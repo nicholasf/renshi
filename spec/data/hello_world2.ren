@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>$title</title>
+  </head>
+  <body class="index">
+    <div id="header">
+      <h1>$title</h1>
+    </div>
+
+    <p r:if="true">Hello</p>
+
+    <div id="footer">
+      <hr />
+    </div>
+  </body>
+</html>
