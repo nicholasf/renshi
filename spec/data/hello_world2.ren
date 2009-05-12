@@ -7,8 +7,9 @@
       <h1>$title</h1>
     </div>
 
-    <p r:if="true">Hello</p>
-
+    <div id="content">
+    $foo
+    </div>
     <div id="footer">
       <hr />
     </div>

@@ -5,13 +5,13 @@ module Renshi
   def self.parse(xhtml, context)
     doc = Nokogiri::HTML(xhtml)
     
-    #puts "before: \n #{doc}"
+    puts "before: \n #{doc}"
     
     doc.root.children.each do |node|
      transform_node(node, context)
     end
     
-    #puts "after: \n #{doc}"
+    puts "after: \n #{doc}"
     return doc.to_s
   end
   
@@ -21,8 +21,9 @@ module Renshi
 
       if refs.size > 1
         refs.each do |ref|
-          next if ref.empty?
+          next if ref.empty? or ref.strip.empty?
           words = ref.split(/(\s+)/)
+   #       puts "interning #{words.first} for #{ref} is ref nil? #{ref.nil?}"
           key_sym = words.first.to_sym
           val = context[key_sym]
           words[0] = val
