@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <body>
-    <div id="content" r:if="true">
+    <div id="content" r:if="foo">
     hello
     </div>
   </body>

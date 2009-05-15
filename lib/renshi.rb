@@ -23,9 +23,9 @@ module Renshi
   def self.transform_node(node, context)
     
     if node.attributes
-      commands = node.commands
-      for command in commands 
-        execute_command(node, context, command)
+      expressions = node.commands
+      for expression in expressions 
+        perform_expression(node, context, expression)
       end
     end
     
@@ -37,7 +37,9 @@ module Renshi
           next if ref.empty? or ref.strip.empty?
           words = ref.split(/(\s+)/)
           key_sym = words.first.to_sym
-          val = context[key_sym]
+          # val = context[key_sym]
+          # debugger
+          val = eval words.first, context
           words[0] = val
           idx = refs.index(ref)
           refs[idx] = words.join
@@ -51,11 +53,14 @@ module Renshi
     node.children.each {|child| transform_node(child, context)}
   end
   
-  def self.execute_command(node, context, command)
+  def self.perform_expression(node, context, command)
     expression = command[0][2..-1]
     begin
-      # debugger
       obj = eval "Renshi::ConditionalExpressions::#{expression.capitalize}.new"
+      obj.evaluate(context, command[1], node)
+      
+    rescue StandardError => boom
+      raise RenshiError "No conditional expression called #{expression}", boom
     end
   end
   

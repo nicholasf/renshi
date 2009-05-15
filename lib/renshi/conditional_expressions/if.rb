@@ -1,8 +1,12 @@
 module Renshi
   module ConditionalExpressions
     class If
-      def execute(expression, context)
-        puts expression
+      def evaluate(context, expression, node)
+        result = eval expression, context
+        
+        unless result
+          node.unlink
+        end
       end
     end
   end
