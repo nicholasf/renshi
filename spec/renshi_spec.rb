@@ -33,4 +33,11 @@ describe Renshi do
     body = doc.root.children.first
     body.children.size.should eql 1
   end
+
+  it "another r:if test" do
+    foo = true
+    out = Renshi.parse(read_file("data/if_2.ren"), binding)
+    doc = N(out)
+    (doc/"div[@id='content']").text.strip.should eql "hello"
+  end
 end

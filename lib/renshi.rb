@@ -35,10 +35,12 @@ module Renshi
       if refs.size > 1
         refs.each do |ref|
           next if ref.empty? or ref.strip.empty?
+          
+          # if ref[0] == "{"
+          #   
+          # end
+          
           words = ref.split(/(\s+)/)
-          key_sym = words.first.to_sym
-          # val = context[key_sym]
-          # debugger
           val = eval words.first, context
           words[0] = val
           idx = refs.index(ref)
