@@ -1,1 +1,13 @@
 Renshi is an xhtml templating language for Ruby loosely based on Python's Genshi: http://genshi.edgewall.org/
+
+Currently, to make the prototype run with Rails you need to append the following into your environment.rb
+
+
+
+class ActionView::Base
+  def renshi_binding
+    binding
+  end
+end
+require 'renshi'
+Renshi::Frameworks.rails()

@@ -15,6 +15,7 @@ module Renshi
       end
 
       # puts "after: \n #{doc}"
+      
       return doc.to_s
     end
 
