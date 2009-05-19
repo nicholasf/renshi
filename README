@@ -2,6 +2,11 @@ Renshi is an xhtml templating language for Ruby loosely based on Python's Genshi
 
 Renshi is currently a prototype.
 
+
+Renshi documents are appended with the suffix of .ren
+
+e.g. index.html.ren
+
 Example Templates
 =================
 Renshi markup currently mimicks Genshi markup.
@@ -21,11 +26,6 @@ Conditional Expression
 <span r:if="true">hello!</span> would render "<span>hello</span>"
 
 <span r:if="false">goodbye!</span> will render "".
-
-
-all evaluate.
-
-
 
 Gem Building
 ============
