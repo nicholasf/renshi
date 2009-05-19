@@ -6,11 +6,21 @@ Example Templates
 =================
 Renshi markup currently mimicks Genshi markup.
 
+
+$ Interpretation
+================
 <h2>$@foo</h2>
 
 $Time.now
 
 ${[1,2,4][0]}
+
+Conditional Expression
+======================
+
+<span r:if="true">hello!</span> would render "<span>hello</span>"
+
+<span r:if="false">goodbye!</span> will render "".
 
 
 all evaluate.
