@@ -1,5 +1,21 @@
 Renshi is an xhtml templating language for Ruby loosely based on Python's Genshi: http://genshi.edgewall.org/
 
+Renshi is currently a prototype.
+
+Example Templates
+=================
+Renshi markup currently mimicks Genshi markup.
+
+<h2>$@foo</h2>
+
+$Time.now
+
+${[1,2,4][0]}
+
+
+all evaluate.
+
+
 
 Gem Building
 ============
@@ -21,3 +37,5 @@ class ActionView::Base
 end
 require 'renshi'
 Renshi::Frameworks.rails()
+
+
