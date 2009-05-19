@@ -2,6 +2,9 @@ Renshi is an xhtml templating language for Ruby loosely based on Python's Genshi
 
 Renshi is currently a prototype.
 
+In Japanese 'renshi' refers to a martial arts master - http://en.wikipedia.org/wiki/Renshi. This meaning is an utter fluke, we started
+off by swapping in 'r' instead of 'g' from genshi, and then googled the result.
+
 Example Templates
 =================
 Renshi markup currently mimicks Genshi markup.
