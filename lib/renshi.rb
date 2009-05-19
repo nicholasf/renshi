@@ -36,7 +36,7 @@ module Renshi
     end
     
     if node.text?
-      node.interpret(context)
+      node.content = node.interpret(context)
     end
     
     node.children.each {|child| transform_node(child, context)}
@@ -85,7 +85,7 @@ module Renshi
       return self.text if idx.nil?
       
       bits = []
-      bits << self.text[0..idx] if idx != 0
+      bits << self.text[0..(idx -1)] if idx != 0
       while idx != nil do
         if self.text[(idx + 1)..(idx + 1)] == "{"
           begin
