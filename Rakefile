@@ -2,6 +2,9 @@ require 'rubygems' unless ENV['NO_RUBYGEMS']
 %w[rake rake/clean fileutils newgem rubigen].each { |f| require f }
 require File.dirname(__FILE__) + '/lib/renshi'
 
+require 'spec'
+require 'spec/rake/spectask'
+
 # Generate all the Rake tasks
 # Run 'rake -T' to see list of generated tasks (from gem root directory)
 $hoe = Hoe.new('renshi', Renshi::VERSION) do |p|
@@ -27,3 +30,10 @@ Dir['tasks/**/*.rake'].each { |t| load t }
 
 # TODO - want other tests/tasks run by default? Add them to the list
 # task :default => [:spec, :features]
+
+
+desc "Run the specs under spec/"
+Spec::Rake::SpecTask.new do |t|
+  t.spec_opts = ['--options', "spec/spec.opts"]
+  t.spec_files = FileList['spec/*_spec.rb']
+end

@@ -1,4 +1,9 @@
+require 'renshi/statement'
+
 module Renshi
+  # The Renshi parser tries to respect speed without complexity. It takes the 
+  # approach that transformations should be done as they are encountered (much 
+  # like a SAXParser) rather than preparing a tree of transformations.
   class Parser
     def self.parse(xhtml, context)
       doc = Nokogiri::HTML(xhtml)
@@ -35,7 +40,7 @@ module Renshi
         obj.evaluate(context, command[1], node)
 
       rescue StandardError => boom
-        raise RenshiError "No conditional expression called #{expression}", boom
+        raise SyntaxError "No conditional expression called #{expression}", boom
       end
     end
   end
