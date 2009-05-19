@@ -7,6 +7,7 @@ require 'nokogiri'
 require 'renshi/parser'
 require 'renshi/node'
 require 'renshi/conditional_expressions'
+require 'renshi/frameworks'
 
 module Renshi
   VERSION="0.0.1"
@@ -15,3 +16,4 @@ module Renshi
 end
 
 Nokogiri::XML::Node.send(:include, Renshi::Node)
+# Renshi::Frameworks.register
