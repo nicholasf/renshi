@@ -6,17 +6,17 @@ module Renshi
   # like a SAXParser) rather than preparing a tree of transformations.
   class Parser
     def self.parse(xhtml, context)
-      doc = Nokogiri::HTML(xhtml)
+      doc = Nokogiri::HTML.fragment(xhtml)
 
       # puts "before: \n #{doc}"
 
-      doc.root.children.each do |node|
+      doc.children.each do |node|
        transform_node(node, context)
       end
 
       # puts "after: \n #{doc}"
       
-      return doc.to_s
+      return doc.inner_html
     end
 
     def self.transform_node(node, context)
