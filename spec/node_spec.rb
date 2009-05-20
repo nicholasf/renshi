@@ -53,4 +53,11 @@ describe Renshi::Node do
     node = body.children.first
     node.interpret(binding).should eql "01234"
   end
+  
+  it "should update the binding after each execution" do
+    doc = Nokogiri::HTML("${foo = 'hello'}$foo")
+    body = doc.root.children.first
+    node = body.children.first
+    node.interpret(binding).should eql "hello"    
+  end
 end

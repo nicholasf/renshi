@@ -35,20 +35,6 @@ then
 `sudo gem install pkg/renshi-0.0.1.gem`
 
 
-
-Rails Integration
-=================
-Currently, to make the prototype run with Rails you need to append the following into your environment.rb
-
-class ActionView::Base
-  def renshi_binding
-    binding
-  end
-end
-require 'renshi'
-Renshi::Frameworks.rails()
-
-
 English to Japanese
 ===================
 Renshi (錬士 : れんし ?): instructor.
