@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/spec_helper'
 require 'nokogiri'
 
 describe Renshi::Node do
-
+  
   it "should return the commands in an XML element's attributes" do
     doc = Nokogiri::HTML("<span r:if='true' r:while='true'/>")
     
@@ -45,4 +45,13 @@ describe Renshi::Node do
     node = body.children.first
     node.interpret(binding).should eql "2 is a number"
   end
+   
+  it "should interpret ${[0,1,2,3,4].each {|i| print i}}" do
+    foo = "is a number"
+    doc = Nokogiri::HTML("${[0,1,2,3,4].each {|i| print i}}")
+    body = doc.root.children.first
+    node = body.children.first
+    node.interpret(binding).should eql "01234"
+  end
+
 end

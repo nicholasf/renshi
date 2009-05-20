@@ -19,7 +19,7 @@ module Renshi
       while idx != nil do
         if self.text[(idx + 1)..(idx + 1)] == "{"
           begin
-            closing_brace_idx = self.text().index("}")
+            closing_brace_idx = self.text().rindex("}")
             statement_str = self.text[(idx + 2)..(closing_brace_idx -1)]
             statement = Renshi::Statement.new(statement_str, context)
             bits << statement.interpret!
