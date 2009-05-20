@@ -53,5 +53,4 @@ describe Renshi::Node do
     node = body.children.first
     node.interpret(binding).should eql "01234"
   end
-
 end

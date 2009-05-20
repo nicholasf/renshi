@@ -15,4 +15,4 @@ module Renshi
 end
 
 Nokogiri::XML::Node.send(:include, Renshi::Node)
-# Renshi::Frameworks.register
+Renshi::Frameworks.notice
