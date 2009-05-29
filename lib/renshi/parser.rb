@@ -5,6 +5,11 @@ module Renshi
   # approach that transformations should be done as they are encountered (much 
   # like a SAXParser) rather than preparing a tree of transformations.
   class Parser
+    
+    def self.exp
+      return "puts \"ok <br>it's this simple</b>\""
+    end
+    
     def self.parse(xhtml, context)
       doc = Nokogiri::HTML.fragment(xhtml)
 

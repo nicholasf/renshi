@@ -16,10 +16,28 @@ module Renshi
             return out
           end
         end
+        
+        class CompilablePlugin
+          include ActionView::TemplateHandlers::Compilable
+
+          def compile(template)
+            if template.respond_to? :source
+              source = template.source
+            else
+              source = template
+            end
+
+            # debugger
+            # 
+            out = Renshi::Parser.parse(source, binding)
+            out = "@output_buffer = ''; @output_buffer.concat \"<b>that simple</b>\" "
+            return out
+          end
+        end
       end
 
       if defined? ActionView::TemplateHandler
-        ActionView::Template.register_template_handler(:ren, Renshi::Frameworks::Rails::Plugin)  
+        ActionView::Template.register_template_handler(:ren, Renshi::Frameworks::Rails::CompilablePlugin)  
 
         class ActionView::Base
           def renshi_binding
@@ -31,18 +49,3 @@ module Renshi
   end
 end
 
-
-  # include ActionView::TemplateHandlers::Compilable
-#           
-#   def compile(template)
-#     if template.respond_to? :source
-#       source = template.source
-#     else
-#       source = template
-#     end
-#     
-#     # debugger
-#     out = Renshi::Parser.parse(source, binding)
-#     return out
-#   end
-# end
