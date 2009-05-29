@@ -11,6 +11,14 @@ module Renshi
   
     def interpret!
       @interpreted_string = eval self.str, self.context
-    end    
+    end   
+    
+    def compile!
+      str = "#{Renshi::Parser::STRING_END};#{self.str};#{Renshi::Parser::STRING_START}"
+    end
+
+    def compile_to_print!
+      str = "#{Renshi::Parser::STRING_END}@output_buffer.concat(#{self.str});#{Renshi::Parser::STRING_START}"
+    end
   end
 end

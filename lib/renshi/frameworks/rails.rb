@@ -27,10 +27,7 @@ module Renshi
               source = template
             end
 
-            # debugger
-            # 
-            out = Renshi::Parser.parse(source, binding)
-            out = "@output_buffer = ''; @output_buffer.concat \"<b>that simple</b>\" "
+            out = Renshi::Parser.parse(source)
             return out
           end
         end

@@ -22,7 +22,7 @@ module Renshi
             closing_brace_idx = self.text().rindex("}")
             statement_str = self.text[(idx + 2)..(closing_brace_idx -1)]
             statement = Renshi::Statement.new(statement_str, context)
-            bits << statement.interpret!
+            bits << statement.compile!
             end_statement_idx = closing_brace_idx + 1
           rescue StandardError => boom
             raise SyntaxError, "No closing brace: #{self.text()[(idx +1)..-1]}: #{boom.to_s}", caller
@@ -31,7 +31,7 @@ module Renshi
           words = self.text()[(idx +1)..-1].split(/\s/)
           statement_str = words.first
           statement = Statement.new(statement_str, context)
-          bits << statement.interpret!
+          bits << statement.compile_to_print!
           end_statement_idx = (words.first.length) + 1 + idx
         end
 
