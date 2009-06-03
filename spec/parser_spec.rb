@@ -30,8 +30,7 @@ describe Renshi::Parser do
       foo = false
       out = interpret("data/if_1.ren", binding)
       doc = N(out)
-      body = doc.root.children.first
-      body.children.size.should eql 1
+      (doc/"div[@id='content']").text.strip.should eql ""
     end
     
     it "another r:if test" do

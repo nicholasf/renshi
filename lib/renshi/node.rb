@@ -48,5 +48,15 @@ module Renshi
       
       return bits.join
     end
+    
+    #opens a clause on an element, for example an if statement on a div
+    def open_clause(opening)
+      self.before("#{Renshi::Parser::STRING_END} #{opening}; #{Renshi::Parser::STRING_START}")
+    end
+    
+    #typically an end statement
+    def close_clause(closing)
+      self.after("#{Renshi::Parser::STRING_END} #{closing}; #{Renshi::Parser::STRING_START}")
+    end
   end
 end

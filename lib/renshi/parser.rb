@@ -12,30 +12,22 @@ module Renshi
     BUFFER_CONCAT_CLOSE = "\");"
     
     def self.parse(xhtml)
-      compiled = "@output_buffer ='';" << BUFFER_CONCAT_OPEN
       doc = Nokogiri::HTML.fragment(xhtml)
 
       doc.children.each do |node|
-       transform_node(node, compiled)
-      end
+       transform_node(node)
+      end      
       
-      #now we parse for RENSHI::STRING_END and RENSHI::STRING_START
-      #and ensure natural strings are buffered
-      out = doc.inner_html
-      out.gsub!("\"", "\\\"")
-      out.gsub!(STRING_END, BUFFER_CONCAT_CLOSE)
-      out.gsub!(STRING_START, BUFFER_CONCAT_OPEN)
-      
-      compiled = "#{compiled}#{out}" << BUFFER_CONCAT_CLOSE
-      
+      compiled = compile_to_buffer(doc.inner_html)
+      puts "\n", compiled, "\n"
       return compiled
     end
 
-    def self.transform_node(node, compiled)
+    def self.transform_node(node)
       if node.attributes
         expressions = node.commands
         for expression in expressions 
-          perform_expression(node, compiled, expression)
+          perform_expression(node, expression)
         end
       end
 
@@ -43,18 +35,33 @@ module Renshi
         node.content = node.interpret()
       end
 
-      node.children.each {|child| transform_node(child, compiled)}
+      node.children.each {|child| transform_node(child)}
     end
 
-    def self.perform_expression(node, compiled, command)
+    def self.perform_expression(node, command)
       expression = command[0][2..-1]
       begin
         obj = eval "Renshi::ConditionalExpressions::#{expression.capitalize}.new"
-        obj.evaluate(compiled, command[1], node)
+        obj.evaluate(command[1], node)
 
       rescue StandardError => boom
         raise SyntaxError "No conditional expression called #{expression}", boom
       end
+    end
+    
+    def self.compile_to_buffer(str)
+      compiled = "@output_buffer ='';" << BUFFER_CONCAT_OPEN      
+      str = compile_print_flags(str)    
+      compiled = "#{compiled}#{str}" << BUFFER_CONCAT_CLOSE
+    end
+    
+    def self.compile_print_flags(str)
+      #now we parse for RENSHI::STRING_END and RENSHI::STRING_START
+      #and ensure natural strings are buffered
+      str.gsub!("\"", "\\\"")
+      str.gsub!(STRING_END, BUFFER_CONCAT_CLOSE)
+      str.gsub!(STRING_START, BUFFER_CONCAT_OPEN)
+      return str
     end
   end
 end
