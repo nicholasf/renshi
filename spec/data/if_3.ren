@@ -1,0 +1,10 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <body>
+    <div id="content" r:if="foo">
+      hello
+      <div id="inner_content" r:if="true">
+        world
+      </div>
+    </div>
+  </body>
+</html>

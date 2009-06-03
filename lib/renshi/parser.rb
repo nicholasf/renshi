@@ -40,7 +40,7 @@ module Renshi
       end
 
       if node.text?
-        node.content = node.interpret(compiled)
+        node.content = node.interpret()
       end
 
       node.children.each {|child| transform_node(child, compiled)}

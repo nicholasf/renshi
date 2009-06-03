@@ -10,7 +10,7 @@ module Renshi
       return commands
     end
     
-    def interpret(context) 
+    def interpret 
       idx = self.text.index("$")
       return self.text if idx.nil?
       
@@ -21,7 +21,7 @@ module Renshi
           begin
             closing_brace_idx = self.text().rindex("}")
             statement_str = self.text[(idx + 2)..(closing_brace_idx -1)]
-            statement = Renshi::Statement.new(statement_str, context)
+            statement = Renshi::Statement.new(statement_str)
             bits << statement.compile!
             end_statement_idx = closing_brace_idx + 1
           rescue StandardError => boom
@@ -30,7 +30,7 @@ module Renshi
         else #$foo
           words = self.text()[(idx +1)..-1].split(/\s/)
           statement_str = words.first
-          statement = Statement.new(statement_str, context)
+          statement = Statement.new(statement_str)
           bits << statement.compile_to_print!
           end_statement_idx = (words.first.length) + 1 + idx
         end
