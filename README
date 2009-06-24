@@ -1,7 +1,6 @@
-Renshi is an xhtml templating language for Ruby loosely based on Python's Genshi: http://genshi.edgewall.org/
+Renshi is a templating language for Ruby loosely based on Python's Genshi: http://genshi.edgewall.org/ . 
 
 Renshi is currently a prototype.
-
 
 Renshi documents are appended with the suffix of .ren
 
