@@ -1,6 +1,7 @@
 Renshi is currently pre-release, though it can work in a project. I'm waiting until I've used it in a couple of my own before I make it a 1.0 release.
 
-Renshi is a templating language for Ruby which works well existing HTML. It is built on Nokogiri, which is very fast, though I have not benchmarked Renshi's speed yet.
+Renshi is a templating language for Ruby which works well existing HTML. It is built on Nokogiri.
+If you're looking for a templating language which is simple, lightweight, and won't impose itself on HTML designers, Renshi is for you!
 
 $ Code
 ======
@@ -30,6 +31,10 @@ Renshi has a small library of expressions which can be inserted into HTML or XML
 
 <span r:if="false">goodbye!</span> will render "".
 
+Further elements will appear as I have time to make them or others want to contribute them. 
+
+See renshi/lib/renshi/conditional_expressions for how they work.
+
 
 Miscellaneous
 =============
@@ -50,6 +55,12 @@ run
 then
 `sudo gem install pkg/renshi-0.0.1.gem`
 
+
+The Usual
+=========
+Please report any bugs at the http://renshi.lighthouseapp.com .
+
+Contributions are welcome. Right now it's just me. 
 
 English to Japanese
 ===================
