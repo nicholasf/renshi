@@ -67,11 +67,21 @@ then
 `sudo gem install pkg/renshi-0.0.2.gem`
 
 
-The Usual
-=========
-Please report any bugs at the http://renshi.lighthouseapp.com .
+Development
+===========
+Please report any bugs at the http://renshi.lighthouseapp.com . 
 
 Contributions are welcome. Right now it's just me. 
+
+Why Renshi?
+===========
+Firstly, it doesn't need a reason. It's a fun project.
+
+I've always found ERB to be a bit cumbersome - <%= is quite tiring to type out when you realise it could be much shorter. I used to think that Velocity, in Java, 
+was the most fun templating language I'd used, and I had wanted something equally as concise for Ruby.
+
+A real need for it emerged in a project which relied upon an external design house handing us HTML. Converting it incessantly into HAML was nightmarish. A colleague 
+mentioned Genshi in Python as ideal, which was when the idea of Renshi was conceived.
 
 English to Japanese
 ===================
