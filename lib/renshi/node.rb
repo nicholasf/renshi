@@ -62,7 +62,7 @@ module Renshi
     
     #opens a clause on an element, for example an if statement on a div
     def open_clause(opening)
-      self.before("#{Renshi::Parser::STRING_END} #{opening}; #{Renshi::Parser::STRING_START}")
+      self.before("#{Renshi::Parser::STRING_END} #{opening}; #{Renshi::Parser::STRING_START}")    
     end
     
     #typically an end statement

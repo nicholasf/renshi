@@ -10,5 +10,10 @@ end
 
 def interpret(file, context)
   compiled = Renshi::Parser.parse(read_file(file))
+  # puts compiled
   eval(compiled, context)
+end
+
+def N(str)
+  Nokogiri::XML(str)
 end

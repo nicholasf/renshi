@@ -10,6 +10,11 @@ module Renshi
     BUFFER_CONCAT_OPEN = "@output_buffer.concat(\""
     BUFFER_CONCAT_CLOSE = "\");"
     
+    #these symbols cannot be normally escaped, as we need to differentiate between &lt; as an
+    #escaped string, to be left in the document, and < as a boolean operator
+    XML_LT = "R_LT"
+    XML_GT = "R_GT"
+    
     def self.parse(xhtml)
       doc = Nokogiri::HTML.fragment(xhtml)
 
