@@ -1,6 +1,6 @@
 Renshi is currently pre-release, though it can work in a project. I'm waiting until I've used it in a couple of my own before I make it a 1.0 release.
 
-Renshi is a templating language for Ruby which works with existing HTML. It is built on Nokogiri.
+Renshi is a templating language for Ruby which is unobtrusive in HTML and XHTML structures. It is built on Nokogiri.
 If you're looking for a templating language which is simple, lightweight, and won't impose itself on HTML designers, Renshi is for you!
 
 $ Code
