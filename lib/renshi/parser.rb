@@ -19,7 +19,7 @@ module Renshi
       end      
       
       compiled = compile_to_buffer(doc.inner_html)
-      puts "\n", compiled, "\n"
+      # puts "\n", compiled, "\n"
       return compiled
     end
 

@@ -22,11 +22,21 @@ module Renshi
             closing_brace_idx = self.text().rindex("}")
             statement_str = self.text[(idx + 2)..(closing_brace_idx -1)]
             statement = Renshi::Statement.new(statement_str)
-            bits << statement.compile!
+            bits << statement.compile_to_print!
             end_statement_idx = closing_brace_idx + 1
           rescue StandardError => boom
             raise SyntaxError, "No closing brace: #{self.text()[(idx +1)..-1]}: #{boom.to_s}", caller
           end
+        elsif self.text[(idx + 1)..(idx + 1)] == "["
+          begin
+            closing_brace_idx = self.text().rindex("]")
+            statement_str = self.text[(idx + 2)..(closing_brace_idx -1)]
+            statement = Renshi::Statement.new(statement_str)
+            bits << statement.compile_to_expression!
+            end_statement_idx = closing_brace_idx + 1
+          rescue StandardError => boom
+            raise SyntaxError, "No closing bracket: #{self.text()[(idx +1)..-1]}: #{boom.to_s}", caller
+          end          
         else #$foo
           words = self.text()[(idx +1)..-1].split(/\s/)
           statement_str = words.first
@@ -57,6 +67,6 @@ module Renshi
     #typically an end statement
     def close_clause(closing)
       self.after("#{Renshi::Parser::STRING_END} #{closing}; #{Renshi::Parser::STRING_START}")
-    end
+    end    
   end
 end
