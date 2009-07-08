@@ -1,30 +1,47 @@
-Renshi is a templating language for Ruby loosely based on Python's Genshi: http://genshi.edgewall.org/ . 
+Renshi is currently pre-release, though it can work in a project. I'm waiting until I've used it in a couple of my own before I make it a 1.0 release.
 
-Renshi is currently a prototype.
+Renshi is a templating language for Ruby which works well existing HTML. It is built on Nokogiri, which is very fast, though I have not benchmarked Renshi's speed yet.
 
+$ Code
+======
+To output data on the page stick a $ in front of your expression
+
+$foo
+$Time.now
+
+If there's a space in your expression or you need formatting around your expression use ${}
+
+${foo},$Time.now 
+
+To insert code in your template use $[]
+
+$[foo = "hello world"]
+
+$foo
+
+
+Element Expressions
+===================
+Renshi has a small library of expressions which can be inserted into HTML or XML elements, making it easier to work with pre-existing documents.
+
+
+* If
+<span r:if="true">hello!</span> would render "<span>hello</span>"
+
+<span r:if="false">goodbye!</span> will render "".
+
+
+Miscellaneous
+=============
 Renshi documents are appended with the suffix of .ren
 
 e.g. index.html.ren or index.ren 
 
-Example Templates
-=================
-Renshi markup currently mimicks Genshi markup.
 
+Rails
+=====
+Simply require the renshi gem in your code, and Renshi will make itself available.
 
-$ Interpretation
-================
-<h2>$@foo</h2>
-
-$Time.now
-
-${[1,2,4][0]}
-
-Conditional Expression
-======================
-
-<span r:if="true">hello!</span> would render "<span>hello</span>"
-
-<span r:if="false">goodbye!</span> will render "".
 
 Gem Building
 ============
@@ -41,4 +58,4 @@ Renshi (錬士 : れんし ?): instructor.
 In Japanese 'renshi' refers to a martial arts master - http://en.wikipedia.org/wiki/Renshi. This meaning is an utter fluke, we started
 off by swapping in 'r' instead of 'g' from genshi, and then googled the result.
 
-It apparently also means 'to know another' - still seeking to verify this, though I'd prefer it as a theme.
+It apparently also means 'to know another' in Cantonese.
