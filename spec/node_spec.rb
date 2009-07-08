@@ -43,26 +43,33 @@ describe Renshi::Node do
      eval(deliver_compiled(node), binding).should eql "2"     
    end  
      
-     it "should interpret ${1 + 1} $foo" do
-       foo = "is a number"
-       doc = Nokogiri::HTML("${1 + 1} $foo")
-       body = doc.root.children.first
-       node = body.children.first
-       eval(deliver_compiled(node), binding).should eql "2 is a number"
-     end
-      
-     it "should interpret ${[0,1,2,3,4].each {|i| print i}}" do
-       foo = "is a number"
-       doc = Nokogiri::HTML("${[0,1,2,3,4].each {|i| print i}}")
-       body = doc.root.children.first
-       node = body.children.first
-       eval(deliver_compiled(node), binding).should eql "01234"
-     end
-     
-     it "should update the binding after each execution" do
-       doc = Nokogiri::HTML("$[@foo = 'hello'] $@foo")
-       body = doc.root.children.first
-       node = body.children.first
-       eval(deliver_compiled(node), binding).should eql " hello"
-     end
+   it "should interpret ${1 + 1} $foo" do
+     foo = "is a number"
+     doc = Nokogiri::HTML("${1 + 1} $foo")
+     body = doc.root.children.first
+     node = body.children.first
+     eval(deliver_compiled(node), binding).should eql "2 is a number"
+   end
+    
+   it "should interpret ${[0,1,2,3,4].each {|i| print i}}" do
+     foo = "is a number"
+     doc = Nokogiri::HTML("${[0,1,2,3,4].each {|i| print i}}")
+     body = doc.root.children.first
+     node = body.children.first
+     eval(deliver_compiled(node), binding).should eql "01234"
+   end
+   
+   it "should update the binding after each execution" do
+     doc = Nokogiri::HTML("$[@foo = 'hello'] $@foo")
+     body = doc.root.children.first
+     node = body.children.first
+     eval(deliver_compiled(node), binding).should eql " hello"
+   end
+   
+   it "should output $ when given two $$" do
+     doc = Nokogiri::HTML("$$")
+     body = doc.root.children.first
+     node = body.children.first
+     eval(deliver_compiled(node), binding).should eql "$"     
+   end
 end

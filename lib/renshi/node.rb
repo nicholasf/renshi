@@ -39,6 +39,7 @@ module Renshi
           end          
         else #$foo
           words = self.text()[(idx +1)..-1].split(/\s/)
+          words[0] = "'$'" if words[0] == "$"
           statement_str = words.first
           statement = Statement.new(statement_str)
           bits << statement.compile_to_print!

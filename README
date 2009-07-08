@@ -20,7 +20,6 @@ $[foo = "hello world"]
 
 $foo
 
-
 Element Expressions
 ===================
 Renshi has a small library of expressions which can be inserted into HTML or XML elements.
@@ -43,6 +42,8 @@ Planned element expressions:
 
 Miscellaneous
 =============
+To print a $ use $$, e.g. $$10.95 comes out as $10.95
+
 Renshi documents are appended with the suffix of .ren
 
 e.g. index.html.ren or index.ren 
