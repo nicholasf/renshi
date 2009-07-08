@@ -1,0 +1,2861 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-19 16:41:04) [GET]
+
+ActionController::RoutingError (No route matches "/test/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-19 16:41:36) [GET]
+
+ActionController::RoutingError (No route matches "/test/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-19 16:41:38) [GET]
+
+ActionController::RoutingError (No route matches "/test/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-19 16:42:08) [GET]
+
+ActionController::RoutingError (No route matches "/test/foo" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 16:42:59) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 16:43:15) [GET]
+
+ActionView::MissingTemplate (Missing template test/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 16:45:41) [GET]
+Rendering test/index
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected tPOW, expecting kEND
+***** Debugger requested, but wa...
+  ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...** Debugger requested, but was not available: Start server w...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...tart server with --debugger to enable *****
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected tPOW
+...with --debugger to enable *****
+                              ^
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected tPOW, expecting kEND
+***** Debugger requested, but wa...
+  ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...** Debugger requested, but was not available: Start server w...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...tart server with --debugger to enable *****
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected tPOW
+...with --debugger to enable *****
+                              ^) on line #2 of app/views/test/index.html.ren:
+1: test!
+
+    app/views/test/index.html.ren:6:in `compile!'
+
+Rendered rescues/_trace (82.1ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 16:47:23) [GET]
+Rendering test/index
+Completed in 395150ms (View: 395078, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 16:54:20) [GET]
+Rendering test/index
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 16:54:23) [GET]
+Rendering test/index
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 16:54:34) [GET]
+Rendering test/index
+Completed in 10074ms (View: 10063, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 16:56:45) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined local variable or method `source' for #<Renshi::Plugin:0x3aab8f8 @view=nil>) in app/views/test/index.html.ren:
+
+    renshi (0.0.1) lib/renshi/frameworks.rb:28:in `compile'
+
+Rendered rescues/_trace (316.1ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:10:33) [GET]
+Rendering test/index
+
+ActionView::TemplateError (Need to implement Renshi::Plugin#render(template, local_assigns)) on line #1 of app/views/test/index.html.ren:
+1: test!
+
+    renshi (0.0.1) lib/renshi/frameworks.rb:26:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (245.7ms)
+Rendered rescues/_request_and_response (4.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:11:05) [GET]
+Rendering test/index
+
+ActionView::TemplateError (Need to implement Renshi::Plugin#render(template, local_assigns)) on line #1 of app/views/test/index.html.ren:
+1: test!
+
+    renshi (0.0.1) lib/renshi/frameworks.rb:26:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (241.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:14:13) [GET]
+Rendering test/index
+
+ActionView::TemplateError (Need to implement Renshi::Plugin#render(template, local_assigns)) on line #1 of app/views/test/index.html.ren:
+1: test!
+
+    lib/renshi/frameworks.rb:26:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (241.6ms)
+Rendered rescues/_request_and_response (4.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:18:00) [GET]
+Rendering test/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.assigns) on line #1 of app/views/test/index.html.ren:
+1: test!
+
+    lib/renshi/frameworks.rb:25:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (256.9ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:19:17) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined local variable or method `assigns' for #<Renshi::Plugin:0x3aac58c>) on line #1 of app/views/test/index.html.ren:
+1: test!
+
+    lib/renshi/frameworks.rb:35:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (242.0ms)
+Rendered rescues/_request_and_response (4.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:20:13) [GET]
+Rendering test/index
+Completed in 2141ms (View: 2130, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:20:15) [GET]
+Rendering test/index
+Completed in 915ms (View: 903, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:21:03) [GET]
+Rendering test/index
+
+ActionView::TemplateError (wrong argument type Hash (expected Proc/Binding)) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$foo</h2>
+
+    lib/renshi/statement.rb:13:in `eval'
+    lib/renshi/statement.rb:13:in `interpret!'
+    lib/renshi/node.rb:34:in `interpret'
+    lib/renshi/parser.rb:30:in `transform_node'
+    lib/renshi/parser.rb:33:in `transform_node'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:140:in `each'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `upto'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `each'
+    lib/renshi/parser.rb:33:in `transform_node'
+    lib/renshi/parser.rb:33:in `transform_node'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:140:in `each'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `upto'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `each'
+    lib/renshi/parser.rb:33:in `transform_node'
+    lib/renshi/parser.rb:14:in `parse'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:140:in `each'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `upto'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `each'
+    lib/renshi/parser.rb:13:in `parse'
+    lib/renshi/frameworks.rb:35:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (292.4ms)
+Rendered rescues/_request_and_response (4.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:21:51) [GET]
+Rendering test/index
+
+ActionView::TemplateError (wrong argument type Hash (expected Proc/Binding)) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$foo</h2>
+
+    lib/renshi/statement.rb:13:in `eval'
+    lib/renshi/statement.rb:13:in `interpret!'
+    lib/renshi/node.rb:34:in `interpret'
+    lib/renshi/parser.rb:30:in `transform_node'
+    lib/renshi/parser.rb:33:in `transform_node'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:140:in `each'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `upto'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `each'
+    lib/renshi/parser.rb:33:in `transform_node'
+    lib/renshi/parser.rb:33:in `transform_node'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:140:in `each'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `upto'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `each'
+    lib/renshi/parser.rb:33:in `transform_node'
+    lib/renshi/parser.rb:14:in `parse'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:140:in `each'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `upto'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `each'
+    lib/renshi/parser.rb:13:in `parse'
+    lib/renshi/frameworks.rb:35:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (294.8ms)
+Rendered rescues/_request_and_response (4.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:30:35) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined local variable or method `foo' for #<Renshi::Plugin:0x3aac58c>) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$foo</h2>
+
+    lib/renshi/frameworks.rb:35:in `render'
+    lib/renshi/frameworks.rb:35:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (241.1ms)
+Rendered rescues/_request_and_response (4.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:31:00) [GET]
+Rendering test/index
+Completed in 21ms (View: 9, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:31:10) [GET]
+Rendering test/index
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:36:25) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (233.2ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 17:38:22) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (235.3ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:20:52) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (235.3ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:20:59) [GET]
+Rendering test/index
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:21:30) [GET]
+Rendering test/index
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (81.9ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:21:49) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (231.6ms)
+Rendered rescues/_request_and_response (4.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:22:55) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (238.2ms)
+Rendered rescues/_request_and_response (4.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:23:14) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (310.0ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:42:10) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:62:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (8954.0ms)
+Rendered rescues/_request_and_response (5535.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:44:28) [GET]
+Rendering test/index
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:44:53) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:46:09) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (858.8ms)
+Rendered rescues/_request_and_response (1003.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:46:20) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (311.8ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:46:40) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected '<', expecting kEND
+...tput_buffer = output_buffer;;<!DOCTYPE html PUBLIC "-//W3C//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:2: syntax error, unexpected '<'
+<html><body>
+ ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:5: syntax error, unexpected '<', expecting kEND
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: unknown regexp option - h
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:6: syntax error, unexpected tINTEGER, expecting kEND
+<h2></h2>
+        ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7: unknown regexp options - htl
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:9: syntax error, unexpected kENSURE) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (229.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#foo (for 127.0.0.1 at 2009-05-19 18:51:07) [GET]
+Rendering test/foo
+Completed in 216319ms (View: 216308, DB: 0) | 200 OK [http://localhost/test/foo]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:55:10) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined local variable or method `out' for #<ActionView::Base:0x11d9a88>) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (832.7ms)
+Rendered rescues/_request_and_response (703.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#foo (for 127.0.0.1 at 2009-05-19 18:56:16) [GET]
+Rendering test/foo
+Completed in 2606ms (View: 2594, DB: 0) | 200 OK [http://localhost/test/foo]
+
+
+Processing TestController#foo (for 127.0.0.1 at 2009-05-19 18:56:24) [GET]
+Rendering test/foo
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://localhost/test/foo]
+
+
+Processing TestController#foo (for 127.0.0.1 at 2009-05-19 18:56:28) [GET]
+Rendering test/foo
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/test/foo]
+
+
+Processing TestController#foo (for 127.0.0.1 at 2009-05-19 18:56:39) [GET]
+Rendering test/foo
+Completed in 31711ms (View: 31700, DB: 0) | 200 OK [http://localhost/test/foo]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 18:57:23) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: unknown regexp option - W
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tINTEGER, expecting ')'
+...("<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+...DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-htm...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tIDENTIFIER, expecting kEND
+...ML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/lo...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: unknown regexp options - www
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tSTRING_BEG, expecting kEND
+...3.org/TR/REC-html40/loose.dtd">
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:8: syntax error, unexpected ')', expecting kEND
+"); @output_buffer
+  ^
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer =''; @output_buffer.concat("<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>test!
+
+</p>
+<h2></h2>
+</body></html>
+"); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: unknown regexp option - W
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tINTEGER, expecting ')'
+...("<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+...DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-htm...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tIDENTIFIER, expecting kEND
+...ML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/lo...
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: unknown regexp options - www
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tSTRING_BEG, expecting kEND
+...3.org/TR/REC-html40/loose.dtd">
+                              ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:8: syntax error, unexpected ')', expecting kEND
+"); @output_buffer
+  ^) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:11:in `compile!'
+
+Rendered rescues/_trace (960.8ms)
+Rendered rescues/_request_and_response (584.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#foo (for 127.0.0.1 at 2009-05-19 19:09:14) [GET]
+Rendering test/foo
+Completed in 8452ms (View: 8441, DB: 0) | 200 OK [http://localhost/test/foo]
+
+
+Processing TestController#foo (for 127.0.0.1 at 2009-05-19 19:09:48) [GET]
+Rendering test/foo
+Completed in 16563ms (View: 16552, DB: 0) | 200 OK [http://localhost/test/foo]
+
+
+Processing TestController#foo (for 127.0.0.1 at 2009-05-19 19:10:42) [GET]
+Rendering test/foo
+Completed in 110370ms (View: 110358, DB: 0) | 200 OK [http://localhost/test/foo]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-19 19:16:49) [GET]
+Rendering test/haml
+
+ActionView::TemplateError (undefined local variable or method `foo' for #<ActionView::Base:0x3943ba0>) on line #2 of app/views/test/haml.haml:
+1: ok
+2: = foo
+3: done
+
+    app/views/test/haml.haml:2:in `_run_haml_app47views47test47haml46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (882.3ms)
+Rendered rescues/_request_and_response (1189.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-19 19:21:47) [GET]
+Rendering test/haml
+Completed in 2497ms (View: 2485, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-19 19:21:53) [GET]
+Rendering test/haml
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-19 19:21:55) [GET]
+Rendering test/haml
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-19 19:22:27) [GET]
+Rendering test/haml
+Completed in 2951921ms (View: 2951909, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:12:44) [GET]
+Rendering test/index
+
+ActionView::TemplateError (Need to implement Renshi::Plugin#render(template, local_assigns)) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (328.6ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:15:52) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined local variable or method `source' for #<Renshi::Plugin:0x3934ba0>) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    lib/renshi/frameworks.rb:25:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (333.8ms)
+Rendered rescues/_request_and_response (4.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:16:22) [GET]
+Rendering test/index
+Completed in 7185ms (View: 7174, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:19:29) [GET]
+Rendering test/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.template) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    lib/renshi/frameworks.rb:26:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (331.8ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:20:12) [GET]
+Rendering test/index
+Completed in 23867ms (View: 23856, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:20:55) [GET]
+Rendering test/index
+Completed in 1266ms (View: 1255, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:22:55) [GET]
+Rendering test/index
+Completed in 23661ms (View: 23650, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:36:20) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined method `class_name' for #<ActionView::Base:0x39444c4>) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    lib/renshi/frameworks.rb:27:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (328.2ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:47:33) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined method `class_name' for #<ActionView::Base:0x3aa7820>) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    lib/renshi/frameworks.rb:27:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (364.6ms)
+Rendered rescues/_request_and_response (5.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:49:47) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined method `class_name' for #<ActionView::Base:0x3aa7820>) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    lib/renshi/frameworks.rb:27:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (332.1ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:50:38) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined method `class_name' for #<ActionView::Base:0x11dfd34>) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+
+    lib/renshi/frameworks.rb:27:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (242.6ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:51:10) [GET]
+Rendering test/index
+Completed in 31ms (View: 20, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:55:30) [GET]
+Rendering test/index
+Completed in 30ms (View: 19, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:57:15) [GET]
+Rendering test/index
+Completed in 86ms (View: 75, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:58:05) [GET]
+Rendering test/index
+Completed in 22ms (View: 10, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:58:11) [GET]
+Rendering test/index
+Completed in 21ms (View: 10, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-19 20:59:54) [GET]
+Rendering test/index
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-20 11:40:43) [GET]
+Rendering test/index
+Completed in 144ms (View: 132, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-20 11:43:43) [GET]
+Rendering test/index
+Completed in 32ms (View: 21, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-20 11:48:14) [GET]
+Rendering test/index
+Completed in 33ms (View: 22, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-20 11:50:14) [GET]
+Rendering test/index
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/lib/renshi/frameworks/rails.rb:26: syntax error, unexpected $end, expecting ')'
+render(:partial
+               ^) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+4: 
+
+    lib/renshi/frameworks/rails.rb:26:in `renshi_binding'
+    lib/renshi/frameworks/rails.rb:26:in `renshi_binding'
+    lib/renshi/frameworks/rails.rb:15:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (260.3ms)
+Rendered rescues/_request_and_response (5.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-20 11:50:25) [GET]
+Rendering test/index
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/lib/renshi/frameworks/rails.rb:26: syntax error, unexpected '}', expecting $end) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: <h2>$@foo</h2>
+4: 
+
+    lib/renshi/frameworks/rails.rb:26:in `renshi_binding'
+    lib/renshi/frameworks/rails.rb:26:in `renshi_binding'
+    lib/renshi/frameworks/rails.rb:15:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (252.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-20 11:52:36) [GET]
+Rendering test/index
+Rendered test/_foo (2.3ms)
+Completed in 32ms (View: 21, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-20 12:59:07) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined method `root' for "test!\n\n${render(:partial =&gt; 'foo')}\n":String) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: ${render(:partial => 'foo')}
+
+    lib/renshi/parser.rb:13:in `parse'
+    lib/renshi/frameworks/rails.rb:15:in `render'
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+
+Rendered rescues/_trace (254.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-20 13:01:50) [GET]
+Rendering test/index
+Rendered test/_foo (2.7ms)
+Completed in 145ms (View: 133, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-21 11:29:56) [GET]
+  Parameters: {"id"=>"haml"}
+
+ActionView::MissingTemplate (Missing template test/haml.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-21 11:30:04) [GET]
+
+ActionView::MissingTemplate (Missing template test/haml.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-21 11:31:32) [GET]
+Rendering test/haml
+Completed in 36ms (View: 25, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 12:58:45) [GET]
+Rendering test/index
+
+ActionView::TemplateError (No closing brace: {render(:partial => 'foo')}
+: undefined method `render' for #<Renshi::Frameworks::Rails::CompilablePlugin:0x3a82958>) in app/views/test/index.html.ren:
+
+    lib/renshi/parser.rb:31:in `transform_node'
+    lib/renshi/parser.rb:14:in `parse'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:140:in `each'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `upto'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `each'
+    lib/renshi/parser.rb:13:in `parse'
+    lib/renshi/frameworks/rails.rb:31:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (94.2ms)
+Rendered rescues/_request_and_response (3.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-29 12:58:57) [GET]
+Rendering test/haml
+Completed in 30ms (View: 23, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-29 13:01:20) [GET]
+Rendering test/haml
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 13:01:32) [GET]
+Rendering test/index
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#erb (for 127.0.0.1 at 2009-05-29 13:02:13) [GET]
+Rendering test/erb
+Completed in 48ms (View: 40, DB: 0) | 200 OK [http://localhost/test/erb]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 13:07:14) [GET]
+Rendering test/index
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 13:07:29) [GET]
+Rendering test/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.concat) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: ${render(:partial => 'foo')}
+
+    app/views/test/index.html.ren:1:in `_run_ren_app47views47test47index46html46ren'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (90.7ms)
+Rendered rescues/_request_and_response (3.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-29 13:10:58) [GET]
+Rendering test/haml
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-29 13:10:58) [GET]
+Rendering test/haml
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-29 13:15:56) [GET]
+Rendering test/haml
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-29 13:15:59) [GET]
+Rendering test/haml
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#erb (for 127.0.0.1 at 2009-05-29 13:23:35) [GET]
+Rendering test/erb
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/test/erb]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 13:24:39) [GET]
+Rendering test/index
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#erb (for 127.0.0.1 at 2009-05-29 13:38:50) [GET]
+Rendering test/erb
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/test/erb]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-29 13:39:08) [GET]
+Rendering test/haml
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 13:40:41) [GET]
+Rendering test/index
+
+ActionView::TemplateError (No closing brace: {render(:partial => 'foo')}
+: undefined method `render' for #<Renshi::Frameworks::Rails::CompilablePlugin:0x3aabac4>) in app/views/test/index.html.ren:
+
+    lib/renshi/parser.rb:36:in `transform_node'
+    lib/renshi/parser.rb:19:in `parse'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:140:in `each'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `upto'
+    nokogiri (1.2.3) lib/nokogiri/xml/node_set.rb:139:in `each'
+    lib/renshi/parser.rb:18:in `parse'
+    lib/renshi/frameworks/rails.rb:32:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (97.9ms)
+Rendered rescues/_request_and_response (3.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 13:41:20) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tIVAR, expecting kEND
+...hat simple</b>" @output_buffer.concat "" if @foo 
+                              ^
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = ''; @output_buffer.concat "<b>that simple</b>" @output_buffer.concat "" if @foo 
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:4:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/opt/local/lib/ruby/gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/opt/local/lib/ruby/gems/1.8/gems/haml-2.0.9/lib/sass/plugin/rails.rb:19:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:1: syntax error, unexpected tIVAR, expecting kEND
+...hat simple</b>" @output_buffer.concat "" if @foo 
+                              ^) on line #1 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: ${render(:partial => 'foo')}
+
+    app/views/test/index.html.ren:4:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (87.3ms)
+Rendered rescues/_request_and_response (3.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 13:41:53) [GET]
+Rendering test/index
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-05-29 13:42:17) [GET]
+Rendering test/haml
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 13:43:40) [GET]
+Rendering test/index
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/test/index]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 16:27:30) [GET]
+Rendering test/index
+ERROR: compiling _run_ren_app47views47test47index46html46ren RAISED compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:3: syntax error, unexpected '=', expecting ')'
+");;render(:partial =&amp;gt; 'foo');@output_buffer.concat("
+                     ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:3: syntax error, unexpected ')', expecting kEND
+");;render(:partial =&amp;gt; 'foo');@output_buffer.concat("
+                                    ^
+Function body:           def _run_ren_app47views47test47index46html46ren(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer ='';@output_buffer.concat("test!
+
+");;render(:partial =&amp;gt; 'foo');@output_buffer.concat("
+");
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:7:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/opt/local/lib/ruby/gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/opt/local/lib/ruby/gems/1.8/gems/haml-2.0.9/lib/sass/plugin/rails.rb:19:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:3: syntax error, unexpected '=', expecting ')'
+");;render(:partial =&amp;gt; 'foo');@output_buffer.concat("
+                     ^
+/Users/nick/code/src/playground/renshi_test/app/views/test/index.html.ren:3: syntax error, unexpected ')', expecting kEND
+");;render(:partial =&amp;gt; 'foo');@output_buffer.concat("
+                                    ^) on line #3 of app/views/test/index.html.ren:
+1: test!
+2: 
+3: ${render(:partial => 'foo')}
+
+    app/views/test/index.html.ren:7:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (88.4ms)
+Rendered rescues/_request_and_response (3.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 16:28:08) [GET]
+Rendering test/index
+Completed in 96ms (View: 88, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-05-29 16:29:08) [GET]
+Rendering test/index
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-06-03 17:28:10) [GET]
+Rendering test/haml
+Completed in 69ms (View: 57, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-06-03 17:28:32) [GET]
+Rendering test/haml
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-06-03 17:28:41) [GET]
+Rendering test/haml
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#haml (for 127.0.0.1 at 2009-06-03 17:29:20) [GET]
+Rendering test/haml
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/test/haml]
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-07-06 14:51:24) [GET]
+Rendering test/index
+
+ActionView::TemplateError (undefined local variable or method `crap' for #<ActionView::Base:0x3a48dac>) on line #5 of app/views/test/index.html.ren:
+2: 
+3: $@foo
+4: 
+5: ${crap }
+
+    app/views/test/index.html.ren:5:in `_run_ren_app47views47test47index46html46ren'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (191.0ms)
+Rendered rescues/_request_and_response (3.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestController#index (for 127.0.0.1 at 2009-07-08 16:43:46) [GET]
+Rendering test/index
+Completed in 47ms (View: 37, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 16:44:04) [GET]
+
+ActionController::RoutingError (No route matches "/hello" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 16:44:14) [GET]
+
+ActionController::RoutingError (No route matches "/hello" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 16:44:17) [GET]
+
+ActionController::RoutingError (No route matches "/hello" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HelloController#index (for 127.0.0.1 at 2009-07-08 16:44:37) [GET]
+
+ActionView::MissingTemplate (Missing template hello/index.erb in view path app/views):
+  haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HelloController#index (for 127.0.0.1 at 2009-07-08 16:44:52) [GET]
+Rendering hello/index
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/hello]
