@@ -47,13 +47,15 @@ Rails
 =====
 Simply require the renshi gem in your code, and Renshi will make itself available.
 
+There is a Rails 2.3.2 example app in the examples directory. Go there, start up the application, and visit http://localhost:3000/hello
+
 
 Gem Building
 ============
 run 
 `rake gem`
 then
-`sudo gem install pkg/renshi-0.0.1.gem`
+`sudo gem install pkg/renshi-0.0.2.gem`
 
 
 The Usual
