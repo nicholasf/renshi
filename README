@@ -31,7 +31,7 @@ Renshi has a small library of expressions which can be inserted into HTML or XML
 
 <span r:if="false">goodbye!</span> will render "".
 
-Further elements will appear as I have time to make them or others want to contribute them. 
+Further elements will appear as I have time to make them or others want to contribute them. There isn't much to making them. For 
 
 See renshi/lib/renshi/conditional_expressions for how they work.
 
@@ -66,7 +66,8 @@ English to Japanese
 ===================
 Renshi (錬士 : れんし ?): instructor.
 
-In Japanese 'renshi' refers to a martial arts master - http://en.wikipedia.org/wiki/Renshi. This meaning is an utter fluke, we started
-off by swapping in 'r' instead of 'g' from genshi, and then googled the result.
+In Japanese 'renshi' refers to a martial arts master - http://en.wikipedia.org/wiki/Renshi. 'Ren' means 'polished' and 'shi' means 'person'. 
 
-It apparently also means 'to know another' in Cantonese.
+It apparently also means 'to know another' in Mandarin.
+
+The project was originally inspired by Genshi, http://genshi.edgewall.org - though it is significantly different in its approach.
