@@ -77,6 +77,8 @@ Why Renshi?
 ===========
 Firstly, it doesn't need a reason. It's a fun project.
 
+But ...
+
 I've always found ERB to be a bit cumbersome - <%= is quite tiring to type out when you realise it could be much shorter. I used to think that Velocity, in Java, 
 was the most fun templating language I'd used, and I had wanted something equally as concise for Ruby.
 
