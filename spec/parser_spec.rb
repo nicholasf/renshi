@@ -9,7 +9,7 @@ describe Renshi::Parser do
     it "should parse a $foo var in elements" do
       title = "hello world"
       out = interpret("data/hello_world1.ren", binding)
-
+    
       doc = Nokogiri::XML(out)
       (doc/"title").text.should eql "hello world"
     end
@@ -39,7 +39,7 @@ describe Renshi::Parser do
       doc = N(out)
       (doc/"div[@id='content']").text.strip.should eql "hello"
     end
-
+    
     it "should evaluate nested r:ifs" do
       foo = true
       out = interpret("data/if_3.ren", binding)
@@ -47,4 +47,33 @@ describe Renshi::Parser do
       (doc/"div[@id='content']").text.strip.should =~ /hello/      
       (doc/"div[@id='inner_content']").text.strip.should eql "world"
     end
+    
+    it "should evaluate r:else" do
+      foo = true
+      out = interpret("data/ifelse.ren", binding)
+      doc = N(out)
+      (doc/"div[@id='content']").text.strip.should =~ /hello/      
+      (doc/"div[@id='inner_content']").text.strip.should eql "world"
+      
+      foo = false
+      
+      out = interpret("data/ifelse.ren", binding)
+      doc = N(out)
+      (doc/"div[@id='content']").text.strip.should =~ /goodbye/      
+    end   
+    
+    it "should evaluate r:elsif" do
+      foo = true
+      bar = false
+      out = interpret("data/ifelsifelse.ren", binding)
+      doc = N(out)
+      (doc/"div[@id='content']").text.strip.should =~ /hello/      
+      (doc/"div[@id='inner_content']").text.strip.should eql "world"
+      
+      foo = false
+      bar = true
+      out = interpret("data/ifelsifelse.ren", binding)
+      doc = N(out)
+      (doc/"div[@id='content']").text.strip.should =~ /neither/      
+    end        
 end

@@ -1,8 +1,8 @@
 module Renshi
   module ConditionalExpressions
-    class If
+    class Elsif
       def evaluate(expression, node)
-        node.open_clause("if #{expression}")
+        node.open_clause("elsif #{expression}")
   
         sibling = node.next_real
         
@@ -11,7 +11,7 @@ module Renshi
         
           if sibling_commands.first
             expression = sibling_commands.first[0][2..-1]
-            if expression == "else" or expression == "elsif"
+            if expression == "else"
               return
             end
           end

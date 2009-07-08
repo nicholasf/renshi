@@ -24,8 +24,8 @@ module Renshi
             statement = Renshi::Statement.new(statement_str)
             bits << statement.compile_to_print!
             end_statement_idx = closing_brace_idx + 1
-          rescue StandardError => boom
-            raise SyntaxError, "No closing brace: #{self.text()[(idx +1)..-1]}: #{boom.to_s}", caller
+          rescue Renshi::StandardError
+            raise SyntaxError, "No closing brace: #{self.text()[(idx +1)..-1]}", caller
           end
         elsif self.text[(idx + 1)..(idx + 1)] == "["
           begin
@@ -34,8 +34,8 @@ module Renshi
             statement = Renshi::Statement.new(statement_str)
             bits << statement.compile_to_expression!
             end_statement_idx = closing_brace_idx + 1
-          rescue StandardError => boom
-            raise SyntaxError, "No closing bracket: #{self.text()[(idx +1)..-1]}: #{boom.to_s}", caller
+          rescue Renshi::StandardError
+            raise SyntaxError, "No closing bracket: #{self.text()[(idx +1)..-1]}", caller
           end          
         else #$foo
           words = self.text()[(idx +1)..-1].split(/\s/)
@@ -68,6 +68,17 @@ module Renshi
     #typically an end statement
     def close_clause(closing)
       self.after("#{Renshi::Parser::STRING_END} #{closing}; #{Renshi::Parser::STRING_START}")
-    end    
+    end
+    
+    #just a hack on next, as Nokogiri returns a new line as the next sibling.
+    def next_real
+      sibling = self.next
+      
+      while sibling and sibling.text.strip == ""
+        sibling = sibling.next
+      end
+      
+      return sibling
+    end
   end
 end

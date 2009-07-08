@@ -1,9 +1,8 @@
 require 'renshi/statement'
 
 module Renshi
-  # The Renshi parser tries to respect speed without complexity. It takes the 
-  # approach that transformations should be done as they are encountered (much 
-  # like a SAXParser) rather than preparing a tree of transformations.
+  # The Renshi parser tries to respect speed without complexity. It builds a set of instructions within
+  # the document, which are then compiled into Ruby. 
   
   class Parser
     STRING_END = "R_END" #maybe replace this with a funky unicode char
@@ -40,13 +39,15 @@ module Renshi
 
     def self.perform_expression(node, command)
       expression = command[0][2..-1]
+      
+      obj = nil
       begin
         obj = eval "Renshi::ConditionalExpressions::#{expression.capitalize}.new"
-        obj.evaluate(command[1], node)
-
-      rescue StandardError => boom
-        raise SyntaxError "No conditional expression called #{expression}", boom
+      rescue StandardError 
+        raise Renshi::SyntaxError, "Could not find conditional expression called #{expression}", caller
       end
+      
+      obj.evaluate(command[1], node)
     end
     
     def self.compile_to_buffer(str)
