@@ -80,8 +80,8 @@ See renshi/lib/renshi/conditional_expressions for how they work.
 
 Planned element expressions:
 
-* r:if, r:else, r:elsif
-* r:while
+* r:each, r:for
+* r:unless
 * r:def - something like genshi's py:def
 
 Miscellaneous
