@@ -87,43 +87,35 @@ but this is:
 
 * While
 
-<div id="outer">
-  <div r:while="foo != 2" id="content$foo">
-    hello$foo
-    $[foo = foo + 1]
-  </div>
+<div r:while="foo != 2" id="content$foo">
+  hello$foo
+  $[foo = foo + 1]
 </div>
 
 renders:
 
-<div id="outer">
-  <div id="content0">
-    hello0
-    
-  </div><div id="content1">
-    hello1
-    
-  </div>
+<div id="content0">
+  hello0
+  
+</div><div id="content1">
+  hello1
+  
 </div>
 
 * For
 
-<div id="outer">
-  <div id="content$foo" r:for="foo in foos">
-  hello$foo
-  </div>
+<div id="content$foo" r:for="foo in foos">
+hello$foo
 </div>
 
 renders:
 
-<div id="outer">
-  <div id="content0">
-  hello0
-  </div><div id="content1">
-  hello1
-  </div><div id="content2">
-  hello2
-  </div>
+<div id="content0">
+hello0
+</div><div id="content1">
+hello1
+</div><div id="content2">
+hello2
 </div>
 
 Further elements will appear as I have time to make them or others want to contribute them. There isn't much to making them. 
