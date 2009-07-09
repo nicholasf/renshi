@@ -27,6 +27,14 @@ Attribute expressions follow the form of
 
 r:expression_name="expression" - the expression value is treated as a Ruby expression .
 
+* Current Attribute Expressions
+* If
+* Elsif
+* Else
+* While
+* For
+
+
 * If
 <span r:if="true">hello!</span> would render "<span>hello</span>"
 
@@ -41,9 +49,41 @@ r:expression_name="expression" - the expression value is treated as a Ruby expre
 
 <span r:if="false">hello!</span>
 <span r:elsif="false">goodbye</span>
-<span r:else="true">neither</span>
+<span r:else>neither</span>
 
 r:elsif and r:else must be adjacent (a sibling) to the element.
+
+
+For example, the below is fine, because the if and else statements are adjacent siblings in the tree of elements.
+
+<div id="menu" r:if="user.is_administrator?">
+  <div id="admin_menu"> ... </div>
+<div id="menu" r:else>
+  <div id="user_menu"> ... </div>
+</div>  
+
+but this is not:
+
+<div id="menu" r:if="user.is_administrator?">
+  <div id="admin_menu"> ... </div>
+<div id="register">
+  <div id="register"> ... </div>
+</div>
+<div id="menu" r:else>
+  <div id="user_menu"> ... </div>
+</div>  
+
+but this is:
+
+<div id="menu" r:if="user.is_administrator?">
+  <div id="admin_menu"> ... </div>
+<div id="menu" r:else>
+  <div id="user_menu"> ... </div>
+</div>  
+<div id="register">
+  <div id="register"> ... </div>
+</div>
+
 
 * While
 
