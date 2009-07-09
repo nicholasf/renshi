@@ -10,14 +10,17 @@ module Renshi
       return commands
     end
     
-    def interpret 
+    def compile 
       idx = self.text.index("$")
       return self.text if idx.nil?
       
       bits = []
       bits << self.text[0..(idx -1)] if idx != 0
       while idx != nil do
-        if self.text[(idx + 1)..(idx + 1)] == "{"
+        if self.text[(idx + 1)..(idx + 1)] == "("
+          #this may be jquery, etc. $(...)
+          return self.text
+        elsif self.text[(idx + 1)..(idx + 1)] == "{"
           begin
             closing_brace_idx = self.text().rindex("}")
             statement_str = self.text[(idx + 2)..(closing_brace_idx -1)]

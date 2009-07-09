@@ -6,7 +6,8 @@ describe Renshi::Parser do
     foo = 0
     out = interpret("data/while.ren", binding)
     doc = N(out)
-    # (doc/"div[@id='content']").text.strip.should =~ /hello0/
-    # (doc/"div[@id='content']").text.strip.should =~ /hello1/
+    puts doc.to_s
+    (doc/"div[@id='content']").text.strip.should =~ /hello0/
+    (doc/"div[@id='content']").text.strip.should =~ /hello1/
   end   
 end

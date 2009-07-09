@@ -3,11 +3,6 @@ require 'nokogiri'
 
 describe Renshi::Node do
   
-  def deliver_compiled(node)
-    raw = node.interpret
-    raw = Renshi::Parser.compile_to_buffer(raw)    
-  end
-  
   it "should return the commands in an XML element's attributes" do
     doc = Nokogiri::HTML("<span r:if='true' r:while='true'/>")
     

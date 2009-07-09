@@ -22,7 +22,8 @@ module Renshi
        transform_node(node)
       end      
       
-      compiled = compile_to_buffer(doc.inner_html)
+      inner_html = doc.inner_html
+      compiled = compile_to_buffer(inner_html) if inner_html
       # puts "\n", compiled, "\n"
       return compiled
     end
@@ -36,7 +37,8 @@ module Renshi
       end
 
       if node.text?
-        node.content = node.interpret()
+        compiled = node.compile()
+        node.content = compiled if compiled
       end
 
       node.children.each {|child| transform_node(child)}

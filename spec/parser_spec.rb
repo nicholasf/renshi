@@ -20,4 +20,10 @@ describe Renshi::Parser do
       doc = N(out)
       (doc/"div[@id='content']").text.strip.should eql "in space no one can hear you scream"
     end  
+    
+    it "should ignore $(..)" do      
+      doc = Nokogiri::HTML.fragment("$(foo)")
+      node = doc.children.first
+      eval(deliver_compiled(node), binding).should eql "$(foo)"
+    end
 end

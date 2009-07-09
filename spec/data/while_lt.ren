@@ -1,0 +1,4 @@
+<div r:while="foo < 2">
+  hello$foo
+  $[foo = foo + 1]
+</div>

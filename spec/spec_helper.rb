@@ -8,10 +8,17 @@ def read_file(file_name)
   file = File.read(File.expand_path(File.dirname(__FILE__) + "/#{file_name}"))
 end
 
+def compile_file(file)
+  compiled = Renshi::Parser.parse(read_file(file))  
+end
+
 def interpret(file, context)
-  compiled = Renshi::Parser.parse(read_file(file))
-  # puts compiled
-  eval(compiled, context)
+  eval(compile_file(file), context)
+end
+
+def deliver_compiled(node)
+  raw = node.compile
+  raw = Renshi::Parser.compile_to_buffer(raw)    
 end
 
 def N(str)
