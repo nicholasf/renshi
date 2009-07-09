@@ -37,14 +37,14 @@ module Renshi
       end
       
       #compile text in attribute values, e.g. <div id="foo$i>"
-      # if node.attributes?
-      #   for attribute in node.attributes
-      #     compiled = compile(attribute.value)
-      #   end
-      #   
-      #   node.content = compiled if compiled
-      # end
-      
+      if node.attributes()
+        for attribute in node.attributes()
+          compiled = compile(attribute[1].to_s)
+          if compiled
+            node[attribute[0]]= (compiled) 
+          end
+        end        
+      end
       
       #compile text in nodes, e.g. <p>*</p>
       if node.text?
