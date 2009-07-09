@@ -20,15 +20,50 @@ $[foo = "hello world"]
 
 $foo
 
-Element Expressions
+Attribute Expressions
 ===================
-Renshi has a small library of expressions which can be inserted into HTML or XML elements.
+Renshi has a small library of expressions which can be inserted into HTML or XML elements as attributes.
 
 
 * If
 <span r:if="true">hello!</span> would render "<span>hello</span>"
 
 <span r:if="false">goodbye!</span> will render "".
+
+* Elsif
+
+<span r:if="false">hello!</span>
+<span r:elsif="true">goodbye</span>
+
+* Else
+
+<span r:if="false">hello!</span>
+<span r:elsif="false">goodbye</span>
+<span r:else="neither">goodbye</span>
+
+r:elsif and r:else must be adjacent (a sibling) to the element.
+
+* While
+
+<div id="outer">
+  <div r:while="foo != 2" id="content$foo">
+    hello$foo
+    $[foo = foo + 1]
+  </div>
+</div>
+
+renders:
+
+<div id="outer">
+  <div id="content0">
+    hello0
+    
+  </div><div id="content1">
+    hello1
+    
+  </div>
+</div>
+
 
 Further elements will appear as I have time to make them or others want to contribute them. There isn't much to making them. 
 

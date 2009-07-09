@@ -9,7 +9,7 @@ require 'renshi/conditional_expressions'
 require 'renshi/frameworks'
 
 module Renshi
-  VERSION="0.0.2"
+  VERSION="0.0.3"
   
   class SyntaxError < StandardError; end
 end
