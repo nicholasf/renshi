@@ -66,13 +66,25 @@ renders:
   </div>
 </div>
 
-Other Rules
-===========
-$ values inside of attributes are only interpreted as Renshi variables for regular attributes (not renshi attributes).
+* For
 
-E.g. <div r:if="'abc' =~ /$abc/" id="content$foo"> the r:if statement would treat $ exactly as Ruby does, while the id attribute value is transformed.
+<div id="outer">
+  <div id="content$foo" r:for="foo in foos">
+  hello$foo
+  </div>
+</div>
 
+renders:
 
+<div id="outer">
+  <div id="content0">
+  hello0
+  </div><div id="content1">
+  hello1
+  </div><div id="content2">
+  hello2
+  </div>
+</div>
 
 Further elements will appear as I have time to make them or others want to contribute them. There isn't much to making them. 
 
@@ -80,9 +92,16 @@ See renshi/lib/renshi/attribute_expressions for how they work.
 
 Planned element expressions:
 
-* r:each, r:for
+* r:each
 * r:unless
 * r:def - something like genshi's py:def
+
+Other Rules
+===========
+$ values inside of attributes are only interpreted as Renshi variables for regular attributes (not renshi attributes).
+
+E.g. <div r:if="'abc' =~ /$abc/" id="content$foo"> the r:if statement would treat $ exactly as Ruby does, while the id attribute value is transformed.
+
 
 Miscellaneous
 =============
