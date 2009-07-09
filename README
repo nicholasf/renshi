@@ -23,6 +23,9 @@ $foo
 Attribute Expressions
 ===================
 Renshi has a small library of expressions which can be inserted into HTML or XML elements as attributes.
+Attribute expressions follow the form of 
+
+r:expression_name="expression" - the expression value is treated as a Ruby expression .
 
 
 * If
@@ -63,6 +66,13 @@ renders:
     
   </div>
 </div>
+
+Other Rules
+===========
+$ values inside of attributes are only interpreted as Renshi variables for regular attributes (not renshi attributes).
+
+E.g. <div r:if="'abc' =~ /$abc/" id="content$foo"> the r:if statement would treat $ exactly as Ruby does, while the id attribute value is transformed.
+
 
 
 Further elements will appear as I have time to make them or others want to contribute them. There isn't much to making them. 
