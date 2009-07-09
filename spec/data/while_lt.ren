@@ -1,4 +1,6 @@
-<div r:while="foo < 2">
-  hello$foo
-  $[foo = foo + 1]
+<div id="outer">
+  <div id="content$foo" r:while="foo < 2">
+    hello$foo
+    $[foo = foo + 1]
+  </div>
 </div>

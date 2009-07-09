@@ -9,11 +9,13 @@ module Renshi
     STRING_START = "R_START" #maybe replace this with a funky unicode char
     BUFFER_CONCAT_OPEN = "@output_buffer.concat(\""
     BUFFER_CONCAT_CLOSE = "\");"
+    NEW_LINE = "@output_buffer.concat('\n');"
     
     #these symbols cannot be normally escaped, as we need to differentiate between &lt; as an
     #escaped string, to be left in the document, and < as a boolean operator
     XML_LT = "R_LT"
     XML_GT = "R_GT"
+    XML_AMP = "R_AMP"
     
     def self.parse(xhtml)
       doc = Nokogiri::HTML.fragment(xhtml)
@@ -65,7 +67,7 @@ module Renshi
         raise Renshi::SyntaxError, "Could not find attribute expression called #{expression}.rb", caller
       end
       
-      obj.evaluate(command[1], node)
+      obj.evaluate(command[1].to_s, node)
     end
     
     def self.compile(text)
@@ -133,6 +135,10 @@ module Renshi
       str.gsub!("\"", "\\\"")
       str.gsub!(STRING_END, BUFFER_CONCAT_CLOSE)
       str.gsub!(STRING_START, BUFFER_CONCAT_OPEN)
+      str.gsub!(XML_GT, ">")
+      str.gsub!(XML_LT, "<")
+      str.gsub!(XML_AMP, "&")
+      
       return str
     end
   end
