@@ -2,7 +2,7 @@ require 'renshi/statement'
 
 module Renshi
   # The Renshi parser tries to respect speed without complexity. It builds a set of instructions within
-  # the document, which are then compiled into Ruby. 
+  # the document, which are finally compiled into Ruby.
   
   class Parser
     STRING_END = "R_END" #maybe replace this with a funky unicode char
