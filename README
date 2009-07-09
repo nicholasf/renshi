@@ -42,7 +42,7 @@ r:expression_name="expression" - the expression value is treated as a Ruby expre
 
 <span r:if="false">hello!</span>
 <span r:elsif="false">goodbye</span>
-<span r:else="neither">goodbye</span>
+<span r:else="true">neither</span>
 
 r:elsif and r:else must be adjacent (a sibling) to the element.
 
