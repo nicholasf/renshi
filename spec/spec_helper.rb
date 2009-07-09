@@ -17,7 +17,7 @@ def interpret(file, context)
 end
 
 def deliver_compiled(node)
-  raw = node.compile
+  raw = Renshi::Parser.compile(node.text)
   raw = Renshi::Parser.compile_to_buffer(raw)    
 end
 

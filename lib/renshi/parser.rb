@@ -35,9 +35,20 @@ module Renshi
           perform_expression(node, expression)
         end
       end
-
+      
+      #compile text in attribute values, e.g. <div id="foo$i>"
+      # if node.attributes?
+      #   for attribute in node.attributes
+      #     compiled = compile(attribute.value)
+      #   end
+      #   
+      #   node.content = compiled if compiled
+      # end
+      
+      
+      #compile text in nodes, e.g. <p>*</p>
       if node.text?
-        compiled = node.compile()
+        compiled = compile(node.text)
         node.content = compiled if compiled
       end
 
@@ -55,6 +66,59 @@ module Renshi
       end
       
       obj.evaluate(command[1], node)
+    end
+    
+    def self.compile(text)
+      idx = text.index("$")
+      return text if idx.nil?
+      
+      bits = []
+      bits << text[0..(idx -1)] if idx != 0
+      while idx != nil do
+        if text[(idx + 1)..(idx + 1)] == "("
+          #this may be jquery, etc. $(...)
+          return text
+        elsif text[(idx + 1)..(idx + 1)] == "{"
+          begin
+            closing_brace_idx = text.rindex("}")
+            statement_str = text[(idx + 2)..(closing_brace_idx -1)]
+            statement = Renshi::Statement.new(statement_str)
+            bits << statement.compile_to_print!
+            end_statement_idx = closing_brace_idx + 1
+          rescue Renshi::StandardError
+            raise SyntaxError, "No closing brace: #{text[(idx +1)..-1]}", caller
+          end
+        elsif text[(idx + 1)..(idx + 1)] == "["
+          begin
+            closing_brace_idx = text.rindex("]")
+            statement_str = text[(idx + 2)..(closing_brace_idx -1)]
+            statement = Renshi::Statement.new(statement_str)
+            bits << statement.compile_to_expression!
+            end_statement_idx = closing_brace_idx + 1
+          rescue Renshi::StandardError
+            raise SyntaxError, "No closing bracket: #{text[(idx +1)..-1]}", caller
+          end          
+        else #$foo
+          words = text[(idx +1)..-1].split(/\s/)
+          words[0] = "'$'" if words[0] == "$"
+          statement_str = words.first
+          statement = Statement.new(statement_str)
+          bits << statement.compile_to_print!
+          end_statement_idx = (words.first.length) + 1 + idx
+        end
+
+        next_statement_idx = text.index("$", end_statement_idx)
+                
+        if next_statement_idx
+          gap = text[end_statement_idx..(next_statement_idx -1)]
+          bits << gap
+        else
+          bits << text[end_statement_idx..-1]
+        end
+        idx = next_statement_idx
+      end       
+      
+      return bits.join
     end
     
     def self.compile_to_buffer(str)

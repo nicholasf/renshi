@@ -26,4 +26,18 @@ describe Renshi::Parser do
       node = doc.children.first
       eval(deliver_compiled(node), binding).should eql "$(foo)"
     end
+    
+    # it "should parse attribute values - e.g. <div id='$i'>" do
+    #   # doc = Nokogiri::HTML("<body>$[$i = 1] <div id='content$i'>hello</div><body>")
+    #   # body = doc.root.children.first
+    #   # node = body.children.first
+    #   # html = eval(deliver_compiled(node), binding)
+    #   # puts html
+    #   
+    #   html = interpret("data/attribute_values_parsed.ren", binding)
+    #   puts html
+    #   # body = doc.root.children.first
+    #   # node = body.children.first
+    #   (html/"div[@id='content1']").text.strip.should =~ /hello/      
+    # end
 end
