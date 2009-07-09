@@ -60,7 +60,7 @@ module Renshi
       
       obj = nil
       begin
-        obj = eval "Renshi::ConditionalExpressions::#{expression.capitalize}.new"
+        obj = eval "Renshi::AttributeExpressions::#{expression.capitalize}.new"
       rescue StandardError 
         raise Renshi::SyntaxError, "Could not find conditional expression called #{expression}", caller
       end

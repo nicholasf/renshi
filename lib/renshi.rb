@@ -5,7 +5,7 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'nokogiri'
 require 'renshi/parser'
 require 'renshi/node'
-require 'renshi/conditional_expressions'
+require 'renshi/attribute_expressions'
 require 'renshi/frameworks'
 
 module Renshi

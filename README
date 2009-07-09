@@ -27,7 +27,6 @@ Attribute expressions follow the form of
 
 r:expression_name="expression" - the expression value is treated as a Ruby expression .
 
-
 * If
 <span r:if="true">hello!</span> would render "<span>hello</span>"
 
