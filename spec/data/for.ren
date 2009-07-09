@@ -1,0 +1,5 @@
+<div id="outer">
+  <div id="content$foo" r:for="foo in foos">
+  hello$foo
+  </div>
+</div>
