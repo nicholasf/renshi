@@ -2859,3 +2859,23 @@ Rendering rescues/layout (internal_server_error)
 Processing HelloController#index (for 127.0.0.1 at 2009-07-08 16:44:52) [GET]
 Rendering hello/index
 Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/hello]
+
+
+Processing HelloController#index (for 127.0.0.1 at 2009-07-10 18:53:08) [GET]
+Rendering hello/index
+
+ActionView::TemplateError (wrong number of arguments (2 for 1)) in app/views/hello/index.html.ren:
+
+    lib/renshi/frameworks/rails.rb:32:in `parse'
+    lib/renshi/frameworks/rails.rb:32:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (97.1ms)
+Rendered rescues/_request_and_response (4.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HelloController#index (for 127.0.0.1 at 2009-07-10 18:54:09) [GET]
+Rendering hello/index
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/hello]
