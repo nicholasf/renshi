@@ -9,7 +9,5 @@ describe Renshi::Parser do
     doc = N(out)
     (doc/"div[@id='content0']").text.strip.should =~ /hello0/
     (doc/"div[@id='content1']").text.strip.should =~ /hello1/
-    
-    puts doc
   end   
 end
