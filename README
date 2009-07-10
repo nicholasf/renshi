@@ -194,7 +194,7 @@ Firstly, it doesn't need a reason. It's a fun project.
 But ...
 
 I've always found ERB to be a bit cumbersome - <%= is quite tiring to type out when you realise it could be much shorter. I used to think that Velocity, in Java, 
-was the funnest templating language I'd used, and I had wanted something equally as concise for Ruby.
+was the most fun templating language I'd used, and I had wanted something equally as concise for Ruby.
 
 A real need for it emerged in a project which relied upon an external design house handing us HTML. Converting it incessantly into HAML was nightmarish. A colleague 
 mentioned Genshi in Python as ideal, which was when the idea of Renshi was conceived.
