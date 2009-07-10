@@ -20,22 +20,32 @@ $foo
 Attribute Expressions
 ===================
 Renshi has a small library of expressions which can be inserted into HTML or XML elements as attributes.
-Attribute expressions follow the form of 
+Attribute expressions generally follow the form of 
 
 r:expression_name="expression" - the expression value is treated as a Ruby expression .
 
+Some expressions, such as r:each, use the quoted value to also hold parameter information.
+
 * Current Attribute Expressions
-* If
-* Elsif
+* If 
+* Unless
+* Elsif 
 * Else
 * While
 * For
-
+* Each
 
 * If
-<span r:if="true">hello!</span> would render "<span>hello</span>"
+<span r:if="true">hello</span>
+would render "<span>hello</span>"
 
 <span r:if="false">goodbye!</span> will render "".
+
+* Unless
+<span r:unless="false">hello</span>
+would render "<span>hello</span>"
+
+<span r:unless="true">goodbye!</span> will render "".
 
 * Elsif
 
@@ -109,21 +119,31 @@ renders:
 
 <div id="content0">
 hello0
-</div><div id="content1">
-hello1
-</div><div id="content2">
-hello2
 </div>
+...etc
+<div id="content99">
+hello99
+</div>
+
+* Each
+<div id="content$foo" r:each="foos, |foo|">
+hello$foo
+</div>
+
+<div id="content0">
+hello0
+</div>
+...etc
+<div id="content99">
+hello99
+</div>
+
 
 Further elements will appear as I have time to make them or others want to contribute them. There isn't much to making them. 
 
 See renshi/lib/renshi/attribute_expressions for how they work.
 
 Planned element expressions:
-
-* r:each
-* r:unless
-* r:def - something like genshi's py:def
 
 Other Rules
 ===========
