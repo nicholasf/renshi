@@ -152,12 +152,9 @@ There is a Rails 2.3.2 example app in the examples directory. Go there, start up
 I'd welcome integrations for Sinatra and Merb or XYZ framework. See renshi/lib/renshi/frameworks 
 
 
-Gem Building
+Installation
 ============
-run 
-`rake gem`
-then
-`sudo gem install pkg/renshi-0.0.2.gem`
+Renshi is hosted on Rubyforge so 'sudo gem install renshi'. Alternatively, use github to do what you want with it.
 
 
 Development
