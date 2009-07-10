@@ -26,7 +26,7 @@ module Renshi
       
       inner_html = doc.inner_html
       compiled = compile_to_buffer(inner_html) if inner_html
-       puts "\n", compiled, "\n"
+       # puts "\n", compiled, "\n"
       return compiled
     end
 
