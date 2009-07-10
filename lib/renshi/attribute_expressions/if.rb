@@ -1,6 +1,6 @@
 module Renshi
   module AttributeExpressions
-    class If
+    class If      
       def evaluate(expression, node)
         node.open_clause("if (#{expression})")
   

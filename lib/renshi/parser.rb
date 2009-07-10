@@ -34,7 +34,7 @@ module Renshi
       if node.attributes
         expressions = node.commands
         for expression in expressions 
-          perform_expression(node, expression)
+          AttributeExpressions.perform_expression(node, expression)
         end
       end
       
@@ -55,19 +55,6 @@ module Renshi
       end
 
       node.children.each {|child| transform_node(child)}
-    end
-
-    def self.perform_expression(node, command)
-      expression = command[0][2..-1]
-      
-      obj = nil
-      begin
-        obj = eval "Renshi::AttributeExpressions::#{expression.capitalize}.new"
-      rescue StandardError 
-        raise Renshi::SyntaxError, "Could not find attribute expression called #{expression}.rb", caller
-      end
-      
-      obj.evaluate(command[1].to_s, node)
     end
     
     def self.compile(text)

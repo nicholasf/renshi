@@ -1,6 +1,6 @@
 module Renshi
   module AttributeExpressions
-    class Elsif
+    class Elsif      
       def evaluate(expression, node)
         node.open_clause("elsif (#{expression})")
   

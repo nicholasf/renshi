@@ -10,4 +10,18 @@ describe Renshi::Parser do
     (doc/"div[@id='content0']").text.strip.should =~ /hello0/
     (doc/"div[@id='content1']").text.strip.should =~ /hello1/
   end   
+  
+  it "should evaluate r:if(foo < 2)" do
+    doc = Nokogiri::HTML("<span r:if='1 < 2'>hello</div>")
+    body = doc.root.children.first
+    node = body.children.first
+    eval(deliver_compiled(node), binding).should eql "hello"
+  end   
+  
+  it "should evaluate r:elsif(foo < 2)" do
+    doc = Nokogiri::HTML("<span r:if='false'/><span r:elsif='1 < 2'>hello</div>")
+    compiled = deliver_compiled(doc.root)
+    puts compiled
+    eval(compiled, binding).should eql "hello"
+  end   
 end
