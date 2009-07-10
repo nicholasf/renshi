@@ -7,7 +7,7 @@ To output data on the page stick a $ in front of your var. or expression
 $foo
 $Time.now
 
-If there's a space in your expression or you need formatting around your expression use ${}
+If there's a space in your expression or you need formatting it use ${}
 
 ${foo},$Time.now 
 
