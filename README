@@ -15,8 +15,6 @@ To insert code in your template use $[]
 
 $[foo = "hello world"]
 
-$foo
-
 Attribute Expressions
 ===================
 Renshi has a small library of expressions which can be inserted into HTML or XML elements as attributes.
