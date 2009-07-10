@@ -5,17 +5,17 @@ module Renshi
   # the document, which are finally compiled into Ruby.
   
   class Parser
-    STRING_END = "R_END" #maybe replace this with a funky unicode char
-    STRING_START = "R_START" #maybe replace this with a funky unicode char
+    STRING_END = "^R_END^" #maybe replace this with a funky unicode char
+    STRING_START = "^R_START^" #maybe replace this with a funky unicode char
     BUFFER_CONCAT_OPEN = "@output_buffer.concat(\""
     BUFFER_CONCAT_CLOSE = "\");"
     NEW_LINE = "@output_buffer.concat('\n');"
     
     #these symbols cannot be normally escaped, as we need to differentiate between &lt; as an
     #escaped string, to be left in the document, and < as a boolean operator
-    XML_LT = "R_LT"
-    XML_GT = "R_GT"
-    XML_AMP = "R_AMP"
+    XML_LT = "^R_LT^"
+    XML_GT = "^R_GT^"
+    XML_AMP = "^R_AMP^"
     
     def self.parse(xhtml)
       doc = Nokogiri::HTML.fragment(xhtml)
