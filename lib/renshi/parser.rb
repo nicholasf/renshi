@@ -26,7 +26,7 @@ module Renshi
       
       inner_html = doc.inner_html
       compiled = compile_to_buffer(inner_html) if inner_html
-      # puts "\n", compiled, "\n"
+       puts "\n", compiled, "\n"
       return compiled
     end
 
@@ -67,6 +67,8 @@ module Renshi
         if text[(idx + 1)..(idx + 1)] == "("
           #this may be jquery, etc. $(...)
           return text
+          
+          #${...}
         elsif text[(idx + 1)..(idx + 1)] == "{"
           begin
             closing_brace_idx = text.rindex("}")
@@ -77,6 +79,8 @@ module Renshi
           rescue Renshi::StandardError
             raise SyntaxError, "No closing brace: #{text[(idx +1)..-1]}", caller
           end
+          
+          #$[...]
         elsif text[(idx + 1)..(idx + 1)] == "["
           begin
             closing_brace_idx = text.rindex("]")
@@ -106,7 +110,7 @@ module Renshi
         end
         idx = next_statement_idx
       end       
-      
+
       return bits.join
     end
     
