@@ -2,7 +2,7 @@ Renshi is a templating language for Ruby which is unobtrusive in HTML and XHTML 
 
 $ Code
 ======
-To output data on the page stick a $ in front of your expression
+To output data on the page stick a $ in front of your var. or expression
 
 $foo
 $Time.now
@@ -11,7 +11,7 @@ If there's a space in your expression or you need formatting around your express
 
 ${foo},$Time.now 
 
-To insert code in your template use $[]
+To insert statements in your template use $[]
 
 $[foo = "hello world"]
 
@@ -24,7 +24,7 @@ r:expression_name="expression" - the expression value is treated as a Ruby expre
 
 Some expressions, such as r:each, use the quoted value to also hold parameter information.
 
-* Current Attribute Expressions
+Current Attribute Expressions
 * If 
 * Unless
 * Elsif 
