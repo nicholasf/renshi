@@ -80,18 +80,6 @@ but this is not:
   <div id="user_menu"> ... </div>
 </div>  
 
-but this is:
-
-<div id="menu" r:if="user.is_administrator?">
-  <div id="admin_menu"> ... </div>
-<div id="menu" r:else>
-  <div id="user_menu"> ... </div>
-</div>  
-<div id="register">
-  <div id="register"> ... </div>
-</div>
-
-
 * While
 
 <div r:while="foo != 2" id="content$foo">
