@@ -130,12 +130,9 @@ hello0
 hello99
 </div>
 
-
 Further elements will appear as I have time to make them or others want to contribute them. There isn't much to making them. 
 
 See renshi/lib/renshi/attribute_expressions for how they work.
-
-Planned element expressions:
 
 Other Rules
 ===========
