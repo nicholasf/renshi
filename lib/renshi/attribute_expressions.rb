@@ -3,6 +3,8 @@ require 'renshi/attribute_expressions/elsif'
 require 'renshi/attribute_expressions/else'
 require 'renshi/attribute_expressions/while'
 require 'renshi/attribute_expressions/for'
+require 'renshi/attribute_expressions/unless'
+require 'renshi/attribute_expressions/each'
 
 module Renshi
   module AttributeExpressions

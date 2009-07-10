@@ -3,9 +3,9 @@ require 'nokogiri'
 
 describe Renshi::Parser do      
   it "should evaluate r:unless(false)" do
-    doc = Nokogiri::HTML("<span r:unless='false'/>hello</span>")
-    compiled = deliver_compiled(doc.root)
-    puts compiled
-    eval(compiled, binding).should eql "hello"
+    doc = Nokogiri::HTML("<span id='red' r:unless='false'>hello</span>")
+    compiled = Renshi::Parser.parse(doc.root.to_s)
+    out = eval(compiled, binding)
+   (doc/"span[@id='red']").text.strip.should eql "hello"
   end   
 end
