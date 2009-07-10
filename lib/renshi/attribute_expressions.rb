@@ -19,6 +19,9 @@ module Renshi
       
       expression = encode_xml_entities(command[1].to_s)
       obj.evaluate(expression, node)
+      
+      #removes attribute after it's performed so it doesn't appear in end document
+      node.remove_attribute(command[0])
     end
     
     def self.encode_xml_entities(expression)

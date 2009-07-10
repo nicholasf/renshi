@@ -12,14 +12,12 @@ module Renshi
           if sibling_commands.first
             expression = sibling_commands.first[0][2..-1]
             if expression == "else" or expression == "elsif"
-              node.remove_attribute("r:if")
               return
             end
           end
         end
         
         node.close_clause("end")
-        node.remove_attribute("r:if")
       end
     end
   end
