@@ -2879,3 +2879,8 @@ Rendering rescues/layout (internal_server_error)
 Processing HelloController#index (for 127.0.0.1 at 2009-07-10 18:54:09) [GET]
 Rendering hello/index
 Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/hello]
+
+
+Processing HelloController#index (for 127.0.0.1 at 2009-07-10 18:56:23) [GET]
+Rendering hello/index
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/hello]
