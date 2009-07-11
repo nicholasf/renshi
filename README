@@ -7,7 +7,7 @@ To output data on the page stick a $ in front of your var. or expression
 $foo
 $Time.now
 
-If there's a space in your expression or you need formatting it use ${}
+If there's a space in your expression or you need formatting use ${}
 
 ${foo},$Time.now 
 
@@ -18,8 +18,6 @@ $[foo = "hello world"]
 $[if foo]
   $foo
 $[end]
-
-Whether you want to do the above or use attribute expressions is up to you ...
 
 Attribute Expressions
 ===================
@@ -144,9 +142,6 @@ $ values inside of attributes are only interpreted as Renshi variables for regul
 
 E.g. <div r:if="'abc' =~ /$abc/" id="content$foo"> the r:if statement would treat $ exactly as Ruby does, while the id attribute value is transformed.
 
-
-Miscellaneous
-=============
 To print a $ use $$, e.g. $$10.95 comes out as $10.95
 
 Renshi documents are appended with the suffix of .ren
