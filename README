@@ -15,10 +15,12 @@ To insert statements in your template use $[]
 
 $[foo = "hello world"]
 
+$[while 1]
+
 Attribute Expressions
 ===================
-Renshi has a small library of expressions which can be inserted into HTML or XML elements as attributes.
-Attribute expressions generally follow the form of 
+The point the $ syntax will give you everything ERB does, with less typing. But Renshi also has 'attribute expressions',
+which can be inserted into a HTML element as an attribute - e.g. <span r:if="user.is_administrator">...</span>. 
 
 r:expression_name="expression" - the expression value is treated as a Ruby expression .
 
@@ -176,11 +178,12 @@ Firstly, it doesn't need a reason. It's a fun project.
 
 But ...
 
-I've always found ERB to be a bit cumbersome - <%= is quite tiring to type out when you realise it could be much shorter. I used to think that Velocity, in Java, 
-was the most fun templating language I'd used, and I had wanted something equally as concise for Ruby.
+I've always found ERB to be a bit cumbersome - <%= is quite tiring to type out when you realise it could be much shorter. I used to think that Velocity, in Java, was the most fun templating language I'd used, and I had wanted something equally as concise for Ruby.
 
-A real need for it emerged in a project which relied upon an external design house handing us HTML. Converting it incessantly into HAML was nightmarish. A colleague 
-mentioned Genshi in Python as ideal, which was when the idea of Renshi was conceived.
+A real need for it emerged in a project which relied upon an external design house handing us HTML. Converting it incessantly into HAML was nightmarish. A colleague mentioned Genshi in Python as ideal, which was when the idea of Renshi was conceived.
+
+It should give the developer power to do what they want, without being restrictive. You can throw $ statements around the place in a document
+or use attribute expressions to preserve a strict xhtml layout.
 
 English to Japanese
 ===================
