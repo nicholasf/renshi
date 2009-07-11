@@ -23,7 +23,7 @@ Whether you want to do the above or use attribute expressions is up to you ...
 
 Attribute Expressions
 ===================
-The point the $ syntax will give you everything ERB does, with less typing. But Renshi also has 'attribute expressions',
+The $ syntax will give you everything ERB does, with less typing. But Renshi also has 'attribute expressions',
 which can be inserted into a HTML element as an attribute - e.g. <span r:if="user.is_administrator">...</span>. 
 
 r:expression_name="expression" - the expression value is treated as a Ruby expression .
