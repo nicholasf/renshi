@@ -15,7 +15,11 @@ To insert statements in your template use $[]
 
 $[foo = "hello world"]
 
-$[while 1]
+$[if foo]
+  $foo
+$[end]
+
+Whether you want to do the above or use attribute expressions is up to you ...
 
 Attribute Expressions
 ===================
