@@ -2884,3 +2884,23 @@ Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/hello]
 Processing HelloController#index (for 127.0.0.1 at 2009-07-10 18:56:23) [GET]
 Rendering hello/index
 Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/hello]
+
+
+Processing HelloController#index (for 127.0.0.1 at 2009-07-13 14:46:51) [GET]
+Rendering hello/index
+Completed in 31ms (View: 23, DB: 0) | 200 OK [http://localhost/hello]
+
+
+Processing HelloController#index (for 127.0.0.1 at 2009-07-13 14:47:16) [GET]
+Rendering hello/index
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/hello]
+
+
+Processing HelloController#index (for 127.0.0.1 at 2009-07-13 14:47:20) [GET]
+Rendering hello/index
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/hello]
+
+
+Processing HelloController#index (for 127.0.0.1 at 2009-07-13 14:47:20) [GET]
+Rendering hello/index
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/hello]

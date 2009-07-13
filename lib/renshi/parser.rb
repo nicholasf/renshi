@@ -63,13 +63,21 @@ module Renshi
       
       bits = []
       bits << text[0..(idx -1)] if idx != 0
+      
       while idx != nil do
-        if text[(idx + 1)..(idx + 1)] == "("
-          #this may be jquery, etc. $(...)
-          return text
+        next_char = text[(idx + 1)..(idx + 1)]
+
+        if next_char == "(" 
+          #this may be jquery, etc. $(...) 
+          end_statement_idx = (idx + 2)
+          bits << text[idx..(idx + 1)]    
+        elsif next_char == "$"
+          #an escaped $ - i.e. '$$'
+          end_statement_idx = (idx + 2)
+          bits << "$"
           
           #${...}
-        elsif text[(idx + 1)..(idx + 1)] == "{"
+        elsif next_char == "{"
           begin
             closing_brace_idx = text.rindex("}")
             statement_str = text[(idx + 2)..(closing_brace_idx -1)]
@@ -81,7 +89,7 @@ module Renshi
           end
           
           #$[...]
-        elsif text[(idx + 1)..(idx + 1)] == "["
+        elsif next_char == "["
           begin
             closing_brace_idx = text.rindex("]")
             statement_str = text[(idx + 2)..(closing_brace_idx -1)]
@@ -101,7 +109,7 @@ module Renshi
         end
 
         next_statement_idx = text.index("$", end_statement_idx)
-                
+        
         if next_statement_idx
           gap = text[end_statement_idx..(next_statement_idx -1)]
           bits << gap
