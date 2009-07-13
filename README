@@ -138,6 +138,10 @@ Renshi documents are appended with the suffix of .ren
 
 e.g. index.html.ren or index.ren 
 
+Installation
+============
+Renshi is hosted on Rubyforge so 'sudo gem install renshi'. Alternatively, use github to do what you want with it.
+
 
 Framework Integration
 =====================
@@ -147,18 +151,18 @@ Simply require the renshi gem in your code, and Renshi will make itself availabl
 
 There is a Rails 2.3.2 example app in the examples directory. Go there, start up the application, and visit http://localhost:3000/hello
 
-I'd welcome integrations for Sinatra and Merb or XYZ framework. See renshi/lib/renshi/frameworks 
+I'd welcome integrations for Sinatra and Merb or XYZ framework. See renshi/lib/renshi/frameworks (see below - How Fast Is It?)
 
 
 How Fast Is It? - Compilable Templates
 ======================================
-I don't know yet - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast. To a certain extent it's an irrelevant question,  
-given that Renshi converts .ren documents into compiled templates. This was written specifically for the Rails notion of compilable templates (see ActionView::TemplateHandlers::Compilable and Renshi::Frameworks::Rails).
+I don't know - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast. To a certain extent it's an irrelevant question,  
+given that Renshi compiles .ren documents into chunks of ruby code, which are kept in memory and reused. This was written specifically for the Rails notion of compilable templates (see ActionView::TemplateHandlers::Compilable and Renshi::Frameworks::Rails).
 
 ERB and HAML also do this (in fact I worked from the source code of both). It means, essentially, that a foo.html.ren document is compiled once
 into ruby, and each presentation of the template is then a matter of using the generated code (not reading the template).
 
-At some stage I might benchmark this raw ruby - but I've written with an eye on efficiency as it's generated and so far it seems very fast.
+At some stage I might benchmark this raw ruby - but I've written it with an eye on efficiency as it's generated and so far it seems very fast. If someone enjoys benchmarking then please jump in.
 
 When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want
 to use (see the spec.s for this). 
@@ -174,12 +178,6 @@ def interpret(file, context)
 end
 
 rendered_template = interpret("index.html.ren", binding)
-
-
-Installation
-============
-Renshi is hosted on Rubyforge so 'sudo gem install renshi'. Alternatively, use github to do what you want with it.
-
 
 Development
 ===========
@@ -197,8 +195,7 @@ I've always found ERB to be a bit cumbersome - <%= is quite tiring to type out w
 
 A real need for it emerged in a project which relied upon an external design house handing us HTML. Converting it incessantly into HAML was nightmarish. A colleague mentioned Genshi in Python as ideal, which was when the idea of Renshi was conceived.
 
-It should give the developer power to do what they want, without being restrictive. You can throw $ statements around the place in a document
-or use attribute expressions to preserve a strict xhtml layout.
+It should give the developer power to do what they want, without being restrictive. You can throw $ statements around the place in a document or use attribute expressions to preserve a strict xhtml layout.
 
 English to Japanese
 ===================
