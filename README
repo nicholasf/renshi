@@ -38,16 +38,12 @@ Current Attribute Expressions
 * Each
 
 * If
-<span r:if="true">hello</span>
-would render "<span>hello</span>"
+<span r:if="true">hello</span> would render "<span>hello</span>"
 
 <span r:if="false">goodbye!</span> will render "".
 
 * Unless
-<span r:unless="false">hello</span>
-would render "<span>hello</span>"
-
-<span r:unless="true">goodbye!</span> will render "".
+e.g. <span r:unless="false">hello</span>
 
 * Elsif
 
@@ -62,7 +58,6 @@ would render "<span>hello</span>"
 
 r:elsif and r:else must be adjacent (a sibling) to the element.
 
-
 For example, the below is fine, because the if and else statements are adjacent siblings in the tree of elements.
 
 <div id="menu" r:if="user.is_administrator?">
@@ -71,16 +66,6 @@ For example, the below is fine, because the if and else statements are adjacent 
   <div id="user_menu"> ... </div>
 </div>  
 
-but this is not:
-
-<div id="menu" r:if="user.is_administrator?">
-  <div id="admin_menu"> ... </div>
-<div id="register">
-  <div id="register"> ... </div>
-</div>
-<div id="menu" r:else>
-  <div id="user_menu"> ... </div>
-</div>  
 
 * While
 
