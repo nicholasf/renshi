@@ -2,6 +2,8 @@ module Renshi
   module Frameworks
     module Rails
       if defined? ActionView::TemplateHandler
+        #this is an old, first try of integrating with Rails, without compilable templates
+        #use it for older Rails versions (pre 2.2.0, I think). 
         class Plugin < ActionView::TemplateHandler
           def self.call(template)
             "#{name}.new(self).render(template, local_assigns)"
