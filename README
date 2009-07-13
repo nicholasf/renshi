@@ -103,8 +103,8 @@ hello99
 * Each
 The expression takes the object and then any arguments for the each block after a comma; so you can do anything with it that each supports.
 
-r:each="foos, |k,v|"
-r:each="foos, |foo|"..
+r:each="foos, |k,v|" to iterate over a hash
+r:each="foos, |foo|" to iterate over an array
 
 <div id="content$foo" r:each="foos, |foo|">
 hello$foo
