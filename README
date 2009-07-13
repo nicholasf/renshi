@@ -167,7 +167,7 @@ Thus, 100 requests for the template means 1 call to Renshi to generate the neces
 When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want
 to use (see the spec.s for this). 
 
-E.g.
+E.g. some helper method in the spec_helper.rb
 
 def compile_file(file)
   compiled = Renshi::Parser.parse(read_file(file))  
