@@ -150,6 +150,30 @@ There is a Rails 2.3.2 example app in the examples directory. Go there, start up
 I'd welcome integrations for Sinatra and Merb or XYZ framework. See renshi/lib/renshi/frameworks 
 
 
+How Fast Is It? - Compilable Templates
+======================================
+I don't know yet - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast. To a certain extent it's an irrelevant question,  
+given that Renshi converts .ren documents into compiled templates. This was written specifically for the Rails notion of compilable templates (see ActionView::TemplateHandlers::Compilable).
+
+ERB and HAML also do this (in fact I worked from the source code of both). It means, essentially, that a foo.html.ren document is compiled once
+into ruby, and each presentation of the template is then a matter of using the generated code (not reading the template).
+
+When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want
+to use (see the spec.s for this). 
+
+E.g.
+
+def compile_file(file)
+  compiled = Renshi::Parser.parse(read_file(file))  
+end
+
+def interpret(file, context)
+  eval(compile_file(file), context)
+end
+
+rendered_template = interpret("index.html.ren", binding)
+
+
 Installation
 ============
 Renshi is hosted on Rubyforge so 'sudo gem install renshi'. Alternatively, use github to do what you want with it.
