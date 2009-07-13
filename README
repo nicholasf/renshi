@@ -156,8 +156,7 @@ I'd welcome integrations for Sinatra and Merb or XYZ framework. See renshi/lib/r
 
 How Fast Is It? - Compilable Templates
 ======================================
-I don't know - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast. To a certain extent it's an irrelevant question,  
-given that Renshi compiles .ren documents into chunks of ruby code, which are kept in memory and reused. This was written specifically for the Rails notion of compilable templates (see ActionView::TemplateHandlers::Compilable and Renshi::Frameworks::Rails).
+I don't know - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast. To a certain extent it's an irrelevant question, given that Renshi compiles .ren documents into chunks of ruby code, which are kept in memory and reused. This was written specifically for the Rails notion of compilable templates (see ActionView::TemplateHandlers::Compilable and Renshi::Frameworks::Rails).
 
 ERB and HAML also do this (in fact I worked from the source code of both). It means, essentially, that a foo.html.ren document is compiled once into ruby, and each presentation of the template is then a matter of using the generated code (not reading the template).
 
@@ -191,7 +190,7 @@ But ...
 
 I've always found ERB to be a bit cumbersome - <%= is quite tiring to type out when you realise it could be much shorter. I used to think that Velocity, in Java, was the most fun templating language I'd used, and I had wanted something equally as concise for Ruby.
 
-A real need for it emerged in a project which relied upon an external design house handing us HTML. Converting it incessantly into HAML was nightmarish. A colleague mentioned Genshi in Python as ideal, which was when the idea of Renshi was conceived.
+A real need for it emerged in a project which relied upon an external design house handing us HTML. Converting it incessantly into HAML was a headache. A colleague mentioned Genshi in Python as ideal, which was when the idea of Renshi was conceived.
 
 It should give the developer power to do what they want, without being restrictive. You can throw $ statements around the place in a document or use attribute expressions to preserve a strict xhtml layout.
 
