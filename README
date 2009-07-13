@@ -120,7 +120,7 @@ hello99
 Further elements will appear as I have time to make them or others want to contribute them. 
 There isn't much to making them. If there's one you'd especially like, let me know on lighthouse and I'll see about adding it.
 
-The one thing is that I want to limit attribute expressions to one key and value combination on the element (everything fits into r:foo="expression").
+The one restriction is that I want to limit attribute expressions to one key and value combination on the element (everything fits into r:foo="expression").
 I want to avoid complexity like "<span r:foo='..' r:params="k,v" />" for example - see r:each for the workaround.
 
 See renshi/lib/renshi/attribute_expressions for how they work.
