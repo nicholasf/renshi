@@ -159,15 +159,13 @@ How Fast Is It? - Compilable Templates
 I don't know - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast. To a certain extent it's an irrelevant question,  
 given that Renshi compiles .ren documents into chunks of ruby code, which are kept in memory and reused. This was written specifically for the Rails notion of compilable templates (see ActionView::TemplateHandlers::Compilable and Renshi::Frameworks::Rails).
 
-ERB and HAML also do this (in fact I worked from the source code of both). It means, essentially, that a foo.html.ren document is compiled once
-into ruby, and each presentation of the template is then a matter of using the generated code (not reading the template).
+ERB and HAML also do this (in fact I worked from the source code of both). It means, essentially, that a foo.html.ren document is compiled once into ruby, and each presentation of the template is then a matter of using the generated code (not reading the template).
 
 Thus, 100 requests for the template means 1 call to Renshi to generate the necessary code. At some stage I might benchmark this raw ruby - but I've written it with an eye on efficiency as it's generated and so far it seems very fast. If someone enjoys benchmarking then please jump in.
 
-When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want
-to use (see the spec.s for this). 
+When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want to use (see the spec.s for this). 
 
-E.g. some helper method in the spec_helper.rb . For the integration you'd keep memory of which files had been compiled (only call compile_file once).
+E.g. some helper methods in the spec_helper.rb might get you started. For the integration you'd keep memory of which files had been compiled (only call compile_file once).
 
 def compile_file(file)
   compiled = Renshi::Parser.parse(read_file(file))  
