@@ -162,7 +162,7 @@ given that Renshi compiles .ren documents into chunks of ruby code, which are ke
 ERB and HAML also do this (in fact I worked from the source code of both). It means, essentially, that a foo.html.ren document is compiled once
 into ruby, and each presentation of the template is then a matter of using the generated code (not reading the template).
 
-At some stage I might benchmark this raw ruby - but I've written it with an eye on efficiency as it's generated and so far it seems very fast. If someone enjoys benchmarking then please jump in.
+This, 100 requests for the template means 1 call to Renshi to generate the necessary code. At some stage I might benchmark this raw ruby - but I've written it with an eye on efficiency as it's generated and so far it seems very fast. If someone enjoys benchmarking then please jump in.
 
 When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want
 to use (see the spec.s for this). 
