@@ -21,8 +21,7 @@ $[end]
 
 Attribute Expressions
 ===================
-The $ syntax will give you everything ERB does, with less typing. But Renshi also has 'attribute expressions',
-which can be inserted into a HTML element as an attribute - e.g. <span r:if="user.is_administrator">...</span>. 
+The $ syntax will give you everything ERB does, with less typing. But Renshi also has 'attribute expressions', which can be inserted into a HTML element as an attribute - e.g. <span r:if="user.is_administrator">...</span>. After Renshi::Parser interprets an attribute expression it removes it from the HTML output; the code is unobstrusive.
 
 r:expression_name="expression" - the expression value is treated as a Ruby expression .
 
@@ -160,7 +159,7 @@ I don't know - I've not benchmarked it yet. It's built solely on Nokogiri, which
 
 ERB and HAML also do this (in fact I worked from the source code of both). It means, essentially, that a foo.html.ren document is compiled once into ruby, and each presentation of the template is then a matter of using the generated code (not reading the template).
 
-Thus, 100 requests for the template means 1 call to Renshi to generate the necessary code. At some stage I might benchmark this raw ruby - but I've written it with an eye on efficiency as it's generated and so far it seems very fast. If someone enjoys benchmarking then please jump in.
+Thus, n requests for the template mean 1 call to Renshi to generate the necessary code, which is then reused. At some stage I might benchmark this raw ruby - but I've written it with an eye on efficiency as it's generated and so far it seems very fast. If someone enjoys benchmarking then please jump in.
 
 When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want to use (see the spec.s for this). 
 
