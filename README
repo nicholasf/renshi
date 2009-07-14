@@ -21,7 +21,7 @@ $[end]
 
 Attribute Expressions
 ===================
-The $ syntax will give you everything ERB does, with less typing. But Renshi also has 'attribute expressions', which can be inserted into a HTML element as an attribute - e.g. <span r:if="user.is_administrator">...</span>. After Renshi::Parser interprets an attribute expression it removes it from the HTML output; the code is unobstrusive.
+The $ syntax will give you everything ERB does, with less typing. But Renshi also has 'attribute expressions', which can be inserted into a HTML element as an attribute - e.g. <span r:if="user.is_administrator">...</span>. After Renshi::Parser interprets an attribute expression it removes it from the HTML output; the code is unobtrusive.
 
 r:expression_name="expression" - the expression value is treated as a Ruby expression .
 
