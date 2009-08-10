@@ -19,18 +19,44 @@ module Renshi
     
     def self.parse(xhtml)
       doc = Nokogiri::HTML.fragment(xhtml)
+      
+      parser = self.new(doc)
+      parser.parse
 
-      doc.children.each do |node|
+      # puts "* - [#{doc.to_s}]"
+      # 
+      # doc.children.each do |node|
+      #  transform_node(node)
+      # end      
+      # 
+      # puts "** - [#{doc.to_s}]"
+      # 
+      # inner_html = doc.inner_html
+      # compiled = compile_to_buffer(inner_html) if inner_html
+      #  # puts "\n", compiled, "\n"
+      # return compiled
+    end
+    
+    def initialize(nokogiri_node)
+      @doc = nokogiri_node
+    end
+    
+    def parse
+      puts "* - [#{@doc.to_s}]"
+
+      @doc.children.each do |node|
        transform_node(node)
       end      
       
-      inner_html = doc.inner_html
+      puts "** - [#{@doc.to_s}]"
+
+      inner_html = @doc.inner_html
       compiled = compile_to_buffer(inner_html) if inner_html
        # puts "\n", compiled, "\n"
       return compiled
     end
 
-    def self.transform_node(node)
+    def transform_node(node)
       if node.attributes
         expressions = node.commands
         for expression in expressions 
@@ -52,12 +78,13 @@ module Renshi
       if node.text?
         compiled = compile(node.text)
         node.content = compiled if compiled
+        # debugger
       end
 
       node.children.each {|child| transform_node(child)}
     end
     
-    def self.compile(text)
+    def compile(text)
       idx = text.index("$")
       return text if idx.nil?
       
@@ -81,8 +108,11 @@ module Renshi
           begin
             closing_brace_idx = text.rindex("}")
             statement_str = text[(idx + 2)..(closing_brace_idx -1)]
+            
+            # puts "* [#{statement_str}]"
             statement = Renshi::Statement.new(statement_str)
             bits << statement.compile_to_print!
+            # puts "** - [#{bits}]"
             end_statement_idx = closing_brace_idx + 1
           rescue Renshi::StandardError
             raise SyntaxError, "No closing brace: #{text[(idx +1)..-1]}", caller
@@ -119,16 +149,18 @@ module Renshi
         idx = next_statement_idx
       end       
 
+puts "--- #{bits.join}"
+
       return bits.join
     end
     
-    def self.compile_to_buffer(str)
+    def compile_to_buffer(str)
       compiled = "@output_buffer ='';" << BUFFER_CONCAT_OPEN      
       str = compile_print_flags(str)    
       compiled = "#{compiled}#{str}" << BUFFER_CONCAT_CLOSE
     end
     
-    def self.compile_print_flags(str)
+    def compile_print_flags(str)
       #now we parse for RENSHI::STRING_END and RENSHI::STRING_START
       #and ensure natural strings are buffered
       str.gsub!("\"", "\\\"")
