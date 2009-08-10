@@ -46,6 +46,14 @@ describe Renshi::Parser do
       (html/"div[@id='content']").text.strip.should =~ /1, 2/      
     end
     
+    it "should understand double quotations marks within ruby code!" do
+      #${link_to "alter this template", edit_cms_page_template_path(PageTemplate.find_by_file_name("default.html.erb"))}       
+      raw = compile_file("data/quots2.ren")
+      html = eval(raw, binding)
+      html = N(html)
+      (html/"div[@id='content']").text.strip.should =~ /1, 2/      
+      (html/"div[@id='content2']").text.strip.should =~ /a, 2/      
+    end
 
     it "should understand double quotations marks within ruby code! 2" do
       doc = Nokogiri::HTML(%Q!<p>${foo "1", foo("3", "4")}</p>!)
