@@ -54,7 +54,7 @@ describe Renshi::Parser do
       (html/"div[@id='content']").text.strip.should =~ /1, 2/      
       (html/"div[@id='content2']").text.strip.should =~ /a, 2/      
     end
-
+    
     it "should understand double quotations marks within ruby code! 2" do
       doc = Nokogiri::HTML(%Q!<p>${foo "1", foo("3", "4")}</p>!)
       
@@ -64,4 +64,31 @@ describe Renshi::Parser do
       node = body.children.first
       eval(deliver_compiled(node), binding).should eql "1, 3, 4"
     end
+    
+    
+    #no need to test for inner braces - the algorithm ensures the structure of the statement between the ${ and rightmost } is passed in!
+    # def display(opts)
+    #   str = ""
+    #   opts.each_value do |v|
+    #     
+    #     if v.class == Hash 
+    #       str = display(v)
+    #     else        
+    #       str << v
+    #     end
+    #     str << " "
+    #   end
+    #   
+    #   return str.strip
+    # end
+    #     
+    # it "should handle inner braces" do
+    #   raw = compile_file("data/inner_braces.ren")
+    #   
+    #   puts raw
+    #   debugger
+    #   html = eval(raw, binding)
+    #   html = N(html)
+    #   (html/"div[@id='content']").text.strip.should =~ /1 flew over the cuckoo's nest/            
+    # end
 end

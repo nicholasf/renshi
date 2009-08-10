@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <div id="content">
+      ${foo "1", "2"}
+    </div>
+    <div id="content2">
+      ${foo "a", "2"}
+    </div>    
+  </body>
+</html>
