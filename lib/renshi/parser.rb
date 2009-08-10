@@ -10,7 +10,8 @@ module Renshi
     BUFFER_CONCAT_OPEN = "@output_buffer.concat(\""
     BUFFER_CONCAT_CLOSE = "\");"
     NEW_LINE = "@output_buffer.concat('\n');"
-    INSTRUCTION = "^R_INSTR_"
+    INSTRUCTION_START = "^R_INSTR_IDX_START^"
+    INSTRUCTION_END = "^R_INSTR_IDX_END^"
     
     #these symbols cannot be normally escaped, as we need to differentiate between &lt; as an
     #escaped string, to be left in the document, and < as a boolean operator
@@ -23,19 +24,6 @@ module Renshi
       
       parser = self.new(doc)
       parser.parse
-
-      # puts "* - [#{doc.to_s}]"
-      # 
-      # doc.children.each do |node|
-      #  transform_node(node)
-      # end      
-      # 
-      # puts "** - [#{doc.to_s}]"
-      # 
-      # inner_html = doc.inner_html
-      # compiled = compile_to_buffer(inner_html) if inner_html
-      #  # puts "\n", compiled, "\n"
-      # return compiled
     end
     
     def initialize(nokogiri_node)
@@ -45,13 +33,9 @@ module Renshi
     end
     
     def parse
-      puts "* - [#{@doc.to_s}]"
-
       @doc.children.each do |node|
        transform_node(node)
       end      
-      
-      puts "** - [#{@doc.to_s}]"
 
       inner_html = @doc.inner_html
       compiled = compile_to_buffer(inner_html) if inner_html
@@ -82,12 +66,11 @@ module Renshi
         compiled = compile(node.text)
         if compiled
           @instructions << compiled
-          key = "#{INSTRUCTION}#{@instr_idx}"
-          @instr_index = @instr_index + 1
+          key = "#{INSTRUCTION_START}#{@instr_idx}#{INSTRUCTION_END}"
+          @instr_idx = @instr_idx + 1
           # node.content = compiled if compiled
           node.content = key
         end
-        # debugger
       end
 
       node.children.each {|child| transform_node(child)}
@@ -117,11 +100,8 @@ module Renshi
           begin
             closing_brace_idx = text.rindex("}")
             statement_str = text[(idx + 2)..(closing_brace_idx -1)]
-            
-            # puts "* [#{statement_str}]"
             statement = Renshi::Statement.new(statement_str)
             bits << statement.compile_to_print!
-            # puts "** - [#{bits}]"
             end_statement_idx = closing_brace_idx + 1
           rescue Renshi::StandardError
             raise SyntaxError, "No closing brace: #{text[(idx +1)..-1]}", caller
@@ -158,8 +138,6 @@ module Renshi
         idx = next_statement_idx
       end       
 
-puts "--- #{bits.join}"
-
       return bits.join
     end
     
@@ -173,17 +151,28 @@ puts "--- #{bits.join}"
       #now we parse for RENSHI::STRING_END and RENSHI::STRING_START
       #and ensure natural strings are buffered
       str.gsub!("\"", "\\\"")
-      str.gsub!(STRING_END, BUFFER_CONCAT_CLOSE)
-      str.gsub!(STRING_START, BUFFER_CONCAT_OPEN)
       str.gsub!(XML_GT, ">")
       str.gsub!(XML_LT, "<")
       str.gsub!(XML_AMP, "&")
       
-      #restore instructions in the string
-      str.each(INSTRUCTION) do |instr|
-        puts "&& - #{instr}"
+      #restore instructions in the string      
+      bits = []
+      str.split(INSTRUCTION_START).each do |bit|
+        if bit.index(INSTRUCTION_END)
+          index = bit[0..0] 
+          instruction = @instructions[index.to_i]
+          
+          bit.gsub!("#{index}#{INSTRUCTION_END}", instruction)
+        end
+        
+        bits << bit
       end
       
+      str = bits.join
+      
+      str.gsub!(STRING_END, BUFFER_CONCAT_CLOSE)
+      str.gsub!(STRING_START, BUFFER_CONCAT_OPEN)
+
       return str
     end
   end

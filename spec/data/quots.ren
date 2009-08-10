@@ -1,0 +1,7 @@
+<html>
+  <body>
+    <div id="content">
+      ${foo "1", "2"}
+    </div>
+  </body>
+</html>
