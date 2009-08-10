@@ -5,11 +5,12 @@ module Renshi
   # the document, which are finally compiled into Ruby.
   
   class Parser
-    STRING_END = "^R_END^" #maybe replace this with a funky unicode char
-    STRING_START = "^R_START^" #maybe replace this with a funky unicode char
+    STRING_END = "^R_END" #maybe replace this with a funky unicode char
+    STRING_START = "^R_START" #maybe replace this with a funky unicode char
     BUFFER_CONCAT_OPEN = "@output_buffer.concat(\""
     BUFFER_CONCAT_CLOSE = "\");"
     NEW_LINE = "@output_buffer.concat('\n');"
+    INSTRUCTION = "^R_INSTR_"
     
     #these symbols cannot be normally escaped, as we need to differentiate between &lt; as an
     #escaped string, to be left in the document, and < as a boolean operator
@@ -39,6 +40,8 @@ module Renshi
     
     def initialize(nokogiri_node)
       @doc = nokogiri_node
+      @instructions = []
+      @instr_idx = 0
     end
     
     def parse
@@ -77,7 +80,13 @@ module Renshi
       #compile text in nodes, e.g. <p>*</p>
       if node.text?
         compiled = compile(node.text)
-        node.content = compiled if compiled
+        if compiled
+          @instructions << compiled
+          key = "#{INSTRUCTION}#{@instr_idx}"
+          @instr_index = @instr_index + 1
+          # node.content = compiled if compiled
+          node.content = key
+        end
         # debugger
       end
 
@@ -169,6 +178,11 @@ puts "--- #{bits.join}"
       str.gsub!(XML_GT, ">")
       str.gsub!(XML_LT, "<")
       str.gsub!(XML_AMP, "&")
+      
+      #restore instructions in the string
+      str.each(INSTRUCTION) do |instr|
+        puts "&& - #{instr}"
+      end
       
       return str
     end
