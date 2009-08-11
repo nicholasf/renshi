@@ -23,7 +23,10 @@ module Renshi
       doc = Nokogiri::HTML.fragment(xhtml)
       
       parser = self.new(doc)
-      parser.parse
+      out = parser.parse
+      puts out
+      
+      return out
     end
     
     def initialize(nokogiri_node)
@@ -75,7 +78,8 @@ module Renshi
 
       node.children.each {|child| transform_node(child)}
     end
-    
+ 
+
     def compile(text)
       idx = text.index("$")
       return text if idx.nil?
@@ -85,8 +89,10 @@ module Renshi
       
       while idx != nil do
         next_char = text[(idx + 1)..(idx + 1)]
-
-        if next_char == "(" 
+    
+        if next_char == " "          
+          raise SyntaxError, "Floating $ - use $$ to output '$': #{text[(idx +1)..-1]}", caller
+        elsif next_char == "(" 
           #this may be jquery, etc. $(...) 
           end_statement_idx = (idx + 2)
           bits << text[idx..(idx + 1)]    
@@ -98,25 +104,27 @@ module Renshi
           #${...}
         elsif next_char == "{"
           begin
-            closing_brace_idx = text.rindex("}")
+            #scan for the next $ in this block
+            closing_brace_idx = close_of_phrase_ending_with("}", text, idx)
             statement_str = text[(idx + 2)..(closing_brace_idx -1)]
             statement = Renshi::Statement.new(statement_str)
             bits << statement.compile_to_print!
             end_statement_idx = closing_brace_idx + 1
-          rescue Renshi::StandardError
-            raise SyntaxError, "No closing brace: #{text[(idx +1)..-1]}", caller
+          rescue StandardError
+            raise SyntaxError, "No closing brace: #{text}", caller
           end
           
           #$[...]
         elsif next_char == "["
           begin
+
             closing_brace_idx = text.rindex("]")
             statement_str = text[(idx + 2)..(closing_brace_idx -1)]
             statement = Renshi::Statement.new(statement_str)
             bits << statement.compile_to_expression!
             end_statement_idx = closing_brace_idx + 1
-          rescue Renshi::StandardError
-            raise SyntaxError, "No closing bracket: #{text[(idx +1)..-1]}", caller
+          rescue StandardError
+            raise SyntaxError, "No closing bracket: #{text}", caller
           end          
         else #$foo
           words = text[(idx +1)..-1].split(/\s/)
@@ -126,7 +134,7 @@ module Renshi
           bits << statement.compile_to_print!
           end_statement_idx = (words.first.length) + 1 + idx
         end
-
+    
         next_statement_idx = text.index("$", end_statement_idx)
         
         if next_statement_idx
@@ -137,8 +145,21 @@ module Renshi
         end
         idx = next_statement_idx
       end       
-
+    
       return bits.join
+    end
+
+    
+    def close_of_phrase_ending_with(char, text, idx)
+      phrase_end = (text[(idx + 1)..-1].index("$")) 
+      
+      if phrase_end.nil?
+        phrase_end = text.length 
+      else
+        phrase_end = phrase_end + idx
+      end
+      closing_brace_idx = text[idx...phrase_end].rindex(char) + idx
+      return closing_brace_idx
     end
     
     def compile_to_buffer(str)
@@ -148,6 +169,9 @@ module Renshi
     end
     
     def compile_print_flags(str)
+      
+      puts "\n raw[#{str}] \n"
+      
       #now we parse for RENSHI::STRING_END and RENSHI::STRING_START
       #and ensure natural strings are buffered
       str.gsub!("\"", "\\\"")
