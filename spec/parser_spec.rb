@@ -64,7 +64,7 @@ describe Renshi::Parser do
       node = body.children.first
       eval(deliver_compiled(node), binding).should eql "1, 3, 4"
     end
-
+    
     it "should understand multiple statements on the same line" do    
       raw = compile_file("data/multiple_statements.ren")
       html = eval(raw, binding)

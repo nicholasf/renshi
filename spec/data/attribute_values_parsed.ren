@@ -1,4 +1,4 @@
 <body>
-  $[$i = 1] 
+  $[i = 1] 
   <div id='content$i'>hello</div>
 <body>
