@@ -1,0 +1,7 @@
+<html>
+  <body>
+    <div id="content">
+      ${display({:a => "1", :b =>  "flew", :c =>  "over", {:d => "the", :e => "cuckoo's"},  :f => "nest"})}
+    </div>
+  </body>
+</html>

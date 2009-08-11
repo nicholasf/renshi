@@ -84,13 +84,20 @@ describe Renshi::Parser do
     
     
     it "should interpret all Renshi instructions and remove them from the document" do
-        raw = compile_file("data/example1.ren")
-        html = eval(raw, binding)
+      raw = compile_file("data/example1.ren")
+      html = eval(raw, binding)
 
-        html.should_not =~/R_INSTR_IDX_START/
-        html.should_not =~/R_INSTR_IDX_END/
-        html.should_not =~/@output_buffer.concat/
-        html.should_not =~/R_START/
-        html.should_not =~/R_END/
+      html.should_not =~/R_INSTR_IDX_START/
+      html.should_not =~/R_INSTR_IDX_END/
+      html.should_not =~/@output_buffer.concat/
+      html.should_not =~/R_START/
+      html.should_not =~/R_END/
+    end
+    
+    it "should not remove the header of the document" do
+      raw = compile_file("data/example1.ren")
+      html = eval(raw, binding)
+      
+      html.should =~/head/
     end
 end

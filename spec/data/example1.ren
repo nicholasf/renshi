@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>$Time.now</title>
+    ${Time.now}
+  </head>
+  <body style="margin: 0; padding: 0; text-align: center;">
+    $Time.now
+    <div id="wrapper" style="width: 700px; margin: 0 auto; text-align: left; padding: 30px">
+      Breadcrumbs: $Time.now
+      Main Menu: $Time.now
+      <h1>$Time.now</h1>
+      <p>BrowserCMS has been installed successfully.</p> 
+
+      <h2>Getting Started</h2>
+      <p>To start building your site, you can either ${foo "alter this template"} or ${foo "create a new one"}.  You will be prompted to login with the credentials provided during the install process.  To change which template the pages use, you can click the 'Edit Properties' button above, and choose a different template. After all pages in the site, use the new template, you can safely delete this one.</p>
+
+      $Time.now
+    </div>
+  </body>
+</html>
