@@ -179,8 +179,9 @@ module Renshi
       #restore instructions in the string      
       bits = []
       str.split(INSTRUCTION_START).each do |bit|
-        if bit.index(INSTRUCTION_END)
-          index = bit[0..0] 
+        instr_end = bit.index(INSTRUCTION_END)
+        if instr_end
+          index = bit[0...instr_end] 
           instruction = @instructions[index.to_i]
           
           bit.gsub!("#{index}#{INSTRUCTION_END}", instruction)
