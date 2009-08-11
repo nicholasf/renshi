@@ -24,7 +24,6 @@ module Renshi
       
       parser = self.new(doc)
       out = parser.parse
-      puts out
       
       return out
     end
@@ -118,7 +117,8 @@ module Renshi
         elsif next_char == "["
           begin
 
-            closing_brace_idx = text.rindex("]")
+            # closing_brace_idx = text.rindex("]")
+            closing_brace_idx = close_of_phrase_ending_with("]", text, idx)
             statement_str = text[(idx + 2)..(closing_brace_idx -1)]
             statement = Renshi::Statement.new(statement_str)
             bits << statement.compile_to_expression!
@@ -169,9 +169,6 @@ module Renshi
     end
     
     def compile_print_flags(str)
-      
-      puts "\n raw[#{str}] \n"
-      
       #now we parse for RENSHI::STRING_END and RENSHI::STRING_START
       #and ensure natural strings are buffered
       str.gsub!("\"", "\\\"")
