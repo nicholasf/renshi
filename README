@@ -36,6 +36,8 @@ Current Attribute Expressions (see below for an explanation of each)
 * For
 * Each
 
+Combinations
+============
 Attribute expressions can be combined on elements, and are interpreted in the order of appearance.
 
 For e.g.
@@ -49,6 +51,8 @@ For e.g.
 </ul>
 
 
+Descriptions
+============
 
 * If
 <span r:if="true">hello</span> would render "<span>hello</span>"
