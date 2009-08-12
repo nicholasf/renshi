@@ -20,3 +20,7 @@
     </div>
   </body>
 </html>
+
+<!-- possibility
+  $div{id='wrapper' style="width: 700px; margin: 0 auto; text-align: left; padding: 30px"}[ $p[Breadcrumbs $render_breadcrumbs]]
+  -->

@@ -27,7 +27,7 @@ r:expression_name="expression" - the expression value is treated as a Ruby expre
 
 Some expressions, such as r:each, use the quoted value to also hold parameter information.
 
-Current Attribute Expressions
+Current Attribute Expressions (see below for an explanation of each)
 * If 
 * Unless
 * Elsif 
@@ -35,6 +35,20 @@ Current Attribute Expressions
 * While
 * For
 * Each
+
+Attribute expressions can be combined on elements, and are interpreted in the order of appearance.
+
+For e.g.
+
+<ul>
+  <li r:for="section in @section.sections" r:if="(section.groups & current_user.groups).any?">$section.name
+    <ul>
+      <li r:for="page in section.pages">${link_to page.name, "#{page.path}"}</li>
+    </ul>
+  </li>  
+</ul>
+
+
 
 * If
 <span r:if="true">hello</span> would render "<span>hello</span>"
