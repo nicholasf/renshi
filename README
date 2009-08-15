@@ -7,9 +7,9 @@ To output data on the page stick a $ in front of your var. or expression
 $foo
 $Time.now
 
-If there's a space in your expression or you need formatting use ${}
+If there's a space in your expression use ${}
 
-${foo},$Time.now 
+${some_function "takes this string as input"}
 
 To insert statements in your template use $[]
 
