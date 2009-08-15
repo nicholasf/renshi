@@ -4,8 +4,7 @@ $ Code
 ======
 To output data on the page stick a $ in front of your var. or expression
 
-$foo
-$Time.now
+$foo, $Time.now
 
 If there's a space in your expression use ${}
 
