@@ -31,12 +31,12 @@ Attribute Expressions
 ===================
 Renshi also has 'attribute expressions', which can be inserted into a HTML element as an attribute - e.g. <span r:if="user.is_administrator">...</span>. After Renshi interprets an attribute expression it removes it from the HTML output.
 
-Attribute expressions can be combined on elements and are interpreted in the order of appearance, allowing you to build chunks of inline code which apply to the HTML element (and any elements within it).
+Attribute expressions can be combined on elements and are interpreted in the order of appearance, allowing you to build chunks of inline code which apply to the HTML element (and anything within it).
 
 For e.g.
 
 <ul>
-  <li r:for="section in @section.sections" r:if="(section.groups & current_user.groups).any?">$section.name
+  <li r:for="section in @section.sections" r:if="(section.groups & current_user.groups).any?" id="section_$section.name">$section.name
     <ul>
       <li r:for="page in section.pages">${link_to page.name, "#{page.path}"}</li>
     </ul>
