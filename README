@@ -4,11 +4,11 @@ $ Code
 ======
 To output data on the page stick a $ in front of your var. or expression
 
-$foo, $Time.now
+$foo, $Time.now  (ERB equivalent - <%= foo %>, <%= Time.now %>)
 
 If there's a space in your expression use ${}
 
-${some_function "takes this string as input"}
+${some_function "takes this string as input"} (ERB equiv. - <%= some_function "takes this string as input" %>)
 
 To insert statements in your template use $[]
 
@@ -17,6 +17,15 @@ $[foo = "hello world"]
 $[if foo]
   $foo
 $[end]
+
+
+(ERB equiv.)
+
+<% foo = "Hello World" %>
+
+<% if foo %>
+  <%= foo %>
+<% end %>
 
 Attribute Expressions
 ===================
@@ -37,7 +46,7 @@ Current Attribute Expressions (see below for an explanation of each)
 
 Combinations
 ============
-Attribute expressions can be combined on elements, and are interpreted in the order of appearance.
+Attribute expressions can be combined on elements and are interpreted in the order of appearance, allowing you to build chunks of inline code which apply to the HTML element.
 
 For e.g.
 
