@@ -31,22 +31,7 @@ Attribute Expressions
 ===================
 The $ syntax will give you everything ERB does, with less typing. But Renshi also has 'attribute expressions', which can be inserted into a HTML element as an attribute - e.g. <span r:if="user.is_administrator">...</span>. After Renshi::Parser interprets an attribute expression it removes it from the HTML output; the code is unobtrusive.
 
-r:expression_name="expression" - the expression value is treated as a Ruby expression .
-
-Some expressions, such as r:each, use the quoted value to also hold parameter information.
-
-Current Attribute Expressions (see below for an explanation of each)
-* If 
-* Unless
-* Elsif 
-* Else
-* While
-* For
-* Each
-
-Combinations
-============
-Attribute expressions can be combined on elements and are interpreted in the order of appearance, allowing you to build chunks of inline code which apply to the HTML element.
+Attribute expressions can be combined on elements and are interpreted in the order of appearance, allowing you to build chunks of inline code which apply to the HTML element (and any elements within it).
 
 For e.g.
 
@@ -59,8 +44,15 @@ For e.g.
 </ul>
 
 
-Descriptions
-============
+Attribute Expression Library
+============================
+* If 
+* Unless
+* Elsif 
+* Else
+* While
+* For
+* Each
 
 * If
 <span r:if="true">hello</span> would render "<span>hello</span>"
