@@ -29,7 +29,7 @@ $[end]
 
 Attribute Expressions
 ===================
-Renshi has 'attribute expressions', which can be inserted into a HTML element as an attribute. After Renshi interprets an attribute expression it removes it from the HTML output.
+Renshi has 'attribute expressions', which can be inserted into a HTML element as an attribute. 
 
 Attribute expressions can be combined on elements and are interpreted in the order of appearance, allowing you to build chunks of inline code which apply to the HTML element (and anything within it).
 
@@ -42,6 +42,7 @@ For e.g.
   </li>  
 </ul>
 
+After Renshi interprets an attribute expression it removes it from the HTML output.
 
 Attribute Expression Library
 ============================
