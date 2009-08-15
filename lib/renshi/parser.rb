@@ -120,7 +120,6 @@ module Renshi
           #$[...]
         elsif next_char == "["
           begin
-
             # closing_brace_idx = text.rindex("]")
             closing_brace_idx = close_of_phrase_ending_with("]", text, idx)
             statement_str = text[(idx + 2)..(closing_brace_idx -1)]
@@ -131,7 +130,9 @@ module Renshi
             raise SyntaxError, "No closing bracket: #{text}", caller
           end          
         else #$foo
-          words = text[(idx +1)..-1].split(/\s/)
+          
+          #divide with a delimiter for anything which is not a name character - alpa-numeric and underscore
+          words = text[(idx +1)..-1].split(/\W/)
           words[0] = "'$'" if words[0] == "$"
           statement_str = words.first
           statement = Statement.new(statement_str)
