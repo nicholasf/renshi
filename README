@@ -1,5 +1,9 @@
 Renshi is a templating language for Ruby which is unobtrusive in HTML and XHTML structures. It is conciser than ERB and offers 'attribute expressions', letting you build sets of inline Ruby instructions upon HTML elements.
 
+Renshi templates are appended with the suffix of .ren
+
+e.g. index.html.ren or index.ren 
+
 $ Ruby Insertion
 ================
 To output data on the page stick a $ in front of your var. or expression
@@ -43,6 +47,8 @@ For e.g.
 </ul>
 
 After Renshi interprets an attribute expression it removes it from the HTML output.
+
+$ symbols inside of attribute values are interpreted for regular HTML attributes (they're unneeded for renshi attributes).
 
 Attribute Expression Library
 ============================
@@ -145,15 +151,7 @@ See renshi/lib/renshi/attribute_expressions for how they work.
 
 Other Rules
 ===========
-$ values inside of attributes are only interpreted as Renshi variables for regular attributes (not renshi attributes).
-
-E.g. <div r:if="'abc' =~ /$abc/" id="content$foo"> the r:if statement would treat $ exactly as Ruby does, while the id attribute value is transformed.
-
 To print a $ use $$, e.g. $$10.95 comes out as $10.95
-
-Renshi documents are appended with the suffix of .ren
-
-e.g. index.html.ren or index.ren 
 
 Installation
 ============
