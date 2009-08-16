@@ -1,8 +1,6 @@
-Renshi is a templating language for Ruby which is unobtrusive in HTML and XHTML structures. It is conciser than ERB and offers 'attribute expressions', letting you build sets of inline Ruby instructions upon HTML elements. 
+Renshi is a templating language for Ruby which is unobtrusive in HTML and XHTML structures. It is conciser than ERB and offers 'attribute expressions', letting you build sets of inline Ruby instructions upon HTML elements. Renshi was designed to give the Ruby dev. flexibility when creating templates; the use of attribute expressions creates clean XHTML, its $ interpretation can be used however the dev. wishes.
 
-Renshi templates are appended with the suffix of .ren
-
-e.g. index.html.ren or index.ren 
+Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren 
 
 $ Ruby Insertion
 ================
@@ -22,14 +20,7 @@ $[if foo]
   $foo
 $[end]
 
-
-(ERB equiv.)
-
-<% foo = "Hello World" %>
-
-<% if foo %>
-  <%= foo %>
-<% end %>
+(The ERB equiv. should be obvious by now.)
 
 Attribute Expressions
 ===================
@@ -39,7 +30,7 @@ Attribute expressions can be combined on elements and are interpreted in the ord
 
 For e.g.
 <ul>
-  <li r:for="section in @section.sections" r:if="(section.groups & current_user.groups).any?" id="section_$section.name">$section.name
+  <li r:for="section in @section.sections" r:if="authorized?(current_user, section)?" id="section_$section.name">$section.name
     <ul>
       <li r:for="page in section.pages">${link_to page.name, "#{page.path}"}</li>
     </ul>
