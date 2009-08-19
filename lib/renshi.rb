@@ -9,7 +9,7 @@ require 'renshi/attribute_expressions'
 require 'renshi/frameworks'
 
 module Renshi
-  VERSION="0.1.2"
+  VERSION="0.1.3"
   
   class SyntaxError < StandardError; end
 end
