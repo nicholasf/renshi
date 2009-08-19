@@ -109,5 +109,43 @@ describe Renshi::Parser do
       html = eval(raw, binding)
       
       html.should eql "hello world"
-    end    
+    end
+
+class Test
+  def bar
+    return "hello world"
+  end
+end
+    
+    it "should interpret single $foo.bar using \W" do
+      raw = Renshi::Parser.parse("$foo.bar")
+      foo = Test.new
+      html = eval(raw, binding)
+      
+      html.should eql "hello world"
+    end
+    
+    it "should interpret single $1+1 and $2*2 and $3/3 and $4-4 using \W" do
+      raw = Renshi::Parser.parse("$1+1")
+      foo = Test.new
+      html = eval(raw, binding)  
+      html.should eql "2"
+      
+      raw = Renshi::Parser.parse("$2*2")
+      foo = Test.new
+      html = eval(raw, binding)  
+      html.should eql "4"
+
+      raw = Renshi::Parser.parse("$3/3")
+      foo = Test.new
+      html = eval(raw, binding)  
+      html.should eql "1"
+
+      raw = Renshi::Parser.parse("$4-4")
+      foo = Test.new
+      html = eval(raw, binding)  
+      html.should eql "0"
+    end
+    
+    
 end
