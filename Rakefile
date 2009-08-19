@@ -8,7 +8,7 @@ require 'spec/rake/spectask'
 
 gem_spec = Gem::Specification.new do |s| 
   s.name = "renshi"
-  s.version = "0.1.3"
+  s.version = "0.1.5"
   s.author = "Nicholas Faiz"
   s.email = "nicholas.faiz@gmail.com"
   s.homepage = "http://treefallinginthewoods.com"
