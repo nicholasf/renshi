@@ -28,7 +28,7 @@ Attribute expressions can be combined on elements and are interpreted in the ord
 
 For e.g.
 <ul>
-  <li r:for="section in @section.sections" r:if="authorized?(current_user, section)?" id="section_$section.name">$section.name
+  <li r:for="section in @section.sections" r:if="authorized?(current_user, section)" id="section_$section.name">$section.name
     <ul>
       <li r:for="page in section.pages">${link_to page.name, "#{page.path}"}</li>
     </ul>
