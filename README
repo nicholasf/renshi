@@ -1,26 +1,24 @@
-Renshi is a templating language for Ruby which is unobtrusive in HTML and XHTML structures. It is conciser than ERB and offers 'attribute expressions', letting you build sets of inline Ruby instructions upon HTML elements. Renshi was designed to give the Ruby dev. flexibility when creating templates; the use of attribute expressions creates well-formed XHTML, $ interpretation can be used however the dev. wishes.
+Renshi is a templating language for Ruby which is unobtrusive in HTML and XHTML structures. It has, a conciser syntax than ERB and 'attribute expression' which let you build sets of inline Ruby instructions upon HTML elements.
 
 Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren 
 
+Renshi was designed to give the Ruby dev. flexibility when creating templates; the use of attribute expressions creates well-formed XHTML, $ interpretation can be used however the dev. wishes.
+
 $ Ruby Insertion
 ================
-To output data on the page stick a $ in front of your var. or expression
+Very much like ERB.
 
-$foo, $Time.now  (ERB equivalent - <%= foo %>, <%= Time.now %>)
+Use $ or ${..} where you would use <%= ... %> . The single $ is used for one word phrases.
 
-If there's a space in your expression use ${}
+$foo[0] - ERB equiv. <%= foo[0] %> 
 
 ${some_function "takes this string as input"} (ERB equiv. - <%= some_function "takes this string as input" %>)
 
-To insert statements in your template use $[]
-
-$[foo = "hello world"]
+Use $[] instead of <% ... -%>
 
 $[if foo]
   $foo
 $[end]
-
-(The ERB equiv. should be obvious by now.)
 
 Attribute Expressions
 ===================
