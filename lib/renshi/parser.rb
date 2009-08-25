@@ -20,7 +20,7 @@ module Renshi
     XML_AMP = "^R_AMP^"
     
     def self.parse(xhtml)
-      if xhtml.index("<head>") #better way to detect the full HTML document structure?
+      if xhtml.index("<head") #better way to detect the full HTML document structure?
         doc = Nokogiri::HTML::Document.parse(xhtml)
       else
         doc = Nokogiri::HTML.fragment(xhtml)
