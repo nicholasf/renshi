@@ -166,11 +166,19 @@ end
       html.should eql %Q!"hello world"!
     end
 
-    it "should interpret '${@foo}' " do
-      raw = Renshi::Parser.parse("'${@foo}'")
-      @foo = "hello world"
+    class R
+      attr_accessor :path
+      
+      def initialize
+        @path = "/hello/world"
+      end
+    end
+    
+    it "should interpret <a href='{$r.path}'>hello</a>" do
+      r = R.new
+      raw = Renshi::Parser.parse(%Q!<a href="${r.path}">hello</a>!)
       html = eval(raw, binding)
       
-      html.should eql "'hello world'"
+      html.should eql "<a href=\"#{r.path}\">hello</a>"
     end
 end

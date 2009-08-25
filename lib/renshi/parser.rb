@@ -5,13 +5,13 @@ module Renshi
   # the document, which are finally compiled into Ruby.
   
   class Parser
-    STRING_END = "^R_END" #maybe replace this with a funky unicode char
-    STRING_START = "^R_START" #maybe replace this with a funky unicode char
+    STRING_END = "_R_END" #maybe replace this with a funky unicode char
+    STRING_START = "_R_START" #maybe replace this with a funky unicode char
     BUFFER_CONCAT_OPEN = "@output_buffer.concat(\""
     BUFFER_CONCAT_CLOSE = "\");"
     NEW_LINE = "@output_buffer.concat('\n');"
-    INSTRUCTION_START = "^R_INSTR_IDX_START^"
-    INSTRUCTION_END = "^R_INSTR_IDX_END^"
+    INSTRUCTION_START = "_R_INSTR_IDX_START_"
+    INSTRUCTION_END = "_R_INSTR_IDX_END_"
     
     #these symbols cannot be normally escaped, as we need to differentiate between &lt; as an
     #escaped string, to be left in the document, and < as a boolean operator
@@ -45,7 +45,6 @@ module Renshi
 
       inner_html = @doc.inner_html
       compiled = compile_to_buffer(inner_html) if inner_html
-       # puts "\n", compiled, "\n"
       return compiled
     end
 
@@ -62,7 +61,8 @@ module Renshi
         for attribute in node.attributes()
           compiled = compile(attribute[1].to_s)
           if compiled
-            node[attribute[0]]= (compiled) 
+            key = store_instruction_for_buffer(compiled)
+            node[attribute[0]]= key      
           end
         end        
       end
@@ -71,17 +71,20 @@ module Renshi
       if node.text?
         compiled = compile(node.text)
         if compiled
-          @instructions << compiled
-          key = "#{INSTRUCTION_START}#{@instr_idx}#{INSTRUCTION_END}"
-          @instr_idx = @instr_idx + 1
-          # node.content = compiled if compiled
-          node.content = key
+          node.content = store_instruction_for_buffer(compiled)
         end
       end
 
       node.children.each {|child| transform_node(child)}
     end
  
+
+    def store_instruction_for_buffer(compiled)
+      @instructions << compiled
+      key = "#{INSTRUCTION_START}#{@instr_idx}#{INSTRUCTION_END}"
+      @instr_idx = @instr_idx + 1
+      return key
+    end
 
     def compile(text)
       idx = text.index("$")
@@ -154,7 +157,6 @@ module Renshi
         end
         idx = next_statement_idx
       end       
-    
       return bits.join
     end
     
