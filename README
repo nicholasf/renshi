@@ -10,7 +10,7 @@ Very much like ERB.
 
 Use $ or ${..} where you would use <%= ... %> . The single $ is used for one word phrases.
 
-$foo[0] - ERB equiv. <%= foo[0] %> 
+$foo[0], $1+1, $Time.now - ERB equiv. <%= foo[0] %>, <%= 1 + 1 %>, <%= Time.now %> 
 
 ${some_function "takes this string as input"} (ERB equiv. - <%= some_function "takes this string as input" %>)
 
