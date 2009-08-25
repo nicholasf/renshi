@@ -24,7 +24,7 @@ Attribute Expressions
 ===================
 Renshi has 'attribute expressions', which may be inserted into HTML elements as attributes. 
 
-Attribute expressions can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to build chunks of inline code which apply to the HTML element (and anything within it).
+Attribute expressions can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to program inline  on the HTML structure (the element and everything within it).
 
 For e.g.
 <ul>
