@@ -132,7 +132,7 @@ module Renshi
         else #$foo
           
           #divide with a delimiter for anything which is not a name character - alpa-numeric and underscore
-          words = text[(idx +1)..-1].split(/[^\w."'{}()+=*\/\-@\[\]]/)
+          words = text[(idx +1)..-1].split(/[^\w."'{}()+=*\/\-@\[\]:]/)
           words[0] = "'$'" if words[0] == "$"
           statement_str = words.first
           statement = Statement.new(statement_str)

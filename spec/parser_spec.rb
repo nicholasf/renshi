@@ -155,4 +155,13 @@ end
       
       html.should eql "hello world"
     end
+    
+    
+    it "should interpret \"${@foo}\" " do
+      raw = Renshi::Parser.parse(%Q!"${@foo}"!)
+      @foo = "hello world"
+      html = eval(raw, binding)
+      
+      html.should eql "\"hello world\""
+    end
 end
