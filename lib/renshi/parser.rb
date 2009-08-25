@@ -88,7 +88,11 @@ module Renshi
       return text if idx.nil?
       
       bits = []
-      bits << text[0..(idx -1)] if idx != 0
+      
+      if idx != 0
+        before_str = text[0..(idx -1)] 
+         bits << escape_quot_mark(before_str)
+      end
       
       while idx != nil do
         next_char = text[(idx + 1)..(idx + 1)]
@@ -144,16 +148,15 @@ module Renshi
         
         if next_statement_idx
           gap = text[end_statement_idx..(next_statement_idx -1)]
-          bits << gap
+          bits << escape_quot_mark(gap)
         else
-          bits << text[end_statement_idx..-1]
+          bits << escape_quot_mark(text[end_statement_idx..-1])
         end
         idx = next_statement_idx
       end       
     
       return bits.join
     end
-
     
     def close_of_phrase_ending_with(char, text, idx)
       phrase_end = (text[(idx + 1)..-1].index("$")) 
@@ -165,6 +168,10 @@ module Renshi
       end
       closing_brace_idx = text[idx...phrase_end].rindex(char) + idx
       return closing_brace_idx
+    end
+    
+    def escape_quot_mark(str)
+      return (str == '"' ? '\"' : str)
     end
     
     def compile_to_buffer(str)
