@@ -6,7 +6,7 @@ Renshi was designed to give the Ruby dev. flexibility when creating templates; t
 
 $ Ruby Insertion
 ================
-Very much like ERB.
+Very much like ERB with less typing.
 
 Use $ or ${..} where you would use <%= ... %> . The single $ is used for one word phrases.
 
