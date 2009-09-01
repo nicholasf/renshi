@@ -36,13 +36,13 @@ For e.g.
 </ul>
 
 Another e.g.
-<li r:each="@sphinx_results.results[:words], |k,v|" r:if="v[:hits].to_i > 0">
+<li r:each="@sphinx.results[:words], |k,v|" r:if="v[:hits].to_i > 0">
     $k - Hits $v[:hits] in $v[:docs] documents
 </li>
 
 It's quite often the case that as you write logic in $[] you realise it can be lifted into the parent element. The above code block began as
 
-<li r:each="@sphinx_results.results[:words], |k,v|">
+<li r:each="@sphinx.results[:words], |k,v|">
   $[if v[:hits].to_i > 0]
     $k - Hits $v[:hits] in $v[:docs] documents
     $[end]
