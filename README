@@ -1,4 +1,4 @@
-Renshi is a templating language for Ruby which is fluidic within HTML and XHTML structures. It has a concise syntax and 'attribute expressions', which let you build and combine sets of inline Ruby instructions upon HTML elements.
+Renshi is a templating language for Ruby which is fluidic within HTML/XHTML structures. It has a concise syntax and 'attribute expressions', which let you build and combine sets of inline Ruby instructions upon HTML elements.
 
 Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren 
 
