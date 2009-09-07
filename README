@@ -1,11 +1,11 @@
-Renshi is a templating language for Ruby which is fluidic within HTML/XHTML structures. It has a concise syntax and 'attribute expressions', which let you build and combine sets of inline Ruby instructions upon HTML elements.
+Renshi is a templating language for Ruby which is versatile and cooperative with HTML. It has a concise syntax and 'attribute expressions', which let you build and combine sets of inline Ruby instructions upon HTML elements.
 
 Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren 
 
-Renshi was designed to give the Ruby dev. flexibility when creating templates; the use of attribute expressions creates well-formed XHTML, $ interpretation can be used however the dev. wishes.
+Renshi was designed to give the Ruby dev. flexibility when creating templates; the use of attribute expressions creates well-formed XHTML, $ interpretation can be used however the dev. wishes. It's especially useful when working alongside a HTML designer.
 
-$ Ruby Insertion
-================
+$ Ruby Interpretation
+=====================
 Very much like ERB with less typing.
 
 Use $ or ${..} where you would use <%= ... %> . The single $ is used for one word phrases.
@@ -40,13 +40,9 @@ Another e.g.
     $k - Hits $v[:hits] in $v[:docs] documents
 </li>
 
-It's quite often the case that as you write logic in $[] you realise it can be lifted into the parent element. The above code block began as
-
-<li r:each="@sphinx.results[:words], |k,v|">
-  $[if v[:hits].to_i > 0]
-    $k - Hits $v[:hits] in $v[:docs] documents
-    $[end]
-</li>
+Another e.g.
+<td r:if="dataset.published?">${link_to 'Hide', hide_cms_dataset_path(dataset)}</td>      
+<td r:else>${link_to 'Publish', publish_cms_dataset_path(dataset)}</td>
 
 After Renshi interprets an attribute expression it removes it from the HTML output.
 
