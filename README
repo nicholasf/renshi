@@ -44,6 +44,8 @@ Another e.g.
 <td r:if="dataset.published?">${link_to 'Hide', hide_cms_dataset_path(dataset)}</td>      
 <td r:else>${link_to 'Publish', publish_cms_dataset_path(dataset)}</td>
 
+You don't need to supply an 'end' element; it can be guessed by the structure of the HTML document (see r:if below in the library).
+
 After Renshi interprets an attribute expression it removes it from the HTML output.
 
 $ symbols inside of attribute values are interpreted for regular HTML attributes (they're unneeded for renshi attributes).
