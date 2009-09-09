@@ -198,4 +198,18 @@ end
       html.should eql true.to_s      
     end    
     
+    it "should interpret $a$b$c" do
+      a = 'a'; b = 'b'; c = 'c';
+      raw = Renshi::Parser.parse("$a$b$c")
+      html = eval(raw, binding)
+      
+      html.should eql "abc"
+    end
+    
+    it "should interpret $'foo'.upcase!" do
+      raw = Renshi::Parser.parse("$'foo'.upcase!")
+      html = eval(raw, binding)
+      
+      html.should eql "FOO"
+    end
 end
