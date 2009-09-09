@@ -153,9 +153,9 @@ Other Rules
 ===========
 To print a $ use $$, e.g. $$10.95 comes out as $10.95
 
-Because the $foo evaluation can take all sorts of symbols to interpret a ruby statement, if you are using a special symbol *immediately* before it, you'll have to use ${foo} instead. For example, because $greetings[0].upcase is interpretable, if you want to output "[HELLO]" where the brackets surround the string, you'd use [${greetings[0].upcase}]
+Because the $foo evaluation can take all sorts of symbols to interpret a Ruby statement, if you are using a special symbol *immediately* before it, you'll have to use ${foo} instead. For example, because $greetings[0].upcase is interpretable, if you want to output "[HELLO]" where the brackets surround the string, you'd use [${greetings[0].upcase}]
 
-The $ character accepts the following characters as legitmate ruby characters - " ' { } ( ) + = * / \ - @ [ ] : ? ! along with the ^\w (any character which is not a Ruby word character).
+The $ character *delimits* (splits) on any character which is not in this list - . " ' { } ( ) + = * / \ - @ [ ] : ? ! \w 
 
 Installation
 ============
