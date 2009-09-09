@@ -181,4 +181,21 @@ end
       
       html.should eql "<a href=\"#{r.path}\">hello</a>"
     end
+    
+    it "should interpret $foo.nil?" do
+      foo = nil
+      raw = Renshi::Parser.parse("$foo.nil?")
+      html = eval(raw, binding)
+      
+      html.should eql true.to_s      
+    end    
+   
+    it "should interpret $@foo.nil?" do
+      @foo = nil
+      raw = Renshi::Parser.parse("$@foo.nil?")
+      html = eval(raw, binding)
+      
+      html.should eql true.to_s      
+    end    
+    
 end

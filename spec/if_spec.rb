@@ -28,4 +28,12 @@ describe Renshi::Parser do
       (doc/"div[@id='content']").text.strip.should =~ /hello/      
       (doc/"div[@id='inner_content']").text.strip.should eql "world"
     end   
+    
+    # it "trying to replicate a problem ..." do
+    #   @foos = [1, 2]
+    #   raw = Renshi::Parser.parse("<p r:if='@foos.empty?'>hello</p>")
+    #   html = eval(raw, binding)
+    #   
+    #   html.should eql ""
+    # end
 end
