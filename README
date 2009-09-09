@@ -175,7 +175,9 @@ I'd welcome integrations for Sinatra or Merb or XYZ framework. See renshi/lib/re
 
 How Fast Is It? - Compilable Templates
 ======================================
-I don't know - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast. To a certain extent it's an irrelevant question, given that Renshi compiles .ren documents into chunks of ruby code, which are kept in memory and reused. This was written specifically for the Rails notion of compilable templates (see ActionView::TemplateHandlers::Compilable and Renshi::Frameworks::Rails).
+I don't know - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast, and allows Renshi to be lightweight (it has 501 lines of code).
+
+To a certain extent it's an irrelevant question, given that Renshi compiles .ren documents into chunks of ruby code, which are kept in memory and reused. This was written specifically for the Rails notion of compilable templates (see ActionView::TemplateHandlers::Compilable and Renshi::Frameworks::Rails).
 
 ERB and HAML also do this (in fact I worked from the source code of both). It means, essentially, that a foo.html.ren document is compiled once into ruby, and each presentation of the template is then a matter of using the generated code (not reading the template).
 
