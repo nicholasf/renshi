@@ -8,7 +8,7 @@ $ Ruby Interpretation
 =====================
 Like ERB, but less typing.
 
-Use $ or ${..} where you would use <%= ... %> . The single $ is used for one word phrases.
+Use $ or ${..} where you would use <%= ... %> . The single $ is used for one unbroken phrases (see below).
 
 $foo[0], $1+1, $Time.now - ERB equiv. <%= foo[0] %>, <%= 1+1 %>, <%= Time.now %> 
 
