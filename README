@@ -31,7 +31,7 @@ They can be combined on elements and are interpreted in the order of appearance 
     $k - Hits $v[:hits] in $v[:docs] documents
 </li>
 
-In the above, you can see the the if statement is configured within the preceding each block, so you can reference variables between attr. expressions. Variables within an attr. expression don't need the $ symbol. That's only for setting up Ruby insertions within regular HTML.
+In the above, you can see that the if statement is scoped within the preceding each block, so you can reference variables between attr. expressions. Variables within an attr. expression don't need the $ symbol. That's only for setting up Ruby insertions within regular HTML.
 
 Renshi will guess at the expected ending of boolean structures.
 
