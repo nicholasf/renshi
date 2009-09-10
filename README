@@ -1,8 +1,6 @@
 Renshi is a templating language for Ruby which is versatile and cooperative with HTML. It has a concise syntax and 'attribute expressions', which let you build and combine sets of inline Ruby instructions upon HTML elements.
 
-Renshi integrates with Rails and Sinatra out of the box. Simply 'require renshi'! In Sinatra the helper method simply use 'ren' where you would have used 'erb'/'haml'.
-
-Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren. 
+Renshi integrates with Rails and Sinatra transparently. Simply 'require renshi'. In Sinatra use 'ren' where you would have used the 'erb'/'haml' methods. Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren. 
 
 $ Ruby Interpretation
 =====================
