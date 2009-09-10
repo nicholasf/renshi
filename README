@@ -33,12 +33,12 @@ They can be combined on elements and are interpreted in the order of appearance 
 
 In the above, you can see that the if statement is scoped within the preceding each block, so you can reference variables between attr. expressions. Variables within an attr. expression don't need the $ symbol. That's only for setting up Ruby insertions within regular HTML.
 
-One more thing, Renshi will guess at the expected ending of boolean structures.
+One more thing, Renshi will guess the expected ending of boolean structures.
 
 <td r:if="dataset.published?">...</td>      
 <td r:else>...</td>
 
-You don't need to supply an 'end' element; it can be guessed by the structure of the HTML document (see r:if below in the library).
+You don't need to supply an 'end' element; it is inferred by the HTML structure (see below).
 
 None of the r:foo attr.expressions are rendered in the HTML source.
 
