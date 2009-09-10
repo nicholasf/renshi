@@ -40,7 +40,7 @@ One more thing, Renshi will guess the expected ending of boolean structures.
 
 You don't need to supply an 'end' element; it is inferred by the HTML structure (see below).
 
-None of the r:foo attr.expressions are rendered in the HTML source.
+None of the r:foo attr.expressions appear in the HTML rendered to the browser.
 
 Attribute Expression Library
 ============================
