@@ -8,12 +8,12 @@ require 'spec/rake/spectask'
 
 gem_spec = Gem::Specification.new do |s| 
   s.name = "renshi"
-  s.version = "0.1.9"
+  s.version = "0.2.0"
   s.author = "Nicholas Faiz"
   s.email = "nicholas.faiz@gmail.com"
   s.homepage = "http://treefallinginthewoods.com"
   s.platform = Gem::Platform::RUBY
-  s.summary = "Renshi is a lightweight XHTML template language, inspired by Python's Genshi and build on Nokogiri."
+  s.summary = "Renshi is a templating language for Ruby which is versatile and cooperative with HTML."
   s.files = FileList["{bin,lib}/**/*"].to_a
   s.require_path = "lib"
   s.autorequire = "renshi"

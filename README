@@ -1,12 +1,14 @@
 Renshi is a templating language for Ruby which is versatile and cooperative with HTML. It has a concise syntax and 'attribute expressions', which let you build and combine sets of inline Ruby instructions upon HTML elements.
 
-Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren 
+Renshi gives the Ruby dev. flexibility when templating; 'attribute expressions' create well-formed XHTML, $ interpretations can be used as a conciser ERB notation.
 
-Renshi was designed to give the Ruby dev. flexibility when creating templates; the use of attribute expressions creates well-formed XHTML, $ interpretation can be used however the dev. wishes. It's especially useful when working alongside a HTML designer.
+Renshi integrates with Rails and Sinatra out of the box. Simply 'require renshi'! In Sinatra the helper method simply use 'ren' where you would have used 'erb'/'haml'.
+
+Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren. 
 
 $ Ruby Interpretation
 =====================
-Very much like ERB with less typing.
+Like ERB, but less typing.
 
 Use $ or ${..} where you would use <%= ... %> . The single $ is used for one word phrases.
 
@@ -21,34 +23,28 @@ $[if foo]
 $[end]
 
 Attribute Expressions
-===================
-Renshi has 'attribute expressions', which may be inserted into HTML elements as attributes. 
+=====================
+Attr. expressions are insertable into HTML elements as attributes.
 
-Attribute expressions can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to program inline on the HTML structure (the element and everything within it).
+<p r:if="user.known?">Welcome $user.name</p>
 
-For e.g.
-<ul>
-  <li r:for="section in @section.sections" r:if="authorized?(current_user, section)" id="section_$section.name">$section.name
-    <ul>
-      <li r:for="page in section.pages">${link_to page.name, "#{page.path}"}</li>
-    </ul>
-  </li>  
-</ul>
+They can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to program inline on the HTML structure: if a variable is created by an attr. expression it can be used within its scope. 
 
-Another e.g.
 <li r:each="@sphinx.results[:words], |k,v|" r:if="v[:hits].to_i > 0">
     $k - Hits $v[:hits] in $v[:docs] documents
 </li>
 
-Another e.g.
-<td r:if="dataset.published?">${link_to 'Hide', hide_cms_dataset_path(dataset)}</td>      
-<td r:else>${link_to 'Publish', publish_cms_dataset_path(dataset)}</td>
+If you use a variable within an attr. expression, the $ notation is not needed. It's only for insertion in regular HTML.
+
+Renshi will automatically guess the natural ending of boolean structures.
+
+<td r:if="dataset.published?">...</td>      
+<td r:else>...</td>
 
 You don't need to supply an 'end' element; it can be guessed by the structure of the HTML document (see r:if below in the library).
 
-After Renshi interprets an attribute expression it removes it from the HTML output.
+None of the r:foo attr.expressions are rendered in the HTML source. 
 
-$ symbols inside of attribute values are interpreted for regular HTML attributes (they're unneeded for renshi attributes).
 
 Attribute Expression Library
 ============================
@@ -144,7 +140,7 @@ hello99
 Further elements will appear as I have time to make them or others want to contribute them. 
 There isn't much to making them. If there's one you'd especially like, let me know on lighthouse and I'll see about adding it.
 
-The one restriction is that I want to limit attribute expressions to one key and value combination on the element (everything fits into r:foo="expression").
+The one restriction is that I want to limit attr. expressions to one key and value combination on the element (everything fits into r:foo="expression").
 I want to avoid complexity like "<span r:foo='..' r:params="k,v" />" for example - see r:each for the workaround.
 
 See renshi/lib/renshi/attribute_expressions for how they work.
@@ -162,20 +158,9 @@ Installation
 Renshi is hosted on Rubyforge so 'sudo gem install renshi'. Alternatively, use github to do what you want with it.
 
 
-Framework Integration
-=====================
-
-* Rails
-Simply require the renshi gem in your code, and Renshi will make itself available.
-
-There is a Rails 2.3.2 example app in the examples directory. Go there, start up the application, and visit http://localhost:3000/hello
-
-I'd welcome integrations for Sinatra or Merb or XYZ framework. See renshi/lib/renshi/frameworks (see below - How Fast Is It?)
-
-
 How Fast Is It? - Compilable Templates
 ======================================
-I don't know - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast, and allows Renshi to be lightweight (it has 501 lines of code).
+I don't know - I've not benchmarked it yet. It's built solely on Nokogiri, which is very fast, and allows Renshi to be lightweight.
 
 To a certain extent it's an irrelevant question, given that Renshi compiles .ren documents into chunks of ruby code, which are kept in memory and reused. This was written specifically for the Rails notion of compilable templates (see ActionView::TemplateHandlers::Compilable and Renshi::Frameworks::Rails).
 
@@ -183,19 +168,7 @@ ERB and HAML also do this (in fact I worked from the source code of both). It me
 
 Thus, n requests for the template mean 1 call to Renshi to generate the necessary code, which is then reused. At some stage I might benchmark this raw ruby - but I've written it with an eye on efficiency as it's generated and so far it seems very fast. If someone enjoys benchmarking then please jump in.
 
-When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want to use (see the spec.s for this). 
-
-E.g. some helper methods in the spec_helper.rb might get you started. For the integration you'd keep memory of which files had been compiled (only call compile_file once).
-
-def compile_file(file)
-  compiled = Renshi::Parser.parse(read_file(file))  
-end
-
-def interpret(file, context)
-  eval(compile_file(file), context)
-end
-
-rendered_template = interpret("index.html.ren", binding)
+When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want to use. See the Rails and Sinatra bridges to get you started.
 
 Development
 ===========
