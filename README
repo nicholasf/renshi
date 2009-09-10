@@ -26,7 +26,8 @@ Attr. expressions are insertable into HTML elements as attributes.
 
 <p r:if="user.known?">Welcome $user.name</p>
 
-They can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to program inline on the HTML structure. 
+They can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to program inline on the HTML structure.
+
 <li r:each="@sphinx.results[:words], |k,v|" r:if="v[:hits].to_i > 0">
     $k - Hits $v[:hits] in $v[:docs] documents
 </li>
