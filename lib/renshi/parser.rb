@@ -29,6 +29,10 @@ module Renshi
       parser = self.new(doc)
       out = parser.parse
       
+      if ENV['RENSHI_SHOW_SRC']
+        puts "Renshi src: \n#{out}"
+      end
+      
       return out
     end
     
@@ -137,7 +141,6 @@ module Renshi
             raise SyntaxError, "No closing bracket: #{text}", caller
           end          
         else #$foo
-          
           #divide with a delimiter for anything which is not a name character - alpa-numeric and underscore
           words = text[(idx +1)..-1].split(/[^\w."'{}()+=*\/\-@\[\]:?!]/)
           words[0] = "'$'" if words[0] == "$"
