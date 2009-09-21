@@ -165,6 +165,8 @@ Thus, n requests for the template mean 1 call to Renshi to generate the necessar
 
 When integrating this feature with other frameworks, simply use a delegate object to hold the compiled code and evaluate it against the binding you want to use. See the Rails and Sinatra bridges to get you started.
 
+If you're curious to see the source it creates, add an environment variable called RENSHI_SHOW_SRC.
+
 Development
 ===========
 Please report any bugs at the http://renshi.lighthouseapp.com . 
