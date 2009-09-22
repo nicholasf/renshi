@@ -16,4 +16,15 @@ describe Renshi::Parser do
     doc = N(out)
     (doc/"div[@id='content']").text.strip.should =~ /neither/      
   end
+  
+  it "should evaluate many of them" do
+    foo = 1
+    out = interpret("data/elsif2.ren", binding)
+    doc = N(out)
+    (doc/"div[@id='content']").text.strip.should =~ /1/
+    foo = 3
+    out = interpret("data/elsif2.ren", binding)
+    doc = N(out)
+    (doc/"div[@id='content']").text.strip.should =~ /3/
+  end
 end

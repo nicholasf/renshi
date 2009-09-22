@@ -11,7 +11,7 @@ module Renshi
         
           if sibling_commands.first
             expression = sibling_commands.first[0][2..-1]
-            if expression == "else"
+            if expression == "else" or expression == "elsif"
               return
             end
           end
