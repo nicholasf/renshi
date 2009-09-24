@@ -91,6 +91,8 @@ module Renshi
     end
 
     def compile(text)
+      return if text.nil?
+      
       idx = text.index("$")
       return text if idx.nil?
       
