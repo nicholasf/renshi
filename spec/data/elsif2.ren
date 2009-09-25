@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <body>
+    <div id="content" r:if="foo == 1">
+      1
+    </div>
+    <div id="content" r:elsif="foo == 2">
+      2
+    </div>    
+    <div id="content" r:elsif="foo == 3">
+      3
+    </div>    
+  </body>
+</html>

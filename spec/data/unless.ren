@@ -1,0 +1,3 @@
+<div id="header_toolbar"><span r:unless="foo">hello
+  <span align="right"></span>
+</div>
