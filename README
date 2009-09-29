@@ -148,6 +148,16 @@ Because the $foo evaluation can take all sorts of symbols to interpret a Ruby st
 
 The $ parser *delimits* (splits) on any character which is not in this list - . " ' { } ( ) + = * / \ - @ [ ] : ? ! % \w 
 
+To output xml elements in a string use the escaped versions - e.g.for 
+
+(incorrect)
+${@page.section.root? ? "<li>Home</li>" : render_breadcrumbs(:from_top => 1)} 
+
+use, instead, 
+
+(correct)
+${@page.section.root? ? "&gt;li&lt;Home&gt;/li&lt;" : render_breadcrumbs(:from_top => 1)} 
+
 Installation
 ============
 Renshi is hosted on Rubyforge so 'sudo gem install renshi'. Alternatively, use github to do what you want with it.

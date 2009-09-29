@@ -220,4 +220,13 @@ end
       html.should =~ /:/
     end
     
+    it "should evaluate ternary statements in the curly braces" do
+      foo = nil
+      raw = Renshi::Parser.parse("${foo.nil? ? '&gt;li&lt;hello&gt;/li&lt;' : '&gt;li&lt;goodbye&gt;/li&lt;'}")
+      html = eval(raw, binding)      
+      html.should =~ /hello/      
+      foo = ""
+      html = eval(raw, binding)      
+      html.should =~ /goodbye/            
+    end
 end
