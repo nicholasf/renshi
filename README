@@ -166,7 +166,7 @@ ${@page.section.root? ? "<li>Home</li>" : render_breadcrumbs(:from_top => 1)}
 use, instead, 
 
 (correct)
-${@page.section.root? ? "&gt;li&lt;Home&gt;/li&lt;" : render_breadcrumbs(:from_top => 1)} 
+${@page.section.root? ? "&lt;li&gt;Home&lt;/li&gt;" : render_breadcrumbs(:from_top => 1)}
 
 Installation
 ============
