@@ -1,3 +1,13 @@
+For those reading below ...
+
+I'm thinking of (1) revising the $ syntax and (2) adding a CSS layer.
+
+(1) - it's becoming clear from my own use of R. that having $ run to the end of line or end of html element (whichever comes first) will result in less typing. For single phrase outputs I might substitute in $!.
+
+(2) SASS is quite good, in its way, but I think its highly redundant to introduce a specialized DSL just to add abstractions already available in Ruby - i.e. variables, expressions, and mixins. I might add a css pre-processor or something to make it easy to relate ruby src to CSS templates. Again, respecting CSS documents instead of trying to change their syntax.
+
+For now, what is below is stable. Let me know if any of the above interests you ...
+
 Renshi is a templating language for Ruby which is versatile and cooperative with HTML. It has a concise syntax and 'attribute expressions', which let you build and combine sets of inline Ruby instructions upon HTML elements.
 
 Renshi integrates with Rails and Sinatra transparently. Simply 'require renshi'. In Sinatra use 'ren' where you would have used the 'erb'/'haml' methods. Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren. 
