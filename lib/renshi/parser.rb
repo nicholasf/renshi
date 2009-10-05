@@ -105,7 +105,7 @@ module Renshi
       
       while idx != nil do
         next_char = text[(idx + 1)..(idx + 1)]
-    
+        
         if next_char == " "          
           raise SyntaxError, "Floating $ - use $$ to output '$': #{text[(idx +1)..-1]}", caller
         elsif next_char == "(" 
@@ -116,7 +116,6 @@ module Renshi
           #an escaped $ - i.e. '$$'
           end_statement_idx = (idx + 2)
           bits << "$"
-          
           #${...}
         elsif next_char == "{"
           begin
@@ -128,8 +127,7 @@ module Renshi
             end_statement_idx = closing_brace_idx + 1
           rescue StandardError
             raise SyntaxError, "No closing brace: #{text}", caller
-          end
-          
+          end      
           #$[...]
         elsif next_char == "["
           begin
@@ -141,16 +139,33 @@ module Renshi
             end_statement_idx = closing_brace_idx + 1
           rescue StandardError
             raise SyntaxError, "No closing bracket: #{text}", caller
-          end          
-        else #$foo
-          #divide with a delimiter for anything which is not a name character - alpa-numeric and underscore
-          words = text[(idx +1)..-1].split(/[^\w."'{}()+=*\/\-@\[\]:?!%]/)
-          words[0] = "'$'" if words[0] == "$"
-          statement_str = words.first
-          statement = Statement.new(statement_str)
-          bits << statement.compile_to_print!
-          end_statement_idx = (words.first.length) + 1 + idx
-        end
+          end
+          elsif next_char == "^" #$!foo
+            #divide with a delimiter for anything which is not a name character - alpa-numeric and underscore
+            words = text[(idx + 2)..-1].split(/[^\w."'{}()+=*\/\-@\[\]:?!%]/)
+            words[0] = "'$'" if words[0] == "$"
+            statement_str = words.first
+            statement = Statement.new(statement_str)
+            bits << statement.compile_to_print!
+            end_statement_idx = (words.first.length) + 2 + idx
+          else #$foo
+            #divide with a delimiter on \n or $ or assume ruby until the end of element
+            words = text[(idx +1)..-1].split(/[\n$]/)
+            words[0] = "'$'" if words[0] == "$"
+
+            #now respect whitespace trailing the word - e.g. $foo $bar should not render as "helloworld"
+            if words.first.index(/\s/)
+              before_whitespace = words.first.index(/\s/) -1
+              src = words.first[0..(before_whitespace)]
+            else
+              src = words.first
+            end
+            
+            statement_str = src
+            statement = Statement.new(statement_str)
+            bits << statement.compile_to_print!
+            end_statement_idx = (src.length) + 1 + idx
+          end
     
         next_statement_idx = text.index("$", end_statement_idx)
         
