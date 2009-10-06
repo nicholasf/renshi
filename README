@@ -47,7 +47,7 @@ Attribute expressions are insertable into HTML elements.
 They can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to program inline on the HTML structure.
 
 <li r:each="@sphinx.results[:words], |k,v|" r:if="v[:hits].to_i > 0">
-    $k$ - Hits $v[:hits]$ in $v[:docs]$ documents
+    $=k - Hits $v[:hits]$ in $v[:docs]$ documents
 </li>
 
 In the above, you can see that the if statement is scoped within the preceding each block, so you can reference variables between attr. expressions. Variables within an attr. expression don't need the $ symbol. That's only for setting up Ruby insertions within regular HTML.
