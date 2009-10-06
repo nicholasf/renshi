@@ -20,7 +20,7 @@ e.g. or this
 
 e.g. or this (contrived) example
 
-<p>$Page.find_by_text("this is the way world ends, \ not with a bang but a whimper).full_text$ A poem by T.S. Eliot, which we thought you'd like $current_user.name</p> 
+<p>$Page.find_by_text("this is the way world ends, \ not with a bang but a whimper").full_text$ A poem by T.S. Eliot, which we thought you'd like $current_user.name</p> 
 
 ${} delimits where the ruby begins and ends, for insertions within a line of HTML where you need to include characters the single $ can't handle (such as $, \n).
 
