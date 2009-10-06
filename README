@@ -27,6 +27,10 @@ ${} delimits where the ruby begins and ends, for insertions within a line of HTM
 e.g.
   <p>this is normal HTML but ${some_function "takes this string as input or uses a \n or /foo$/ regex"} and now this is normal HTML</p>
 
+$= allows you to insert single phrases, as an alternative to surrounding your ruby with on each side.
+e.g.
+  <p>It has been $=current_user.days_absent since we last saw you.</p>
+
   
 $[] allows ruby src code to be embedded. It's a bad practice (use helpers or something) but we let you do it.
 
