@@ -29,6 +29,6 @@ describe Renshi::Parser do
     compiled = Renshi::Parser.parse(str)
     doc = eval(compiled, binding)
     doc = N(doc)
-    (doc/"div[@id='test']").text.strip.should =~ /hello world/    
+    (doc/"div[@id='test']").text.strip.should =~ /hello world/
   end
 end

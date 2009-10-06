@@ -236,7 +236,7 @@ end
        
        html.should =~ /this should output as a string/      
      end
-     
+      
      it "should interpret $^foo as the single phrase" do
        raw = Renshi::Parser.parse("this should $^foo 'hello'")
        foo = "say"

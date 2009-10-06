@@ -152,7 +152,16 @@ module Renshi
             #divide with a delimiter on \n or $ or assume ruby until the end of element
             words = text[(idx +1)..-1].split(/[\n$]/)
             words[0] = "'$'" if words[0] == "$"
-            statement_str = words.first
+
+            #now respect whitespace trailing the word - e.g. $foo $bar should not render as "helloworld"
+            if words.first.index(/\s/)
+              before_whitespace = words.first.rindex(/[^\s]/)              
+              src = words.first[0..(before_whitespace)]
+            else
+              src = words.first
+            end
+            
+            statement_str = src
             statement = Statement.new(statement_str)
             bits << statement.compile_to_print!
             end_statement_idx = (src.length) + 1 + idx
