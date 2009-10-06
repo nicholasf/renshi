@@ -16,11 +16,10 @@ e.g. you can do this
 e.g. or this
   <p>$foo $translator("welcome human") $Time.now</p> 
 
-e.g. or this
+e.g. or this (contrived) example
 
 <p>$Page.find_by_text("this is the way world ends, \ not with a bang but a whimper).full_text$ A poem by T.S. Eliot, which we thought you'd like $current_user.name</p> 
 
-$$ acts as an escape, output a regular '$' on the page.
 
 The $ symbol is designed to let you drop into inserting ruby code or go back to regular HTML, without having to cursor back and forth as you build your templates.
 
