@@ -5,27 +5,28 @@ Works with Rails and Sinatra - no config.. Just 'require renshi'. In Sinatra use
 index.html.ren means you're working with a Renshi file!
 
 
-$ Ruby Interpretation
-=====================
-The $ symbol is flexible enough to let you drop into code or go back to regular HTML, without having to cursor back and forth as you build your templates.
+$ Interpretation 
+================
+The $ symbol lets you switch into code or HTML, without cursoring back and forth to represent enclosures.
 
-$ interprets everything after it as ruby which will be to_stringed until the next $, a newline character, or the end of the element. Leave a $ with a space after it to switch back into writing regular HTML.
-
-e.g. you can do this
+e.g. you can take the whole line for ruby:
 
   $stylesheet_link_tag "atsida"
 
-e.g. or this
+e.g. or use a number of expressions:
   <p>$foo $translator("welcome human") $Time.now</p> 
 
-e.g. or this (contrived) example
+e.g. or combine ruby with HTML:
 
 <p>$Page.find_by_text("this is the way world ends, \ not with a bang but a whimper").full_text$ A poem by T.S. Eliot, which we thought you'd like $current_user.name</p> 
 
-${} delimits where the ruby begins and ends, for insertions within a line of HTML where you need to include characters the single $ can't handle (such as $, \n).
+$ interprets everything after it as ruby which will be to_stringed until the next $, a newline character, or the end of the element. Leave a $ with a space after it to switch back into writing regular HTML.
+
+${} can be used for enclosures, particular formatting constraints, or for insertions within a line of HTML where you need to include characters which the single $ can't handle (such as $, \n).
 
 e.g.
-  <p>this is normal HTML but ${some_function "takes this string as input or uses a \n or /foo$/ regex"} and now this is normal HTML</p>
+  <p>this is normal HTML but ${some_function "takes this string as input or uses a \n or /foo$/ regex"}, and now this is normal HTML</p>
+
 
 $^ allows you to insert single phrases, as an alternative to surrounding your ruby with on each side.
 e.g.
