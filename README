@@ -16,19 +16,18 @@ e.g. you can do this
 e.g. or this
   <p>$foo $translator("welcome human") $Time.now</p> 
 
-  <p>$foo $translator("welcome human") $Time.now $ now this is normal html  </p> 
+e.g. or this
+
+  <p>$foo $translator("welcome human") $Time.now $ now this is normal html, the final $$ signaled where the last expression ended ... </p> 
   
+The $ symbol is the most flexible, designed to let you drop into inserting ruby code or go back to regular HTML, without having to cursor back and forth as you create templates.
 
 
-${} delimits where the ruby begins and ends, for insertions within a line of HTML
+${} delimits where the ruby begins and ends, for insertions within a line of HTML where you need to include characters the single $ can't handle (such as $, \n).
 
 e.g.
   <p>this is normal HTML but ${some_function "takes this string as input"} and now this is normal HTML</p>
 
-$= is used for inplace insertion: (note - I'm thinking of using the # here, instead ... just working through usability.)
-
-e.g. 
-  <p>What are you doing up at $=Time.now when you should be asleep?</p>
   
 $[] allows ruby src code to be embedded. It's a bad practice (use helpers or something) but we let you do it.
 
