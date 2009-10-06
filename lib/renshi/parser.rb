@@ -138,7 +138,7 @@ module Renshi
           rescue StandardError
             raise SyntaxError, "No closing bracket: #{text}", caller
           end
-          elsif next_char == "=" #$=foo
+          elsif next_char == "^" #$^foo
             #divide with a delimiter for anything which is not a name character - alpa-numeric and underscore
             words = text[(idx + 2)..-1].split(/[^\w."'{}()+=*\/\-@\[\]:?!%]/)
             words[0] = "'$'" if words[0] == "$"
