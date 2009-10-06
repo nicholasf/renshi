@@ -17,16 +17,16 @@ e.g. or this
   <p>$foo $bar</p> 
 
 
-${} delimits where the ruby begins and ends, for inplace insertions"
+${} delimits where the ruby begins and ends, for insertions within a line of HTML
 
 e.g.
   <p>${some_function "takes this string as input"} and this is normal HTML</p>
 
-$^ outputs a single phrase:
+$= is used for inplace insertion:
 
 e.g. 
-  <p>What are you doing up at $^Time.now when you should be asleep?</p>
-
+  <p>What are you doing up at $=Time.now when you should be asleep?</p>
+  
 $[] allows ruby src code to be embedded. It's a bad practice (use helpers or something) but we let you do it.
 
 $[if foo]

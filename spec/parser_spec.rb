@@ -101,14 +101,22 @@ describe Renshi::Parser do
       html.should =~/head/
     end
     
-    it "should interpret single $^foos using \W, i.e. $^foo$^bar should render" do
-      raw = Renshi::Parser.parse("$^foo$^bar")
+    it "should interpret single $=foos using \W, i.e. $=foo$=bar should render" do
+      raw = Renshi::Parser.parse("$=foo$=bar")
       foo = "hello"
       bar = " world"
       
       html = eval(raw, binding)
       
       html.should eql "hello world"
+    end
+    
+    it "should interpret $a$b$c" do
+      a = 'a'; b = 'b'; c = 'c';
+      raw = Renshi::Parser.parse("$a$b$c")
+      html = eval(raw, binding)
+      
+      html.should eql "abc"
     end
 
 class Test
@@ -198,13 +206,6 @@ end
        html.should eql true.to_s      
      end    
      
-     it "should interpret $a$b$c" do
-       a = 'a'; b = 'b'; c = 'c';
-       raw = Renshi::Parser.parse("$a$b$c")
-       html = eval(raw, binding)
-       
-       html.should eql "abc"
-     end
      
      it "should interpret $'foo'.upcase!" do
          raw = Renshi::Parser.parse("$'foo'.upcase!")
@@ -237,8 +238,8 @@ end
        html.should =~ /this should output as a string/      
      end
       
-     it "should interpret $^foo as the single phrase" do
-       raw = Renshi::Parser.parse("this should $^foo 'hello'")
+     it "should interpret $=foo as the single phrase" do
+       raw = Renshi::Parser.parse("this should $=foo 'hello'")
        foo = "say"
        html = eval(raw, binding)
        
