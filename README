@@ -7,7 +7,7 @@ index.html.ren means you're working with a Renshi file!
 
 $ Ruby Interpretation
 =====================
-The $ symbol is designed to let you drop into inserting ruby code or go back to regular HTML, without having to cursor back and forth as you build your templates.
+The $ symbol is designed to let you drop into ruby code or go back to regular HTML, without having to cursor back and forth as you build your templates.
 
 $ interprets everything after it as ruby which will be to_stringed until the next $, a newline character, or the end of the element. Leave a $ with a space after it to switch back into writing regular HTML.
 
@@ -27,9 +27,9 @@ ${} delimits where the ruby begins and ends, for insertions within a line of HTM
 e.g.
   <p>this is normal HTML but ${some_function "takes this string as input or uses a \n or /foo$/ regex"} and now this is normal HTML</p>
 
-$= allows you to insert single phrases, as an alternative to surrounding your ruby with on each side.
+$^ allows you to insert single phrases, as an alternative to surrounding your ruby with on each side.
 e.g.
-  <p>It has been $=current_user.days_absent since we last saw you.</p>
+  <p>It has been $^current_user.days_absent since we last saw you.</p>
 
   
 $[] allows ruby src code to be embedded. It's a bad practice (use helpers or something) but we let you do it.
@@ -47,7 +47,7 @@ Attribute expressions are insertable into HTML elements.
 They can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to program inline on the HTML structure.
 
 <li r:each="@sphinx.results[:words], |k,v|" r:if="v[:hits].to_i > 0">
-    $=k - Hits $v[:hits]$ in $v[:docs]$ documents
+    $^k - Hits $v[:hits]$ in $v[:docs]$ documents
 </li>
 
 In the above, you can see that the if statement is scoped within the preceding each block, so you can reference variables between attr. expressions. Variables within an attr. expression don't need the $ symbol. That's only for setting up Ruby insertions within regular HTML.
