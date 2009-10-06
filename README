@@ -7,7 +7,7 @@ index.html.ren means you're working with a Renshi file!
 
 $ Ruby Interpretation
 =====================
-$ interprets everything after it as ruby which will be to_stringed until the next $, a newline character, or the end of the element.
+$ interprets everything after it as ruby which will be to_stringed until the next $, a newline character, or the end of the element. Leave a $ with a space after it to switch back into writing regular HTML.
 
 e.g. you can do this
 
