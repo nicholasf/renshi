@@ -1,21 +1,33 @@
-Renshi is a templating language for Ruby which is versatile and cooperative with HTML. It has a concise syntax and 'attribute expressions', which let you build and combine sets of inline Ruby instructions upon HTML elements.
+Renshi - a templating language which is friendly and powerful with your HTML structures.
 
-Renshi integrates with Rails and Sinatra transparently. Simply 'require renshi'. In Sinatra use 'ren' where you would have used the 'erb'/'haml' methods. Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren. 
+Works with Rails and Sinatra - no config.. Just 'require renshi'. In Sinatra use 'ren' where you would have used the 'erb'/'haml' methods. 
 
-$!foo ok?
+index.html.ren means you're working with a Renshi file!
 
 
 $ Ruby Interpretation
 =====================
-Like ERB, but less typing.
+$ interprets everything after it as ruby which will be to_stringed until the next $, a newline character, or the end of the element.
 
-Use $ or ${..} where you would use <%= ... %> . The single $ is used for an unbroken phrase (see below).
+e.g. you can do this
 
-$foo[0], $1+1, $Time.now - ERB equiv. <%= foo[0] %>, <%= 1+1 %>, <%= Time.now %> 
+  $stylesheet_link_tag "atsida"
 
-${some_function "takes this string as input"} (ERB equiv. - <%= some_function "takes this string as input" %>)
+e.g. or this
+  <p>$foo $bar</p> 
 
-Use $[] instead of <% ... -%>
+
+${} delimits where the ruby begins and ends, for inplace insertions"
+
+e.g.
+  <p>${some_function "takes this string as input"} and this is normal HTML</p>
+
+$^ outputs a single phrase:
+
+e.g. 
+  <p>What are you doing up at $^Time.now when you should be asleep?</p>
+
+$[] allows ruby src code to be embedded. It's a bad practice (use helpers or something) but we let you do it.
 
 $[if foo]
   $foo
@@ -23,14 +35,14 @@ $[end]
 
 Attribute Expressions
 =====================
-Attr. expressions are insertable into HTML elements as attributes.
+Attribute expressions are insertable into HTML elements.
 
 <p r:if="user.known?">Welcome $user.name</p>
 
 They can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to program inline on the HTML structure.
 
 <li r:each="@sphinx.results[:words], |k,v|" r:if="v[:hits].to_i > 0">
-    $k - Hits $v[:hits] in $v[:docs] documents
+    $^k - Hits $^v[:hits] in $^v[:docs] documents
 </li>
 
 In the above, you can see that the if statement is scoped within the preceding each block, so you can reference variables between attr. expressions. Variables within an attr. expression don't need the $ symbol. That's only for setting up Ruby insertions within regular HTML.
@@ -149,7 +161,7 @@ To print a $ use $$, e.g. $$10.95 comes out as $10.95
 
 Because the $foo evaluation can take all sorts of symbols to interpret a Ruby statement, if you are using a special symbol *immediately* before it, you'll have to use ${foo} instead. For example, because $greetings[0].upcase is interpretable, if you want to output "[HELLO]" where the brackets surround the string, you'd use [${greetings[0].upcase}]
 
-The $ parser *delimits* (splits) on any character which is not in this list - . " ' { } ( ) + = * / \ - @ [ ] : ? ! % \w 
+The $^ parser *delimits* (splits) on any character which is not in this list - . " ' { } ( ) + = * / \ - @ [ ] : ? ! % \w 
 
 To output xml elements in a string use the escaped versions - e.g.for 
 
