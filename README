@@ -18,7 +18,7 @@ e.g. or this
 
 e.g. or this
 
-  <p>$foo $translator("welcome human") $Time.now $ now this is normal html, the final $$ signaled where the last expression ended ... </p> 
+<p>$Page.find_by_text("this is the way world ends, \ not with a bang but a whimper).full_text$ A poem by T.S. Eliot, which we thought you'd like $current_user.name</p> 
 
 $$ acts as an escape, output a regular '$' on the page.
 
