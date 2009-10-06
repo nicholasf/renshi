@@ -106,9 +106,7 @@ module Renshi
       while idx != nil do
         next_char = text[(idx + 1)..(idx + 1)]
         
-        if next_char == " "          
-          raise SyntaxError, "Floating $ - use $$ to output '$': #{text[(idx +1)..-1]}", caller
-        elsif next_char == "(" 
+        if next_char == "("          
           #this may be jquery, etc. $(...) 
           end_statement_idx = (idx + 2)
           bits << text[idx..(idx + 1)]    
@@ -148,6 +146,9 @@ module Renshi
             statement = Statement.new(statement_str)
             bits << statement.compile_to_print!
             end_statement_idx = (words.first.length) + 2 + idx
+          elsif next_char =~/\s/ #the empty $ acting as a delimiter
+            end_statement_idx = (idx + 2)
+            bits << "\s"
           else #$foo
             #divide with a delimiter on \n or $ or assume ruby until the end of element
             words = text[(idx +1)..-1].split(/[\n$]/)

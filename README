@@ -16,6 +16,9 @@ e.g. you can do this
 e.g. or this
   <p>$foo $translator("welcome human") $Time.now</p> 
 
+  <p>$foo $translator("welcome human") $Time.now $ now this is normal html  </p> 
+  
+
 
 ${} delimits where the ruby begins and ends, for insertions within a line of HTML
 

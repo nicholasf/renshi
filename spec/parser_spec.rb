@@ -231,18 +231,26 @@ end
          html.should =~ /goodbye/            
        end
      
-     it "should interpret $foo until \n or end of element as ruby to string" do
-       raw = Renshi::Parser.parse("$'this should output as a string'")
-       html = eval(raw, binding)
-       
-       html.should =~ /this should output as a string/      
-     end
-      
-     it "should interpret $=foo as the single phrase" do
-       raw = Renshi::Parser.parse("this should $=foo 'hello'")
-       foo = "say"
-       html = eval(raw, binding)
-       
-       html.should =~ /this should say 'hello'/      
-     end
+   it "should interpret $foo until \n or end of element as ruby to string" do
+     raw = Renshi::Parser.parse("$'this should output as a string'")
+     html = eval(raw, binding)
+     
+     html.should =~ /this should output as a string/      
+   end
+    
+   it "should interpret $=foo as the single phrase" do
+     raw = Renshi::Parser.parse("this should $=foo 'hello'")
+     foo = "say"
+     html = eval(raw, binding)
+     
+     html.should =~ /this should say 'hello'/      
+   end
+   
+   it "should interpret $ as a delimiter " do
+     raw = Renshi::Parser.parse("this should $foo$ 'hello'")
+     foo = "say"
+     html = eval(raw, binding)
+     
+     html.should =~ /this should say 'hello'/           
+   end
 end
