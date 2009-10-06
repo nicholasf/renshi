@@ -19,9 +19,10 @@ e.g. or this
 e.g. or this
 
   <p>$foo $translator("welcome human") $Time.now $ now this is normal html, the final $$ signaled where the last expression ended ... </p> 
-  
-The $ symbol is the most flexible, designed to let you drop into inserting ruby code or go back to regular HTML, without having to cursor back and forth as you create templates.
 
+$$ acts as an escape, output a regular '$' on the page.
+
+The $ symbol is designed to let you drop into inserting ruby code or go back to regular HTML, without having to cursor back and forth as you build your templates.
 
 ${} delimits where the ruby begins and ends, for insertions within a line of HTML where you need to include characters the single $ can't handle (such as $, \n).
 
