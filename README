@@ -20,7 +20,7 @@ e.g. or this
 ${} delimits where the ruby begins and ends, for insertions within a line of HTML
 
 e.g.
-  <p>${some_function "takes this string as input"} and this is normal HTML</p>
+  <p>this is normal HTML but ${some_function "takes this string as input"} and now this is normal HTML</p>
 
 $= is used for inplace insertion:
 
