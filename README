@@ -7,7 +7,7 @@ index.html.ren means you're working with a Renshi file!
 
 $ Ruby Interpretation
 =====================
-The $ symbol is designed to let you drop into ruby code or go back to regular HTML, without having to cursor back and forth as you build your templates.
+The $ symbol is flexible enough to let you drop into code or go back to regular HTML, without having to cursor back and forth as you build your templates.
 
 $ interprets everything after it as ruby which will be to_stringed until the next $, a newline character, or the end of the element. Leave a $ with a space after it to switch back into writing regular HTML.
 
