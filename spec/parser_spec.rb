@@ -86,7 +86,7 @@ describe Renshi::Parser do
     it "should interpret all Renshi instructions and remove them from the document" do
       raw = compile_file("data/example1.ren")
       html = eval(raw, binding)
-    
+
       html.should_not =~/R_INSTR_IDX_START/
       html.should_not =~/R_INSTR_IDX_END/
       html.should_not =~/@output_buffer.concat/
@@ -101,22 +101,14 @@ describe Renshi::Parser do
       html.should =~/head/
     end
     
-    it "should interpret single $=foos using \W, i.e. $=foo$=bar should render" do
-      raw = Renshi::Parser.parse("$=foo$=bar")
+    it "should interpret single $foos using \W, i.e. $foo$bar should render" do
+      raw = Renshi::Parser.parse("$foo$bar")
       foo = "hello"
       bar = " world"
       
       html = eval(raw, binding)
       
       html.should eql "hello world"
-    end
-    
-    it "should interpret $a$b$c" do
-      a = 'a'; b = 'b'; c = 'c';
-      raw = Renshi::Parser.parse("$a$b$c")
-      html = eval(raw, binding)
-      
-      html.should eql "abc"
     end
 
 class Test
@@ -126,131 +118,106 @@ class Test
 end
     
     it "should interpret single $foo.bar " do
-       raw = Renshi::Parser.parse("$foo.bar")
-       foo = Test.new
-       html = eval(raw, binding)
-       
-       html.should eql "hello world"
-     end
-     
-     it "should interpret single $1+1 and $2*2 and $3/3 and $4-4 " do
-       raw = Renshi::Parser.parse("$1+1")
-       foo = Test.new
-       html = eval(raw, binding)  
-       html.should eql "2"
-       
-       raw = Renshi::Parser.parse("$2*2")
-       foo = Test.new
-       html = eval(raw, binding)  
-       html.should eql "4"
+      raw = Renshi::Parser.parse("$foo.bar")
+      foo = Test.new
+      html = eval(raw, binding)
+      
+      html.should eql "hello world"
+    end
     
-       raw = Renshi::Parser.parse("$3/3")
-       foo = Test.new
-       html = eval(raw, binding)  
-       html.should eql "1"
+    it "should interpret single $1+1 and $2*2 and $3/3 and $4-4 " do
+      raw = Renshi::Parser.parse("$1+1")
+      foo = Test.new
+      html = eval(raw, binding)  
+      html.should eql "2"
+      
+      raw = Renshi::Parser.parse("$2*2")
+      foo = Test.new
+      html = eval(raw, binding)  
+      html.should eql "4"
+
+      raw = Renshi::Parser.parse("$3/3")
+      foo = Test.new
+      html = eval(raw, binding)  
+      html.should eql "1"
+
+      raw = Renshi::Parser.parse("$4-4")
+      foo = Test.new
+      html = eval(raw, binding)  
+      html.should eql "0"
+    end
     
-       raw = Renshi::Parser.parse("$4-4")
-       foo = Test.new
-       html = eval(raw, binding)  
-       html.should eql "0"
-     end
-     
-     
-     it "should interpret $foo[0] " do
-       raw = Renshi::Parser.parse("$foo[0]")
-       foo = ["hello world"]
-       html = eval(raw, binding)
-       
-       html.should eql "hello world"
-     end
-     
-     
-     it "should interpret \"${@foo}\" " do
-       raw = Renshi::Parser.parse(%Q!"${@foo}"!)
-       puts raw
-       @foo = "hello world"
-       html = eval(raw, binding)
-       
-       html.should eql %Q!"hello world"!
-     end
     
-     class R
-       attr_accessor :path
-       
-       def initialize
-         @path = "/hello/world"
-       end
-     end
-     
-     it "should interpret <a href='{$r.path}'>hello</a>" do
-       r = R.new
-       raw = Renshi::Parser.parse(%Q!<a href="${r.path}">hello</a>!)
-       html = eval(raw, binding)
-       
-       html.should eql "<a href=\"#{r.path}\">hello</a>"
-     end
-     
-     it "should interpret $foo.nil?" do
-       foo = nil
-       raw = Renshi::Parser.parse("$foo.nil?")
-       html = eval(raw, binding)
-       
-       html.should eql true.to_s      
-     end    
-         
-     it "should interpret $@foo.nil?" do
-       @foo = nil
-       raw = Renshi::Parser.parse("$@foo.nil?")
-       html = eval(raw, binding)
-       
-       html.should eql true.to_s      
-     end    
-     
-     
-     it "should interpret $'foo'.upcase!" do
-         raw = Renshi::Parser.parse("$'foo'.upcase!")
-         html = eval(raw, binding)
-         
-         html.should eql "FOO"
-       end
-       
-       it "should interpret $Time.now.strftime('%I:%M')" do
-         raw = Renshi::Parser.parse("$Time.now.strftime('%I:%M')")
-         html = eval(raw, binding)
-         
-         html.should =~ /:/
-       end
-       
-       it "should evaluate ternary statements in the curly braces" do
-         foo = nil
-         raw = Renshi::Parser.parse("${foo.nil? ? '&gt;li&lt;hello&gt;/li&lt;' : '&gt;li&lt;goodbye&gt;/li&lt;'}")
-         html = eval(raw, binding)      
-         html.should =~ /hello/      
-         foo = ""
-         html = eval(raw, binding)      
-         html.should =~ /goodbye/            
-       end
-     
-   it "should interpret $foo until \n or end of element as ruby to string" do
-     raw = Renshi::Parser.parse("$'this should output as a string'")
-     html = eval(raw, binding)
-     
-     html.should =~ /this should output as a string/      
-   end
+    it "should interpret $foo[0] " do
+      raw = Renshi::Parser.parse("$foo[0]")
+      foo = ["hello world"]
+      html = eval(raw, binding)
+      
+      html.should eql "hello world"
+    end
     
-   it "should interpret $=foo as the single phrase" do
-     raw = Renshi::Parser.parse("this should $=foo 'hello'")
-     foo = "say"
-     html = eval(raw, binding)
-     
-     html.should =~ /this should say 'hello'/      
-   end
+    
+    it "should interpret \"${@foo}\" " do
+      raw = Renshi::Parser.parse(%Q!"${@foo}"!)
+      puts raw
+      @foo = "hello world"
+      html = eval(raw, binding)
+      
+      html.should eql %Q!"hello world"!
+    end
+
+    class R
+      attr_accessor :path
+      
+      def initialize
+        @path = "/hello/world"
+      end
+    end
+    
+    it "should interpret <a href='{$r.path}'>hello</a>" do
+      r = R.new
+      raw = Renshi::Parser.parse(%Q!<a href="${r.path}">hello</a>!)
+      html = eval(raw, binding)
+      
+      html.should eql "<a href=\"#{r.path}\">hello</a>"
+    end
+    
+    it "should interpret $foo.nil?" do
+      foo = nil
+      raw = Renshi::Parser.parse("$foo.nil?")
+      html = eval(raw, binding)
+      
+      html.should eql true.to_s      
+    end    
    
-   it "should interpret $ as a delimiter " do
-     raw = Renshi::Parser.parse("this should $foo$ 'hello'")
-     foo = "say"
-     html = eval(raw, binding)
-     
-     html.should =~ /this should say 'hello'/           
-   end
+    it "should interpret $@foo.nil?" do
+      @foo = nil
+      raw = Renshi::Parser.parse("$@foo.nil?")
+      html = eval(raw, binding)
+      
+      html.should eql true.to_s      
+    end    
+    
+    it "should interpret $a$b$c" do
+      a = 'a'; b = 'b'; c = 'c';
+      raw = Renshi::Parser.parse("$a$b$c")
+      html = eval(raw, binding)
+      
+      html.should eql "abc"
+    end
+    
+    it "should interpret $'foo'.upcase!" do
+      raw = Renshi::Parser.parse("$'foo'.upcase!")
+      html = eval(raw, binding)
+      
+      html.should eql "FOO"
+    end
+    
+    it "should interpret $Time.now.strftime('%I:%M')" do
+      raw = Renshi::Parser.parse("$Time.now.strftime('%I:%M')")
+      html = eval(raw, binding)
+      
+      html.should =~ /:/
+    end
+    
 end

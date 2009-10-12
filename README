@@ -1,43 +1,18 @@
-Note - I have been working on a few features which I'll be putting into a new templating language - see Cranberry.
+Renshi is a templating language for Ruby which is versatile and cooperative with HTML. It has a concise syntax and 'attribute expressions', which let you build and combine sets of inline Ruby instructions upon HTML elements.
 
-The $ functionality became too limited. Please use version 0.2.4 of Renshi, which will become its final version.
+Renshi integrates with Rails and Sinatra transparently. Simply 'require renshi'. In Sinatra use 'ren' where you would have used the 'erb'/'haml' methods. Renshi templates are appended with the suffix of .ren, e.g. index.html.ren or index.ren. 
 
-Renshi - a templating language which is friendly and powerful with your HTML structures.
+$ Ruby Interpretation
+=====================
+Like ERB, but less typing.
 
-Works with Rails and Sinatra - no config.. Just 'require renshi'. In Sinatra use 'ren' where you would have used the 'erb'/'haml' methods. 
+Use $ or ${..} where you would use <%= ... %> . The single $ is used for an unbroken phrase (see below).
 
-index.html.ren means you're working with a Renshi file!
+$foo[0], $1+1, $Time.now - ERB equiv. <%= foo[0] %>, <%= 1+1 %>, <%= Time.now %> 
 
+${some_function "takes this string as input"} (ERB equiv. - <%= some_function "takes this string as input" %>)
 
-$ Interpretation 
-================
-The $ symbol lets you switch into code or HTML, without cursoring back and forth to represent enclosures.
-
-e.g. you can take the whole line for ruby:
-
-  $stylesheet_link_tag "atsida"
-
-e.g. or use a number of expressions:
-  <p>$foo $translator("welcome human") $Time.now</p> 
-
-e.g. or combine ruby with HTML:
-
-<p>$Page.find_by_text("this is the way world ends, \ not with a bang but a whimper").full_text$ A poem by T.S. Eliot, which we thought you'd like $current_user.name</p> 
-
-$ interprets everything after it as ruby which will be to_stringed until the next $, a newline character, or the end of the element. Leave a $ with a space after it to switch back into writing regular HTML.
-
-${} can be used for enclosures, particular formatting constraints, or for insertions within a line of HTML where you need to include characters which the single $ can't handle (such as $, \n).
-
-e.g.
-  <p>this is normal HTML but ${some_function "takes this string as input or uses a \n or /foo$/ regex"}, and now this is normal HTML</p>
-
-
-$^ allows you to insert single phrases, as an alternative to surrounding your ruby with on each side.
-e.g.
-  <p>It has been $^current_user.days_absent since we last saw you.</p>
-
-  
-$[] allows ruby src code to be embedded. It's a bad practice (use helpers or something) but we let you do it.
+Use $[] instead of <% ... -%>
 
 $[if foo]
   $foo
@@ -45,14 +20,14 @@ $[end]
 
 Attribute Expressions
 =====================
-Attribute expressions are insertable into HTML elements.
+Attr. expressions are insertable into HTML elements as attributes.
 
 <p r:if="user.known?">Welcome $user.name</p>
 
 They can be combined on elements and are interpreted in the order of appearance and are cumulative, allowing you to program inline on the HTML structure.
 
 <li r:each="@sphinx.results[:words], |k,v|" r:if="v[:hits].to_i > 0">
-    $^k - Hits $v[:hits]$ in $v[:docs]$ documents
+    $k - Hits $v[:hits] in $v[:docs] documents
 </li>
 
 In the above, you can see that the if statement is scoped within the preceding each block, so you can reference variables between attr. expressions. Variables within an attr. expression don't need the $ symbol. That's only for setting up Ruby insertions within regular HTML.
@@ -171,17 +146,7 @@ To print a $ use $$, e.g. $$10.95 comes out as $10.95
 
 Because the $foo evaluation can take all sorts of symbols to interpret a Ruby statement, if you are using a special symbol *immediately* before it, you'll have to use ${foo} instead. For example, because $greetings[0].upcase is interpretable, if you want to output "[HELLO]" where the brackets surround the string, you'd use [${greetings[0].upcase}]
 
-The $^ parser *delimits* (splits) on any character which is not in this list - . " ' { } ( ) + = * / \ - @ [ ] : ? ! % \w 
-
-To output xml elements in a string use the escaped versions - e.g.for 
-
-(incorrect)
-${@page.section.root? ? "<li>Home</li>" : render_breadcrumbs(:from_top => 1)} 
-
-use, instead, 
-
-(correct)
-${@page.section.root? ? "&lt;li&gt;Home&lt;/li&gt;" : render_breadcrumbs(:from_top => 1)}
+The $ parser *delimits* (splits) on any character which is not in this list - . " ' { } ( ) + = * / \ - @ [ ] : ? ! % \w 
 
 Installation
 ============
