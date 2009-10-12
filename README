@@ -1,3 +1,7 @@
+Note - I have been working on a few features which I'll be putting into a new templating language - see Cranberry.
+
+The $ functionality became too limited. Please use version 0.2.4 of Renshi, which will become its final version.
+
 Renshi - a templating language which is friendly and powerful with your HTML structures.
 
 Works with Rails and Sinatra - no config.. Just 'require renshi'. In Sinatra use 'ren' where you would have used the 'erb'/'haml' methods. 
