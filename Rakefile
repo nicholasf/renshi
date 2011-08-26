@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'rake/gempackagetask'
 
+
 require File.dirname(__FILE__) + '/lib/renshi'
 
 require 'spec'
